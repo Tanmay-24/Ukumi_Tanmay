@@ -1,0 +1,647 @@
+    Sentence: Responsibilities of Okay.
+      Start: 0.24, End: 5.2999997
+    Sentence: Alright.
+      Start: 6.08, End: 6.48
+    Sentence: So starting with the first start starting the segment with this question.
+      Start: 6.48, End: 9.86
+    Sentence: What are some key responsibilities of a growth manager at different career stages from entry level, mid level, right up to leadership?
+      Start: 10.32, End: 18.105
+    Sentence: Right.
+      Start: 18.485, End: 18.885
+
+    Sentence: So when you're at the entry level, you're looking at a specific part of the growth funnel.
+      Start: 18.885, End: 24.404999
+    Sentence: It can be acquisition, retention onboarding, activation.
+      Start: 24.404999, End: 29.01
+    Sentence: Usually you're trying to do this uptake, you're gathering, you're understanding the tools, skills, you're getting a lot of inputs of what product managers are building.
+      Start: 29.550001, End: 40.05
+    Sentence: Figuring out what experiments that can be done to, you know, make this uptick.
+      Start: 40.35, End: 47.905
+    Sentence: So you are really trying to prove your heart or learn the skill of being that growth manager and try to prove with some of your experiments that you have built or campaigns that you have done or the product experimentation features that you have built.
+      Start: 48.285, End: 69.5
+
+    Sentence: You're trying to prove that some of them are successful and hence you're able to create an impact.
+      Start: 69.5, End: 74.295
+    Sentence: And as a new move into your mid level, you're trying to understand, not just from the one particular acquisition retention I was saying, you're also looking at the entire journey.
+      Start: 74.355, End: 84.195
+    Sentence: You're looking at how what are the big levers in the journey that is, going to have impact on, on the business.
+      Start: 84.195, End: 94.03001
+    Sentence: You're trying to also understand the p and l.
+      Start: 94.03001, End: 95.79
+    Sentence: You're trying to coach the people who have joined in entry level.
+      Start: 95.79, End: 99.71001
+
+    Sentence: You're trying to also do learn about people management and spend a little bit more into hiring people management and and so on.
+      Start: 99.71001, End: 107.795
+    Sentence: You're trying to also do more interviews and things like that.
+      Start: 107.795, End: 110.695
+    Sentence: As you move you move to more towards leadership you are setting directions or strategy or the company level OKRs or like the business units of ARs or even let's say if you're a business unit head you're collaborating with other business units heads or the like this your chief growth officer or or if you're into top leadership for example and you're looking at how does the growth pillars also impact me now.
+      Start: 110.915, End: 141.095
+    Sentence: You're trying to also see how are you able to not just ensure that you're high you are growing in terms of growth, but you're also really hiring and retaining the best of talents.
+      Start: 141.095, End: 155.65001
+    Sentence: I don't see more than next one because it's one point three.
+      Start: 157.845, End: 160.585
+
+    Sentence: The next question is Yeah.
+      Start: 160.80501, End: 161.845
+    Sentence: We can do that.
+      Start: 161.845, End: 162.725
+    Sentence: Yes.
+      Start: 162.725, End: 163.125
+    Sentence: We'll probably Yeah.
+      Start: 163.125, End: 163.92502
+    Sentence: Let's get a little finish up.
+      Start: 163.92502, End: 165.30501
+
+    Sentence: Next question is, as a follow-up to the first one.
+      Start: 166.005, End: 169.205
+    Sentence: What skills are most critical for success in growth roles?
+      Start: 169.205, End: 172.98
+    Sentence: The skills, for to really go deep into the nuances of understanding the ICP, understanding the user problems, comparing it what's there in the competitors, understanding the growth model, understanding acquisitions per se, understanding how does activation, how understanding retention metrics, and most importantly, I feel like understanding how those important things lead to monetization and why do customers pay, like, how can you get your conversion rate optimized so that more customers pay?
+      Start: 174.34, End: 216.66501
+    Sentence: And how can you make customers pay even more?
+      Start: 216.965, End: 220.265
+    Sentence: So, as and and as you get to understand that more and go become an expert in even not just acquisition, but also monetization, you tend to level up in the growth, growth thing.
+      Start: 220.725, End: 239.06
+
+    Sentence: But monetization can only happen when you understand retention and retention is an output metric of activation, like onboarding, engagement, and resurrection.
+      Start: 239.06, End: 249.67499
+    Sentence: So you have to understand all this thing to actually level up and you got to whom that's good.
+      Start: 249.81499, End: 257.01
+    Sentence: Awesome.
+      Start: 257.63, End: 258.03
+    Sentence: I think we can pause for now, Raju.
+      Start: 258.03, End: 259.97
+    Sentence: Cool.
+      Start: 261.79, End: 262.29
+
+    Sentence: Yes.
+      Start: 263.23, End: 263.63
+    Sentence: I'll get you preparation section of this particular segment.
+      Start: 263.63, End: 271.965
+    Sentence: And, Safi, the first question here is, what is the common pitfalls that candidates usually make when they prepare for group interviews?
+      Start: 271.965, End: 279.745
+    Sentence: Love the word pitfalls.
+      Start: 280.41998, End: 281.56
+    Sentence: There are so many.
+      Start: 281.62, End: 282.66
+
+    Sentence: I can go on and talk about pitfalls.
+      Start: 282.66, End: 284.68
+    Sentence: But, like, there are so many but, like, very common ones that I've seen, like Like, people specifically early in their career, like, where they are just, like, applying for growth roles or new growth roles or just doing a transition.
+      Start: 285.06, End: 298.945
+    Sentence: When you're applying for these 100 jobs and you you just land up, like, some interview to you don't know when you applied for that specific role and you land at that interview and then you're like, oh, when did I apply?
+      Start: 299.24503, End: 309.77002
+    Sentence: Okay.
+      Start: 309.77002, End: 309.93002
+    Sentence: Let me Let me just give this interview.
+      Start: 309.93002, End: 311.71002
+
+    Sentence: Right?
+      Start: 311.85, End: 312.35
+    Sentence: So that's the time you just, like, go for that interview and without having downloaded yeah.
+      Start: 312.57, End: 318.97
+    Sentence: Without understanding understanding what are the metrics, without understanding the market industry and then you just go and just blabber something out and then you get rejected and then you apply for another 100 jobs.
+      Start: 318.97, End: 333.745
+    Sentence: So the first pitfall is when you apply for, when you go for an interview, please go through everything possible you can in that period of time about the company, about the growth for that company, about acquisition retention, how to for that company, about the competitive landscape, about something one insight that you can tell in that interview that will impress your manager because your manager doesn't know that.
+      Start: 334.445, End: 366.73
+    Sentence: And try to find out, that what are some of your skills, transferable skills, if you're transitioning, for example, transferable skills that you want to highlight and prepare your interviews if because I've I've seen so many people.
+      Start: 368.95, End: 384.015
+
+    Sentence: People are just coming to the interview and just like waiting for the other person to ask a question and then you're answering.
+      Start: 384.15503, End: 390.015
+    Sentence: You cannot think on the spot just like that because you're not specifically when you're transitioning, you're not wired to think in that way.
+      Start: 391.11502, End: 399.19998
+    Sentence: You're wired to think in the marketing way or the if you're into marketing mode, if you're transitioning to growth or product road, you need to be wired to think in that.
+      Start: 399.19998, End: 406.88
+    Sentence: For that, you need to prepare it.
+      Start: 406.88, End: 408.345
+    Sentence: And if you need to prepare, you need to follow STARS framework and so many other interview frameworks.
+      Start: 408.505, End: 413.165
+
+    Sentence: There are chat gbt.
+      Start: 413.225, End: 414.105
+    Sentence: There are now when there is, even interview preparation tool that will give you a question, you give answer, it'll record your answer, and we'll give you feedback about the answer.
+      Start: 414.105, End: 425.34003
+    Sentence: Use those tools.
+      Start: 425.34003, End: 426.40002
+    Sentence: So, the other is if I've seen people also, like, not knowing enough about what the role is.
+      Start: 427.42, End: 435.555
+    Sentence: They they think the role is something.
+      Start: 435.715, End: 437.07498
+
+    Sentence: They they interview for something else.
+      Start: 437.07498, End: 439.57498
+    Sentence: It also happened to me at one point.
+      Start: 440.51498, End: 442.535
+    Sentence: Uh-uh, when I interviewed for 2 roles, 1 in the morning, 1 in the afternoon, I'm confused which one was that.
+      Start: 442.675, End: 448.35
+    Sentence: Right?
+      Start: 448.75, End: 449.25
+    Sentence: So please know your roles.
+      Start: 449.31, End: 450.91
+
+    Sentence: Please know your industry competitors and find that insight and tell that insight.
+      Start: 450.91, End: 458.03
+    Sentence: Prepare your interview.
+      Start: 458.03, End: 459.07
+    Sentence: Practice your interviews.
+      Start: 459.07, End: 460.21
+    Sentence: And, and and and most importantly, I would say try to really have conversation during that interview.
+      Start: 460.83002, End: 470.405
+    Sentence: People just come, they think they're a chatbot and answer the questions.
+      Start: 470.405, End: 474.58502
+
+    Sentence: That's thought interview.
+      Start: 474.80502, End: 476.005
+    Sentence: Right?
+      Start: 476.005, End: 476.505
+    Sentence: That's like so focus on, having conversation.
+      Start: 476.725, End: 482.86002
+    Sentence: Go with at least 5 questions on your hand, that you will ask your manager in the interview.
+      Start: 483.0, End: 489.26
+    Sentence: And those 5 questions, 3 of them can be common.
+      Start: 489.32, End: 493.56
+
+    Sentence: One of my favorite questions is with the conversation that we have had so far, how do you think I fit in this now your manager will tell you how do you how do you fit in this role.
+      Start: 493.56, End: 507.185
+    Sentence: Oh, long story short, prepare your questions and, don't make don't be the same interview person, like, like the others.
+      Start: 507.185, End: 517.14
+    Sentence: Be difficult.
+      Start: 517.28, End: 518.10004
+    Sentence: Awesome.
+      Start: 519.60004, End: 520.10004
+    Sentence: Saket, the next question, is very interesting.
+      Start: 526.405, End: 529.60504
+
+    Sentence: I want to do a stand from you.
+      Start: 529.60504, End: 531.125
+    Sentence: How can candidates effectively research a company's growth strategies and initiatives before the interview, and how important is this exactly?
+      Start: 531.125, End: 539.865
+    Sentence: Let me answer the second part of the question first.
+      Start: 540.77, End: 543.57
+    Sentence: It's extremely important.
+      Start: 543.57, End: 545.19
+    Sentence: It will decide whether you will get a job and if you even if you get the job it will decide whether you will have the same amount of respect from your hiring manager when you join that company.
+      Start: 545.81, End: 560.05505
+
+    Sentence: So extremely important.
+      Start: 561.315, End: 562.59503
+    Sentence: Now how do you prepare?
+      Start: 562.59503, End: 563.815
+    Sentence: You have to start preparing for the interview even before you have, let's say, got an interview.
+      Start: 564.43506, End: 570.52
+    Sentence: Let's say if you're interested in the Fintech space, understand about the straight I used to put in Google alerts, name of the company, name of the competitors, anything that comes in Google alert about the company, I get notified about it.
+      Start: 570.52, End: 586.205
+    Sentence: And when that information comes to me on my email, I just quickly glimpse it.
+      Start: 586.205, End: 591.565
+
+    Sentence: Take one insight about that Google from that and try to write that down and think how can I incorporate in one of my answers in my interview?
+      Start: 591.565, End: 601.76
+    Sentence: I used to speak to people who were working in competitors or in the company or, in the space to practice mock interviews.
+      Start: 602.54004, End: 613.775
+    Sentence: So you have to if you're really interested, you have to know about the company.
+      Start: 614.155, End: 618.715
+    Sentence: You have to know about the competitors.
+      Start: 618.715, End: 620.175
+    Sentence: You have to know understand the the growth funnel.
+      Start: 620.235, End: 622.715
+
+    Sentence: You have to understand the thunder.
+      Start: 622.715, End: 624.335
+    Sentence: How does the company make money and how does how can you make help the company make more money?
+      Start: 624.395, End: 630.33
+    Sentence: And and you have to practice the interviews, you have to practice and and trust me, when you practice the interview by recording it and 99.9% of the people will not do this.
+      Start: 631.35, End: 643.16504
+    Sentence: If you record your answers and practice in front of mirror or even if you record your interviews, right, and, take notes of it, You will figure out that you have done so many mistakes in the interview by saying words like, you know, say so it's like, ah, oh, telling too much information rather than just getting to the point of the question.
+      Start: 643.22504, End: 665.335
+    Sentence: Not answering the question, but answering everything else that comes to your mind.
+      Start: 665.47504, End: 669.97504
+
+    Sentence: So it's very important that you, you prepare for the interview and when you your interviewer is asking you a question, when you prepare that, so your interviews when your interviewer is asking that question, you are able to understand that why that interviewer is asking that question.
+      Start: 670.03503, End: 688.77997
+    Sentence: And when you can figure that out, you can tailor your answer accordingly.
+      Start: 689.32, End: 694.06
+    Sentence: And my best advice to you, make sure that you prepare your answers in stars or one of these formats or frameworks and end your answer in a way that your interviewer asks you the question where your answer has ended.
+      Start: 694.655, End: 710.195
+    Sentence: So it's a provocative interview, and then you have your next answer also prepared.
+      Start: 710.84, End: 717.42004
+    Sentence: So that's how you will continuously answer the questions that you know in the interview and that you have prepared and add value to the conversation.
+      Start: 718.44, End: 729.245
+
+    Sentence: Right.
+      Start: 771.25, End: 771.75
+    Sentence: So when you have your past growth experiences or any projects that you have done for growth rate, You have pitched that ideas to your managers internally, led that project experiment, did something special, presented that, etcetera.
+      Start: 771.97, End: 791.71497
+    Sentence: Right?
+      Start: 791.775, End: 792.275
+    Sentence: No.
+      Start: 792.75, End: 793.25
+    Sentence: You have to bring that story into your interview as well.
+      Start: 793.31, End: 799.33
+
+    Sentence: You have to tell how are you your skills are adding value to that role.
+      Start: 799.63, End: 806.61
+    Sentence: If you have if you if you really followed my answer previously, if you have really prepared about the company, took insights about the company, understood the common questions asked, prepared those answers, and practiced the interview, that interview, that actual interview would be a deja vu moment for you.
+      Start: 807.695, End: 830.26996
+    Sentence: It it is going to be that moment that you have lived, practiced, and confidently delivered and impressed your manager to even hire or even give you a senior title to that.
+      Start: 830.88995, End: 847.065
+    Sentence: It happened to me.
+      Start: 847.065, End: 848.105
+    Sentence: It can happen to you.
+      Start: 848.105, End: 849.325
+
+    Sentence: Yeah.
+      Start: 887.64, End: 888.04
+    Sentence: So first question again, please.
+      Start: 888.04, End: 889.74
+    Sentence: Alright.
+      Start: 907.015, End: 907.515
+    Sentence: So, the first question, what technical skills do hiring managers prioritize for entry level versus senior group roles?
+      Start: 907.815, End: 916.31
+    Sentence: So for entry level, hiring managers are looking, okay, are you understanding, let's say, a part of the funnel very well, let's say acquisition or an onboarding engagement?
+      Start: 916.93, End: 927.89496
+
+    Sentence: Do you have familiarity with the tools that they are working with or a similar competitor that they are working with?
+      Start: 928.27496, End: 934.615
+    Sentence: Do you have, do you have experience in, or and some technical background which will or some know how which will enable you to capture, understand, learn, and get to speed fast with that technical because at entry level, you have to work with tools.
+      Start: 935.39496, End: 955.015
+    Sentence: And now your manager will teach you how to work with those tools.
+      Start: 955.395, End: 958.455
+    Sentence: If some of it, you will learn most of it by yourself or from your peers.
+      Start: 958.59503, End: 962.775
+    Sentence: Your manager is also able looking to figure out, are you a quick learner for those tools to have you learned many several tools before?
+      Start: 962.835, End: 971.02
+
+    Sentence: And and trust me, I have seen so many people mentioning 200 tools, 100 like, so many different tools, like, 20 tools, tools, but 20 tools into a, into the entry level CV, which if you fake it so much and it because if you know only a few tools, if your manager is going to test you for a tool which you have mentioned in the CV and you'd have or you just or or or, like a coding language and you just know how to write 3 lines of code in that specific language.
+      Start: 971.16, End: 1000.9
+    Sentence: Right?
+      Start: 1001.12, End: 1001.52
+    Sentence: Then you're gonna have on the interview.
+      Start: 1002.08, End: 1003.86
+    Sentence: So mention things that you really know, things that you are learning.
+      Start: 1004.08, End: 1008.225
+    Sentence: And if in your job description it says, hey, you need to know SQL, then do a course in SQL and know know know a few things in SQL before you go for an interview.
+      Start: 1008.225, End: 1017.985
+
+    Sentence: Right?
+      Start: 1017.985, End: 1018.35
+    Sentence: In your job description, it says, hey, they need to know a specific tool like mortgage, for example.
+      Start: 1018.43, End: 1023.88995
+    Sentence: Then you need to see what the mortgage flow supply, other competitors flow look like, and then understand those and be able to, articulate that in your conversation and interview.
+      Start: 1023.94995, End: 1037.695
+    Sentence: So knowing the tools, knowing that technical know how of the language could be, Knowing the funnel of onboarding, knowing, what goes into the customer journey.
+      Start: 1037.915, End: 1050.37
+    Sentence: What does customer journey look like?
+      Start: 1050.37, End: 1051.73
+
+    Sentence: Who is the ICP?
+      Start: 1051.73, End: 1052.7899
+    Sentence: Right?
+      Start: 1053.09, End: 1053.4099
+    Sentence: That stuff.
+      Start: 1053.4099, End: 1054.1499
+    Sentence: As in more, you move into more senior roles.
+      Start: 1054.45, End: 1057.57
+    Sentence: Right?
+      Start: 1057.57, End: 1058.055
+
+    Sentence: You're just not looking at, the roles or the tools.
+      Start: 1058.135, End: 1063.435
+    Sentence: That is like given that you have that.
+      Start: 1063.9751, End: 1066.2151
+    Sentence: Right?
+      Start: 1066.2151, End: 1066.6951
+    Sentence: But you're also looking at the business acumen.
+      Start: 1067.015, End: 1069.5951
+    Sentence: Your ability to orchestrate, communicate within the tools.
+      Start: 1069.9751, End: 1074.03
+
+    Sentence: You're looking within the company.
+      Start: 1074.35, End: 1076.5901
+    Sentence: You're also looking at your ability something opened up.
+      Start: 1076.5901, End: 1084.11
+    Sentence: Yeah.
+      Start: 1084.11, End: 1084.61
+    Sentence: Sorry.
+      Start: 1090.595, End: 1091.095
+    Sentence: Too much of moments.
+      Start: 1093.155, End: 1094.215
+
+    Sentence: Yeah.
+      Start: 1099.635, End: 1100.135
+    Sentence: Thank you.
+      Start: 1100.755, End: 1101.575
+    Sentence: It's hard to make level.
+      Start: 1119.665, End: 1120.965
+    Sentence: Yeah.
+      Start: 1121.025, End: 1121.525
+    Sentence: Yeah.
+      Start: 1121.665, End: 1122.165
+
+    Sentence: So as we move into mid level then, managers or leadership or more senior level, let's say, they are really looking at can you understand the business?
+      Start: 1170.41, End: 1181.885
+    Sentence: Do you come from the same vertical?
+      Start: 1181.885, End: 1183.4249
+    Sentence: Do you come or do you understand the metrics?
+      Start: 1183.8049, End: 1187.585
+    Sentence: Do you understand the growth model?
+      Start: 1187.6449, End: 1189.4249
+    Sentence: Do you understand the business aspect?
+      Start: 1189.485, End: 1192.6599
+
+    Sentence: Can you lead people from who are coming in from different industries?
+      Start: 1192.6599, End: 1200.2
+    Sentence: Can you hire good people?
+      Start: 1200.6599, End: 1203.3999
+    Sentence: Can you retain good people?
+      Start: 1203.46, End: 1205.0
+    Sentence: You would And from a technical standpoint, they're really looking at are you able to not just communicate with developers but have influence with your engineering counterparts?
+      Start: 1205.1399, End: 1218.045
+    Sentence: Are you able to really have, like, really able to understand business, technology, metrics, and build growth around that.
+      Start: 1219.13, End: 1235.6051
+
+    Sentence: Awesome.
+      Start: 1236.865, End: 1237.365
+    Sentence: Thank you, Saket.
+      Start: 1237.9851, End: 1239.025
+    Sentence: The next question is around a little bit more on skills.
+      Start: 1239.025, End: 1242.405
+    Sentence: I would like to understand how important is experience with data analytics and Data analytics and experimentation in growth interviews.
+      Start: 1242.625, End: 1250.66
+    Sentence: Data analytics and experimentation is super critical because when you are whether in entry level, mid level, senior level, you are always and in the growth world you are always downloaded with spreadsheets, CSV files, looking at campaign reports, looking at, like experimentation reports, looking at cohorts, looking at retention go up, like, different different things.
+      Start: 1250.66, End: 1275.705
+
+    Sentence: Right?
+      Start: 1275.705, End: 1275.9451
+    Sentence: You're looking at revenue metrics.
+      Start: 1275.9451, End: 1277.405
+    Sentence: You need to know how to do those technical analysis, understand it, and make sense out of it as to what makes sense, what needs to move, why it needs to move, and present that into a presentation format as well so that you can communicate that.
+      Start: 1278.05, End: 1297.005
+    Sentence: So it's important to understand data analytics.
+      Start: 1297.225, End: 1300.365
+    Sentence: Maybe even do an SQL query, because some of the rules require.
+      Start: 1300.905, End: 1305.325
+
+    Sentence: Maybe even know a little bit of Python or some kind of format of data.
+      Start: 1306.9199, End: 1312.7799
+    Sentence: But data analytics is super important because if you cannot communicate, if you cannot communicate with your data engineers or people who are integrating or inflow of data that's coming in or orchestrating data out or understanding data buckets, data lakes, how does data ingestion, extrapolation happens, how does pivot tables make, why do pivot which pivot tables to make, which how to filter data, how to segment data, how to make sense of data, how to communicate that data in the right way to the different stakeholders, how to place the right bets on data, then you will not succeed as as you grow up.
+      Start: 1313.1599, End: 1357.705
+    Sentence: Right?
+      Start: 1358.01, End: 1358.25
+    Sentence: Because so data analytics, very important.
+      Start: 1358.25, End: 1360.59
+    Sentence: But you do not need to be data nerd.
+      Start: 1360.89, End: 1363.15
+
+    Sentence: You need to know your stuff.
+      Start: 1363.4501, End: 1365.31
+    Sentence: You need to be you need to communicate that stuff.
+      Start: 1366.81, End: 1370.27
+    Sentence: But most importantly, if your data analytics person is telling you that information, you need to be sure that that relevant that's relevant information and what's relevant in that and being able to communicate through that.
+      Start: 1370.655, End: 1384.115
+    Sentence: Great.
+      Start: 1384.77, End: 1385.27
+    Sentence: Alright.
+      Start: 1389.5701, End: 1390.0701
+
+    Sentence: Moving to soft skills next, Saket.
+      Start: 1390.13, End: 1392.39
+    Sentence: What soft skills do hiring managers look for in candidates at different levels within growth functions?
+      Start: 1393.3301, End: 1399.1901
+    Sentence: Soft skills, it's so broad and it's so, important.
+      Start: 1402.115, End: 1407.255
+    Sentence: And at and very interestingly, as in you move move more and more upwards in your career, soft skills become more important than hard skills.
+      Start: 1407.955, End: 1417.4801
+    Sentence: Right?
+      Start: 1418.18, End: 1418.68
+
+    Sentence: So because there you need to be able to communicate.
+      Start: 1418.8201, End: 1422.52
+    Sentence: Listen.
+      Start: 1424.3401, End: 1424.8401
+    Sentence: Asking the right question is such an important soft skill.
+      Start: 1425.705, End: 1430.205
+    Sentence: Listen.
+      Start: 1431.5449, End: 1432.0449
+    Sentence: Listening and asking the right questions.
+      Start: 1432.745, End: 1436.2849
+
+    Sentence: Ability to present without us, without you knows, without telling too much information.
+      Start: 1436.985, End: 1443.74
+    Sentence: So ability to communicate to different stakeholders, getting people together to build trust, to bring accountability.
+      Start: 1445.64, End: 1453.1951
+    Sentence: And there are soft skills like, you know, how can you bring more drive motivation within the team?
+      Start: 1455.575, End: 1466.22
+    Sentence: How can you delegate things better?
+      Start: 1466.46, End: 1469.12
+    Sentence: How can you execute more efficiently?
+      Start: 1469.5, End: 1472.64
+
+    Sentence: So there are a lot of these soft skills beyond communication and presentation, which are also very important.
+      Start: 1473.5, End: 1481.84
+    Sentence: So, different industries, different types of roles, different, requires different depth of it, but soft skill is an important thing.
+      Start: 1483.015, End: 1496.39
+    Sentence: One of the coolest soft skills that I have learned in the last 6 months is remembering people's name and calling out with people's first name.
+      Start: 1496.39, End: 1506.41
+    Sentence: And trust me if you, and then saying what you want to, when you do that, A, you build trust, B, you build authority.
+      Start: 1506.925, End: 1514.225
+    Sentence: And you can get more things done with those people.
+      Start: 1514.685, End: 1517.665
+
+    Sentence: So here is one quick tip on a soft skill that I learned.
+      Start: 1518.125, End: 1523.92
+    Sentence: Awesome.
+      Start: 1524.3, End: 1524.8
+    Sentence: Trust me I've got like a lot of things with this.
+      Start: 1526.14, End: 1530.96
+    Sentence: So if I say you're doing a good job versus if I say, Shashank, you're doing a good job.
+      Start: 1531.66, End: 1539.895
+    Sentence: There's a difference.
+      Start: 1540.115, End: 1541.015
+
+    Sentence: And I've got Taj Mahi free upgrade.
+      Start: 1541.715, End: 1543.975
+    Sentence: I'm not joking.
+      Start: 1545.075, End: 1545.975
+    Sentence: 2 cottages room and all.
+      Start: 1546.195, End: 1547.5549
+    Sentence: I've got 50% discount on Leelah Palace where they give no discounts.
+      Start: 1547.5549, End: 1552.1699
+    Sentence: I've got, like, so many things.
+      Start: 1552.1699, End: 1555.21
+
+    Sentence: I've got upgrades and whatnot, but just, for example, I've got, when I if this guy name is c Sandeep or I take people's name because very few people talk to them with respect.
+      Start: 1555.21, End: 1569.6649
+    Sentence: Less than 1%.
+      Start: 1569.6649, End: 1570.565
+    Sentence: Yeah.
+      Start: 1570.625, End: 1570.945
+    Sentence: But if you do, you get so much free stuff and discounts.
+      Start: 1570.945, End: 1574.005
+    Sentence: Right.
+      Start: 1574.465, End: 1574.965
+
+    Sentence: Right.
+      Start: 1575.4249, End: 1575.9049
+    Sentence: So use the first name.
+      Start: 1575.9049, End: 1577.345
+    Sentence: That's Very important.
+      Start: 1577.345, End: 1579.01
+    Sentence: Awesome.
+      Start: 1585.87, End: 1586.37
+    Sentence: Saketed, how do hiring managers assess culture and team fit you need to use for those See, for every company, there are some cultural values.
+      Start: 1586.5901, End: 1599.235
+
+    Sentence: There are some, you know, values.
+      Start: 1599.5349, End: 1603.5549
+    Sentence: For my best example is Amazon.
+      Start: 1604.46, End: 1606.64
+    Sentence: Amazon has these, 11 Amazon leadership principles.
+      Start: 1606.7, End: 1611.36
+    Sentence: For each and every interview, they have to test people on these leadership principles, and they have to score those people on the, leadership principles.
+      Start: 1611.98, End: 1623.275
+    Sentence: So similar and 11 is a very exhaustive list and but people do that.
+      Start: 1623.3351, End: 1627.735
+
+    Sentence: Right?
+      Start: 1627.735, End: 1628.235
+    Sentence: And that's why they have, like, 5, 6 round of interviews.
+      Start: 1628.615, End: 1630.715
+    Sentence: Whereas there are some companies that have 4 and 5 or 3 or 4 and 5 generally.
+      Start: 1631.015, End: 1635.9099
+    Sentence: Right?
+      Start: 1636.0499, End: 1636.53
+    Sentence: So you need to, like and some there are some common themes in our account around ownership accountability, about customer centricity.
+      Start: 1636.53, End: 1644.39
+
+    Sentence: This is, like, very common, you know, or customer first, all that stuff.
+      Start: 1644.69, End: 1649.3451
+    Sentence: There is also very common thing around teamwork and team collaboration and team spirit and all that stuff.
+      Start: 1649.4851, End: 1655.9851
+    Sentence: So make sure your answers are like, there are stories in your answers which, which are pre prepared for these questions.
+      Start: 1656.045, End: 1666.46
+    Sentence: Because you will be tested on this.
+      Start: 1666.9199, End: 1668.6
+    Sentence: And if you're going to think of that situation on the spot and answer something, you're going to give a stupid answer.
+      Start: 1668.6, End: 1675.98
+
+    Sentence: So please prepare in advance and give an impressive answer because these questions are going to come.
+      Start: 1677.0449, End: 1683.705
+    Sentence: And so understand what and most companies these days have on their career space that what are their values.
+      Start: 1683.7649, End: 1691.27
+    Sentence: Right?
+      Start: 1691.3301, End: 1691.8301
+    Sentence: So accountability level.
+      Start: 1691.89, End: 1693.65
+    Sentence: So ask Chargegbt or Cloud AI that, hey, if these are the things, what could be the structure for questions?
+      Start: 1693.65, End: 1699.27
+
+    Sentence: You get those questions, from Chargegbt, just pick 3 from each each of these accountability.
+      Start: 1699.73, End: 1707.495
+    Sentence: Three questions from teamwork and prepare your answers for it, in STARS format or the frameworks which works best for you.
+      Start: 1707.795, End: 1714.755
+    Sentence: STARS is a great format that I love.
+      Start: 1714.755, End: 1716.535
+    Sentence: And then record that practice that in front of a camera, hear yourself out or give a mock interview to your partner, to your friend, to your mentor.
+      Start: 1717.635, End: 1731.45
+    Sentence: And once you give them, take the corporate feedback and ace the interview, get your hiring manager love you as a culture fit, you stand out from the rest.
+      Start: 1731.99, End: 1741.175
+
+    Sentence: Awesome.
+      Start: 1742.275, End: 1742.775
+    Sentence: As a follow-up to that, Satish, is there anything more you'd like to add?
+      Start: 1743.0751, End: 1746.275
+    Sentence: We'd like to understand how do hiring managers differentiate Yeah.
+      Start: 1746.275, End: 1757.37
+    Sentence: So they differentiate on technical aspect.
+      Start: 1757.37, End: 1760.3501
+    Sentence: Like you know, do you have do you understand the technical thing.
+      Start: 1760.9701, End: 1764.625
+
+    Sentence: If you come from the similar industry, competitor industry, if you have if you bring complementary skills to the team.
+      Start: 1764.625, End: 1773.6849
+    Sentence: Like when I hired like 8 people in 6 months, I was really looking at, is this person bringing something to my team which nobody else has?
+      Start: 1773.745, End: 1782.78
+    Sentence: That was, like, one question that I always answered.
+      Start: 1782.78, End: 1785.1001
+    Sentence: Right?
+      Start: 1785.1001, End: 1785.5801
+    Sentence: So everybody in my team had one unique skill which nobody else had.
+      Start: 1785.5801, End: 1790.16
+
+    Sentence: Right?
+      Start: 1790.425, End: 1790.665
+    Sentence: And which was relevant for the growth of the team, for the growth of my growth team, and bringing awesome results.
+      Start: 1790.665, End: 1798.525
+    Sentence: And now because they were bringing those unique skills, those were one of the strengths of that.
+      Start: 1798.905, End: 1803.99
+    Sentence: And I made sure that people capitalize on the strength.
+      Start: 1804.07, End: 1806.49
+    Sentence: And out of 8 people, 4 people just got promoted within a year.
+      Start: 1806.63, End: 1810.09
+
+    Sentence: Awesome.
+      Start: 1812.39, End: 1812.87
+    Sentence: Thank you, Satir.
+      Start: 1812.87, End: 1813.31
+    Sentence: Coming to the last question of the segment, and it's around feedback.
+      Start: 1813.31, End: 1814.17
+    Sentence: Feedback are super critical.
+      Start: 1830.24, End: 1831.86
+    Sentence: Most of the time when you have interviews, you don't necessarily get a feedback even if you try to get a feedback.
+      Start: 1833.04, End: 1841.06
+
+    Sentence: Right?
+      Start: 1841.36, End: 1841.68
+    Sentence: Because manager let's say if you got it if you got rejected.
+      Start: 1841.68, End: 1845.695
+    Sentence: Right?
+      Start: 1845.695, End: 1846.095
+    Sentence: You will likely not get a feedback.
+      Start: 1846.095, End: 1848.895
+    Sentence: But if if the company is too good, have time, then they may give you if you came from a referral, you may get a feedback.
+      Start: 1848.895, End: 1854.915
+
+    Sentence: But generally, you don't.
+      Start: 1855.13, End: 1856.5701
+    Sentence: Right?
+      Start: 1856.5701, End: 1856.89
+    Sentence: Your HR will give you a very general feedback, and you'll get this email that, hey.
+      Start: 1856.89, End: 1861.2101
+    Sentence: We found some suitable candidates with blah blah blah blah.
+      Start: 1861.2101, End: 1863.8501
+    Sentence: So you, your we'll keep your profile for the future.
+      Start: 1863.8501, End: 1866.91
+
+    Sentence: So so it's very important to get the feedback before you get into the interview and that is why you need mentors.
+      Start: 1867.13, End: 1874.385
+    Sentence: That is why you need interview practice.
+      Start: 1874.385, End: 1876.145
+    Sentence: That is why you need to record your answers.
+      Start: 1876.145, End: 1878.005
+    Sentence: That is why you need to practice your interviews so that you are confident what you are answering is your best version.
+      Start: 1878.225, End: 1885.2101
+    Sentence: You cannot create your best version on camera or I mean on the interview thing at that time.
+      Start: 1885.99, End: 1892.17
+
+    Sentence: So it's important, you have practice that but I used to also, like, record my interviews.
+      Start: 1892.4701, End: 1899.195
+    Sentence: That not may not be the right best way to do it, but I used to do that and learn from from that as well.
+      Start: 1899.655, End: 1907.655
+    Sentence: Great.
+      Start: 1907.815, End: 1908.315
+    Sentence: So it's a it's a thing that you can incorporate.
+      Start: 1908.375, End: 1912.6699
+    Sentence: And also, let's say if you have got your feedback if you got through a referral, right, then your referral can generally see the feedback and so you can also get get answers from your referral as to how the interview went.
+      Start: 1912.8099, End: 1926.665
+
+    Sentence: And if generally, if you go through a referral, make sure before your interview with it, just practice the interview with your referral if it's a known person.
+      Start: 1927.045, End: 1936.965
+    Sentence: Right?
+      Start: 1936.965, End: 1937.465
+    Sentence: So because referral has also has a incentive to do that because if you get hired he gets a referral or she gets a referral bonus.
+      Start: 1937.63, End: 1943.41
+    Sentence: And so why not help you get hired?
+      Start: 1944.03, End: 1946.6101
+

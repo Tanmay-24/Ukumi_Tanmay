@@ -1,0 +1,13 @@
+langchain
+langgraph
+
+openai
+tiktoken
+jsonschema
+pandas
+langchain-openai
+python-dotenv
+
+streamlit
+
+graphviz
