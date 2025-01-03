@@ -92,11 +92,13 @@ if __name__ == "__main__":
     input_video = "saket_podcast.mp4"
     output_video = "saket_podcast_edit_python_2.mp4"
     
-    with open("/home/tanmay/Downloads/processed_transcript.txt") as f:
-        timestamp_data = f.read()
-        if timestamp_data.startswith('```'):
-            timestamp_data = timestamp_data.strip('```')
-        else:
-            timestamp_data=  """10.32,18.105,18.485,155.65001 169.205,172.98,174.34,257.01 271.965,279.745,280.41998,517.14 531.125,539.865,540.77,729.245 907.815,916.31,916.93,1084.61 1586.5901,1599.235,1604.46,1691.8301 1743.0751,1746.275,1757.37,1810.09 1813.31,1814.17,1830.24,1907.815"""
+    try:
+        with open("/home/tanmay/Downloads/processed_transcript.txt") as f:
+            timestamp_data = f.read()
+            if timestamp_data.startswith('```'):
+                timestamp_data = timestamp_data.strip('```')
+    except FileNotFoundError: 
+        print("!!!!!!!!!!!! No timestamp data found in processed_transcript.txt, switching to default data !!!!!!!!!!!!!!")           
+        timestamp_data=  """10.32,18.105,18.485,155.65001 169.205,172.98,174.34,257.01 271.965,279.745,280.41998,517.14 531.125,539.865,540.77,729.245 907.815,916.31,916.93,1084.61 1586.5901,1599.235,1604.46,1691.8301 1743.0751,1746.275,1757.37,1810.09 1813.31,1814.17,1830.24,1907.815"""
     
     main(input_video, timestamp_data, output_video)
