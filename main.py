@@ -55,6 +55,9 @@ class PodcastTranscriptProcessor:
             2. Do not generate new text or modify existing content
             3. Focus on clear question-answer segments
             
+            The goal is to remove unwanted content and identify the core Q&A pairs. The transcript may contain stops between actual questions and answers. The task is to remove segments like water breaks, mic checks, and other non-Q&A content.
+            Think step by step and process the entire transcript.
+            
             Output Format:
             - Question segment with start/end timestamps
             - Answer segment with start/end timestamps
@@ -89,7 +92,7 @@ class PodcastTranscriptProcessor:
             1. Remove filler words and profanity
             2. Maintain exact timestamps
             3. Ensure question-answer alignment
-            4. Do not modify core content
+            4. Do not modify core content of the transcript
             
             Output Format:
             - Cleaned question text with original timestamps
@@ -128,7 +131,7 @@ class PodcastTranscriptProcessor:
             3. Format for video editor use
             
             Output Format:
-            question_start,question_end,answer_start,answer_end|question|answer
+            question_start,question_end,answer_start,answer_end
             """),
             ("human", "{qa_pairs}")
         ])
