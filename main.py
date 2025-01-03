@@ -258,7 +258,7 @@ def main():
         
         st.download_button(
             "Download Results",
-            data=str(final_output),
+            data=str(final_output.content),
             file_name="processed_transcript.txt",
             mime="text/plain"
         )
