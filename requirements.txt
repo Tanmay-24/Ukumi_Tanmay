@@ -11,3 +11,4 @@ python-dotenv
 streamlit
 
 graphviz
+deepgram-sdk==3.7.7

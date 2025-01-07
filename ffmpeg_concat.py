@@ -89,11 +89,11 @@ def main(input_video, timestamp_data, output_video):
     print(f"Complete! Output saved to {output_video}")
 
 if __name__ == "__main__":
-    input_video = "saket_podcast.mp4"
-    output_video = "saket_podcast_edit_python_2.mp4"
+    input_video = "817cb0da-5498-4868-bea6-a1de70217a46.mp4"
+    output_video = "new_edit_python.mp4"
     
     try:
-        with open("/home/tanmay/Downloads/processed_transcript.txt") as f:
+        with open("/home/tanmay/Downloads/selected_transcript.txt") as f:
             timestamp_data = f.read()
             if timestamp_data.startswith('```'):
                 timestamp_data = timestamp_data.strip('```')
