@@ -1,647 +1,1070 @@
-    Sentence: Responsibilities of Okay.
-      Start: 0.24, End: 5.2999997
-    Sentence: Alright.
-      Start: 6.08, End: 6.48
-    Sentence: So starting with the first start starting the segment with this question.
-      Start: 6.48, End: 9.86
-    Sentence: What are some key responsibilities of a growth manager at different career stages from entry level, mid level, right up to leadership?
-      Start: 10.32, End: 18.105
-    Sentence: Right.
-      Start: 18.485, End: 18.885
+    Sentence: I think if we back up about kind of till November 2020 sec 2022 to dispute degree, it's fantastic to view it really.
+      Start: 0.0, End: 7.9199996
+    Sentence: So it really changed the world's view of artificial intelligence, the democratization of AI.
+      Start: 7.9199996, End: 12.32
+    Sentence: Now kind of 100 of millions of people around the world were touching and feeling AI every day.
+      Start: 12.32, End: 17.564999
+    Sentence: What is the right safety framework in place that's flexible enough to allow the as much innovation as possible, but puts the guardrails in place where it's needed?
+      Start: 17.625, End: 26.345
+    Sentence: So I think over the last year, that's probably the question I've gotten most from policymakers, congressional staff, global regulators, and it's really been the subject of the first two global AI safety forums as well, which scale was a part of.
+      Start: 26.345, End: 38.92
 
-    Sentence: So when you're at the entry level, you're looking at a specific part of the growth funnel.
-      Start: 18.885, End: 24.404999
-    Sentence: It can be acquisition, retention onboarding, activation.
-      Start: 24.404999, End: 29.01
-    Sentence: Usually you're trying to do this uptake, you're gathering, you're understanding the tools, skills, you're getting a lot of inputs of what product managers are building.
-      Start: 29.550001, End: 40.05
-    Sentence: Figuring out what experiments that can be done to, you know, make this uptick.
-      Start: 40.35, End: 47.905
-    Sentence: So you are really trying to prove your heart or learn the skill of being that growth manager and try to prove with some of your experiments that you have built or campaigns that you have done or the product experimentation features that you have built.
-      Start: 48.285, End: 69.5
+    Sentence: Welcome to the regulating AI podcast.
+      Start: 40.58, End: 42.92
+    Sentence: Join host, Sanjay Puri, as he explores the dynamic and developing world of artificial intelligence governance.
+      Start: 43.475, End: 49.975
+    Sentence: Each episode features deep dives with global leaders at the forefront of regulating AI responsibly, tackling the challenges using AI can bring about head on and enabling balance without hindering innovation.
+      Start: 50.515, End: 62.309998
+    Sentence: Welcome to Regulating AI, the podcast that brings together diverse voices from around the world to discuss the critical issue of fair and responsible AI regulation on a global scale.
+      Start: 70.145, End: 81.765
+    Sentence: I'm your host, Sanjay Puri, and today we are excited to have a distinguished guest joining us to share his insights on this complex and rapidly evolving field.
+      Start: 82.08, End: 91.62
 
-    Sentence: You're trying to prove that some of them are successful and hence you're able to create an impact.
-      Start: 69.5, End: 74.295
-    Sentence: And as a new move into your mid level, you're trying to understand, not just from the one particular acquisition retention I was saying, you're also looking at the entire journey.
-      Start: 74.355, End: 84.195
-    Sentence: You're looking at how what are the big levers in the journey that is, going to have impact on, on the business.
-      Start: 84.195, End: 94.03001
-    Sentence: You're trying to also understand the p and l.
-      Start: 94.03001, End: 95.79
-    Sentence: You're trying to coach the people who have joined in entry level.
-      Start: 95.79, End: 99.71001
+    Sentence: Our guest today is Max Finkel, the head of government relations at Scale AI.
+      Start: 92.0, End: 96.58
+    Sentence: For those who might not be familiar, Scale AI is a global leader in building out high quality datasets for AI companies looking to develop, apply, and evaluate AI systems.
+      Start: 96.905, End: 108.925
+    Sentence: Max's position at the intersection of AI technology and government policy gives him a unique perspective on the challenges and opportunities in AI regulation.
+      Start: 109.384995, End: 119.12
+    Sentence: Max, welcome to regulating AI.
+      Start: 119.82, End: 121.740005
+    Sentence: We are thrilled to have you here to discuss this important topic.
+      Start: 121.740005, End: 125.44
 
-    Sentence: You're trying to also do learn about people management and spend a little bit more into hiring people management and and so on.
-      Start: 99.71001, End: 107.795
-    Sentence: You're trying to also do more interviews and things like that.
-      Start: 107.795, End: 110.695
-    Sentence: As you move you move to more towards leadership you are setting directions or strategy or the company level OKRs or like the business units of ARs or even let's say if you're a business unit head you're collaborating with other business units heads or the like this your chief growth officer or or if you're into top leadership for example and you're looking at how does the growth pillars also impact me now.
-      Start: 110.915, End: 141.095
-    Sentence: You're trying to also see how are you able to not just ensure that you're high you are growing in terms of growth, but you're also really hiring and retaining the best of talents.
-      Start: 141.095, End: 155.65001
-    Sentence: I don't see more than next one because it's one point three.
-      Start: 157.845, End: 160.585
+    Sentence: Thank you so much for having me.
+      Start: 126.455, End: 127.575005
+    Sentence: I'm excited for the conversation today.
+      Start: 127.575005, End: 129.195
+    Sentence: Wonderful.
+      Start: 130.05501, End: 130.55501
+    Sentence: Max, we have a global, listener base, policy makers, think tanks, regulators, CEOs of AI companies, AI aficionados, and others.
+      Start: 131.41501, End: 142.17
+    Sentence: For them, can you give an overview of Scale AI's role in the AI ecosystem and how it influences your perspective on AI regulation?
+      Start: 142.70999, End: 151.04999
 
-    Sentence: The next question is Yeah.
-      Start: 160.80501, End: 161.845
-    Sentence: We can do that.
-      Start: 161.845, End: 162.725
-    Sentence: Yes.
-      Start: 162.725, End: 163.125
-    Sentence: We'll probably Yeah.
-      Start: 163.125, End: 163.92502
-    Sentence: Let's get a little finish up.
-      Start: 163.92502, End: 165.30501
+    Sentence: Yeah.
+      Start: 152.125, End: 152.365
+    Sentence: Absolutely.
+      Start: 152.365, End: 152.865
+    Sentence: So as you mentioned, Skill was founded in 2016 really around looking at solving the challenge of building out high quality datasets for AI.
+      Start: 153.005, End: 161.425
+    Sentence: And so we've been building what we call the data foundry since day 1.
+      Start: 161.565, End: 165.505
+    Sentence: The early days, I was around building out high quality computer vision systems for things like autonomous vehicles and other autonomy programs.
+      Start: 165.82, End: 172.16
 
-    Sentence: Next question is, as a follow-up to the first one.
-      Start: 166.005, End: 169.205
-    Sentence: What skills are most critical for success in growth roles?
-      Start: 169.205, End: 172.98
-    Sentence: The skills, for to really go deep into the nuances of understanding the ICP, understanding the user problems, comparing it what's there in the competitors, understanding the growth model, understanding acquisitions per se, understanding how does activation, how understanding retention metrics, and most importantly, I feel like understanding how those important things lead to monetization and why do customers pay, like, how can you get your conversion rate optimized so that more customers pay?
-      Start: 174.34, End: 216.66501
-    Sentence: And how can you make customers pay even more?
-      Start: 216.965, End: 220.265
-    Sentence: So, as and and as you get to understand that more and go become an expert in even not just acquisition, but also monetization, you tend to level up in the growth, growth thing.
-      Start: 220.725, End: 239.06
+    Sentence: Moving forward a couple years in the AI development world, that became turning what we consider our quote, unquote data engine into working with companies looking to develop what's now considered generative AI systems.
+      Start: 173.26001, End: 182.32755
+    Sentence: Back in the early days, I was really doing research around things like how do we build high quality responses, more human like responses.
+      Start: 182.32755, End: 188.89584
+    Sentence: Now that's known as supervised fine tuning and reinforcement learning through human reinforcement learning through human feedback.
+      Start: 188.89584, End: 194.57999
+    Sentence: But early on, I was really developing the research techniques, which are more well known today.
+      Start: 194.57999, End: 198.5
+    Sentence: And then once we understood how to build high quality outputs, we needed to make sure that they were safe outputs, that they were reliable, that they were minimal biased, things like that.
+      Start: 198.5, End: 206.655
 
-    Sentence: But monetization can only happen when you understand retention and retention is an output metric of activation, like onboarding, engagement, and resurrection.
-      Start: 239.06, End: 249.67499
-    Sentence: So you have to understand all this thing to actually level up and you got to whom that's good.
-      Start: 249.81499, End: 257.01
-    Sentence: Awesome.
-      Start: 257.63, End: 258.03
-    Sentence: I think we can pause for now, Raju.
-      Start: 258.03, End: 259.97
-    Sentence: Cool.
-      Start: 261.79, End: 262.29
+    Sentence: And that's really how we started working on test and evaluation.
+      Start: 206.655, End: 209.395
+    Sentence: And so today, we work across the industry on those three main topics.
+      Start: 209.85501, End: 214.57501
+    Sentence: 1 is building out high quality responses.
+      Start: 214.57501, End: 216.755
+    Sentence: 2 is making responses sound very human like, and then 3 is making sure that AI systems are safe to deploy through test and evaluation.
+      Start: 217.40001, End: 224.62001
+    Sentence: And so we work really across the board with all the lead players like OpenAI, Meta, Anthropic, and and others, And we have this really cool vision because of that into what works well.
+      Start: 224.92001, End: 234.455
 
-    Sentence: Yes.
-      Start: 263.23, End: 263.63
-    Sentence: I'll get you preparation section of this particular segment.
-      Start: 263.63, End: 271.965
-    Sentence: And, Safi, the first question here is, what is the common pitfalls that candidates usually make when they prepare for group interviews?
-      Start: 271.965, End: 279.745
-    Sentence: Love the word pitfalls.
-      Start: 280.41998, End: 281.56
-    Sentence: There are so many.
-      Start: 281.62, End: 282.66
+    Sentence: How do you build a high quality AI system?
+      Start: 234.455, End: 236.55501
+    Sentence: What are the techniques you need?
+      Start: 236.615, End: 237.975
+    Sentence: What are the standards that we need to be utilizing?
+      Start: 237.975, End: 239.99501
+    Sentence: And, ultimately, how do we build safe and reliable AI systems that are ready to be deployed?
+      Start: 240.21501, End: 245.035
+    Sentence: And then the other side of the company as well is we work with governments around the world looking to deploy AI.
+      Start: 245.36, End: 249.52
 
-    Sentence: I can go on and talk about pitfalls.
-      Start: 282.66, End: 284.68
-    Sentence: But, like, there are so many but, like, very common ones that I've seen, like Like, people specifically early in their career, like, where they are just, like, applying for growth roles or new growth roles or just doing a transition.
-      Start: 285.06, End: 298.945
-    Sentence: When you're applying for these 100 jobs and you you just land up, like, some interview to you don't know when you applied for that specific role and you land at that interview and then you're like, oh, when did I apply?
-      Start: 299.24503, End: 309.77002
-    Sentence: Okay.
-      Start: 309.77002, End: 309.93002
-    Sentence: Let me Let me just give this interview.
-      Start: 309.93002, End: 311.71002
-
-    Sentence: Right?
-      Start: 311.85, End: 312.35
-    Sentence: So that's the time you just, like, go for that interview and without having downloaded yeah.
-      Start: 312.57, End: 318.97
-    Sentence: Without understanding understanding what are the metrics, without understanding the market industry and then you just go and just blabber something out and then you get rejected and then you apply for another 100 jobs.
-      Start: 318.97, End: 333.745
-    Sentence: So the first pitfall is when you apply for, when you go for an interview, please go through everything possible you can in that period of time about the company, about the growth for that company, about acquisition retention, how to for that company, about the competitive landscape, about something one insight that you can tell in that interview that will impress your manager because your manager doesn't know that.
-      Start: 334.445, End: 366.73
-    Sentence: And try to find out, that what are some of your skills, transferable skills, if you're transitioning, for example, transferable skills that you want to highlight and prepare your interviews if because I've I've seen so many people.
-      Start: 368.95, End: 384.015
-
-    Sentence: People are just coming to the interview and just like waiting for the other person to ask a question and then you're answering.
-      Start: 384.15503, End: 390.015
-    Sentence: You cannot think on the spot just like that because you're not specifically when you're transitioning, you're not wired to think in that way.
-      Start: 391.11502, End: 399.19998
-    Sentence: You're wired to think in the marketing way or the if you're into marketing mode, if you're transitioning to growth or product road, you need to be wired to think in that.
-      Start: 399.19998, End: 406.88
-    Sentence: For that, you need to prepare it.
-      Start: 406.88, End: 408.345
-    Sentence: And if you need to prepare, you need to follow STARS framework and so many other interview frameworks.
-      Start: 408.505, End: 413.165
-
-    Sentence: There are chat gbt.
-      Start: 413.225, End: 414.105
-    Sentence: There are now when there is, even interview preparation tool that will give you a question, you give answer, it'll record your answer, and we'll give you feedback about the answer.
-      Start: 414.105, End: 425.34003
-    Sentence: Use those tools.
-      Start: 425.34003, End: 426.40002
-    Sentence: So, the other is if I've seen people also, like, not knowing enough about what the role is.
-      Start: 427.42, End: 435.555
-    Sentence: They they think the role is something.
-      Start: 435.715, End: 437.07498
-
-    Sentence: They they interview for something else.
-      Start: 437.07498, End: 439.57498
-    Sentence: It also happened to me at one point.
-      Start: 440.51498, End: 442.535
-    Sentence: Uh-uh, when I interviewed for 2 roles, 1 in the morning, 1 in the afternoon, I'm confused which one was that.
-      Start: 442.675, End: 448.35
-    Sentence: Right?
-      Start: 448.75, End: 449.25
-    Sentence: So please know your roles.
-      Start: 449.31, End: 450.91
-
-    Sentence: Please know your industry competitors and find that insight and tell that insight.
-      Start: 450.91, End: 458.03
-    Sentence: Prepare your interview.
-      Start: 458.03, End: 459.07
-    Sentence: Practice your interviews.
-      Start: 459.07, End: 460.21
-    Sentence: And, and and and most importantly, I would say try to really have conversation during that interview.
-      Start: 460.83002, End: 470.405
-    Sentence: People just come, they think they're a chatbot and answer the questions.
-      Start: 470.405, End: 474.58502
-
-    Sentence: That's thought interview.
-      Start: 474.80502, End: 476.005
-    Sentence: Right?
-      Start: 476.005, End: 476.505
-    Sentence: That's like so focus on, having conversation.
-      Start: 476.725, End: 482.86002
-    Sentence: Go with at least 5 questions on your hand, that you will ask your manager in the interview.
-      Start: 483.0, End: 489.26
-    Sentence: And those 5 questions, 3 of them can be common.
-      Start: 489.32, End: 493.56
-
-    Sentence: One of my favorite questions is with the conversation that we have had so far, how do you think I fit in this now your manager will tell you how do you how do you fit in this role.
-      Start: 493.56, End: 507.185
-    Sentence: Oh, long story short, prepare your questions and, don't make don't be the same interview person, like, like the others.
-      Start: 507.185, End: 517.14
-    Sentence: Be difficult.
-      Start: 517.28, End: 518.10004
-    Sentence: Awesome.
-      Start: 519.60004, End: 520.10004
-    Sentence: Saket, the next question, is very interesting.
-      Start: 526.405, End: 529.60504
-
-    Sentence: I want to do a stand from you.
-      Start: 529.60504, End: 531.125
-    Sentence: How can candidates effectively research a company's growth strategies and initiatives before the interview, and how important is this exactly?
-      Start: 531.125, End: 539.865
-    Sentence: Let me answer the second part of the question first.
-      Start: 540.77, End: 543.57
-    Sentence: It's extremely important.
-      Start: 543.57, End: 545.19
-    Sentence: It will decide whether you will get a job and if you even if you get the job it will decide whether you will have the same amount of respect from your hiring manager when you join that company.
-      Start: 545.81, End: 560.05505
-
-    Sentence: So extremely important.
-      Start: 561.315, End: 562.59503
-    Sentence: Now how do you prepare?
-      Start: 562.59503, End: 563.815
-    Sentence: You have to start preparing for the interview even before you have, let's say, got an interview.
-      Start: 564.43506, End: 570.52
-    Sentence: Let's say if you're interested in the Fintech space, understand about the straight I used to put in Google alerts, name of the company, name of the competitors, anything that comes in Google alert about the company, I get notified about it.
-      Start: 570.52, End: 586.205
-    Sentence: And when that information comes to me on my email, I just quickly glimpse it.
-      Start: 586.205, End: 591.565
-
-    Sentence: Take one insight about that Google from that and try to write that down and think how can I incorporate in one of my answers in my interview?
-      Start: 591.565, End: 601.76
-    Sentence: I used to speak to people who were working in competitors or in the company or, in the space to practice mock interviews.
-      Start: 602.54004, End: 613.775
-    Sentence: So you have to if you're really interested, you have to know about the company.
-      Start: 614.155, End: 618.715
-    Sentence: You have to know about the competitors.
-      Start: 618.715, End: 620.175
-    Sentence: You have to know understand the the growth funnel.
-      Start: 620.235, End: 622.715
-
-    Sentence: You have to understand the thunder.
-      Start: 622.715, End: 624.335
-    Sentence: How does the company make money and how does how can you make help the company make more money?
-      Start: 624.395, End: 630.33
-    Sentence: And and you have to practice the interviews, you have to practice and and trust me, when you practice the interview by recording it and 99.9% of the people will not do this.
-      Start: 631.35, End: 643.16504
-    Sentence: If you record your answers and practice in front of mirror or even if you record your interviews, right, and, take notes of it, You will figure out that you have done so many mistakes in the interview by saying words like, you know, say so it's like, ah, oh, telling too much information rather than just getting to the point of the question.
-      Start: 643.22504, End: 665.335
-    Sentence: Not answering the question, but answering everything else that comes to your mind.
-      Start: 665.47504, End: 669.97504
-
-    Sentence: So it's very important that you, you prepare for the interview and when you your interviewer is asking you a question, when you prepare that, so your interviews when your interviewer is asking that question, you are able to understand that why that interviewer is asking that question.
-      Start: 670.03503, End: 688.77997
-    Sentence: And when you can figure that out, you can tailor your answer accordingly.
-      Start: 689.32, End: 694.06
-    Sentence: And my best advice to you, make sure that you prepare your answers in stars or one of these formats or frameworks and end your answer in a way that your interviewer asks you the question where your answer has ended.
-      Start: 694.655, End: 710.195
-    Sentence: So it's a provocative interview, and then you have your next answer also prepared.
-      Start: 710.84, End: 717.42004
-    Sentence: So that's how you will continuously answer the questions that you know in the interview and that you have prepared and add value to the conversation.
-      Start: 718.44, End: 729.245
-
-    Sentence: Right.
-      Start: 771.25, End: 771.75
-    Sentence: So when you have your past growth experiences or any projects that you have done for growth rate, You have pitched that ideas to your managers internally, led that project experiment, did something special, presented that, etcetera.
-      Start: 771.97, End: 791.71497
-    Sentence: Right?
-      Start: 791.775, End: 792.275
+    Sentence: So we're able to bring our best in class commercial technology to government stakeholders.
+      Start: 249.52, End: 253.38
+    Sentence: And so we have a really cool vision into what works well in the AI system.
+      Start: 253.6, End: 256.9
+    Sentence: We we'd like to think that we're kind of the Switzerland and that we work with everyone, but it's really cool because from a policy standpoint, what that means is we just know what works well.
+      Start: 257.12, End: 265.455
+    Sentence: It doesn't matter to us, what exactly the model looks like, but what matters is that we're building out high quality safe AI systems.
+      Start: 265.455, End: 273.07498
     Sentence: No.
-      Start: 792.75, End: 793.25
-    Sentence: You have to bring that story into your interview as well.
-      Start: 793.31, End: 799.33
+      Start: 274.4, End: 274.72
 
-    Sentence: You have to tell how are you your skills are adding value to that role.
-      Start: 799.63, End: 806.61
-    Sentence: If you have if you if you really followed my answer previously, if you have really prepared about the company, took insights about the company, understood the common questions asked, prepared those answers, and practiced the interview, that interview, that actual interview would be a deja vu moment for you.
-      Start: 807.695, End: 830.26996
-    Sentence: It it is going to be that moment that you have lived, practiced, and confidently delivered and impressed your manager to even hire or even give you a senior title to that.
-      Start: 830.88995, End: 847.065
-    Sentence: It happened to me.
-      Start: 847.065, End: 848.105
-    Sentence: It can happen to you.
-      Start: 848.105, End: 849.325
+    Sentence: That's great.
+      Start: 274.72, End: 275.46
+    Sentence: You are the Switzerland of, AI systems, and you obviously work across with the government, with companies like OpenAI, Meta, and others.
+      Start: 275.84, End: 284.34
+    Sentence: So you have a unique perspective, Max.
+      Start: 284.88, End: 287.19998
+    Sentence: So for our listeners, can you give them a view as to what you think are the most pressing challenges that face policymakers when it comes to regulating AI?
+      Start: 287.19998, End: 297.175
+    Sentence: Yeah.
+      Start: 298.275, End: 298.595
+
+    Sentence: Absolutely.
+      Start: 298.595, End: 299.07498
+    Sentence: And it's such a critical topic for us to discuss.
+      Start: 299.07498, End: 301.735
+    Sentence: I think if we back up about kind of till November 2020 sec 2022 to dispute agreement, it's fantastic that he was released.
+      Start: 301.98, End: 309.90002
+    Sentence: And it really changed the world's view of artificial intelligence.
+      Start: 309.90002, End: 312.64
+    Sentence: And I think you saw governments around the world saying, okay.
+      Start: 312.7, End: 314.78
+
+    Sentence: We have to understand this technology and how to regulate it.
+      Start: 314.78, End: 317.505
+    Sentence: And so, historically, we've actually used AI in a lot of ways since the Turing test in 19 fifties.
+      Start: 317.585, End: 323.045
+    Sentence: And what that's meant is that industries like financial services or the housing sector or others have started to use AI in various fashions.
+      Start: 323.105, End: 330.405
+    Sentence: And so some of the regulatory regimes actually already encompass that into the regulations.
+      Start: 330.7, End: 334.48
+    Sentence: However, what was new was generative AI systems, the democratization of AI, and now kind of hundreds of millions of people around the world were touching and feeling AI every day.
+      Start: 335.02002, End: 344.32
+
+    Sentence: And so what we were getting asked first and foremost was how do we know this AI is safe to deploy?
+      Start: 344.495, End: 349.155
+    Sentence: What is the right safety framework in place?
+      Start: 349.375, End: 351.795
+    Sentence: But how do we not put in such an over system where we're burdening this technology?
+      Start: 351.855, End: 356.995
+    Sentence: We need to enable innovation.
+      Start: 357.135, End: 358.415
+    Sentence: We have to allow the next model to come out and really continue to move forward the AI ecosystem.
+      Start: 358.415, End: 364.02
+
+    Sentence: And so I think the biggest question, and obviously happy to talk further about some of our views on it, is how do we ensure that AI is the regulatory regime you put in?
+      Start: 364.31998, End: 373.655
+    Sentence: It's flexible enough to allow the as much innovation as possible, but puts the guardrails in place where it's needed.
+      Start: 373.655, End: 380.07498
+    Sentence: And it's so important because I think what we're seeing is everyone's developing the next generation of AI.
+      Start: 380.455, End: 385.01498
+    Sentence: We're building out more capable models.
+      Start: 385.01498, End: 386.935
+    Sentence: We're building out high higher quality systems.
+      Start: 386.935, End: 389.35
+
+    Sentence: We're seeing the leading companies looking to deploy AI for all the benefits that it brings.
+      Start: 389.49002, End: 393.59
+    Sentence: But at the end of the day, we have to make sure that this AI is safe to deploy and that we put the right regulatory framework in place for that.
+      Start: 393.65, End: 400.15
+    Sentence: So you touched on an important, topic, Max, and we've had many, many members of congress and the senate on our show, and we've had, companies, civil liberty, leaders, etcetera.
+      Start: 401.095, End: 413.995
+    Sentence: And the issue is how do you maintain the force of innovation for good and balance, AI regulation?
+      Start: 414.53497, End: 423.81998
+    Sentence: What are your views?
+      Start: 424.36, End: 425.63998
+
+    Sentence: You kind of touched upon that a little bit.
+      Start: 425.63998, End: 427.87997
+    Sentence: How do you strike this balance between innovation and ensuring responsible development of AI and deployment?
+      Start: 427.87997, End: 434.955
+    Sentence: Yeah.
+      Start: 436.455, End: 436.695
+    Sentence: Absolutely.
+      Start: 436.695, End: 437.195
+    Sentence: So I think over the last year, that's probably the question I've gotten most from policymakers, congressional staff, global regulators, and it's really been the subject of the first 2 global AI safety forms as well which scale was a part of.
+      Start: 437.255, End: 449.88998
+
+    Sentence: It's how do we balance those two things?
+      Start: 450.27, End: 452.35
+    Sentence: And I think from our point of view, it doesn't have to be trade offs.
+      Start: 452.35, End: 455.22998
+    Sentence: We can do both.
+      Start: 455.22998, End: 456.19
+    Sentence: And so I think when we've talked to policymakers, it's looking at both sector specific and risk based regulations.
+      Start: 456.19, End: 461.81
+    Sentence: And so to go into what that means, sector specific, it's understanding the how you look at what the technology you've been used for.
+      Start: 462.565, End: 470.745
+
+    Sentence: And so looking based off the use of the technology, not regulating the fundamental technology itself.
+      Start: 470.885, End: 475.785
+    Sentence: And so, for example, if it wants to be used in the financial sector, the regulator of the financial sector should be setting the regulation around that.
+      Start: 475.99, End: 482.06998
+    Sentence: If it wants to be used in the health sector, the regulator looking who has jurisdiction of the health sector should.
+      Start: 482.06998, End: 487.59
+    Sentence: And the reason why this is important is 2 fold in our opinion.
+      Start: 487.59, End: 490.215
+    Sentence: 1, re ensuring regulatory consistency, because as I mentioned, industries have been using AI for years.
+      Start: 490.275, End: 495.875
+
+    Sentence: And so, for example, in the financial service industry, the regulatory framework actually is flexible enough to encompass AI in a lot of places.
+      Start: 495.875, End: 502.595
+    Sentence: So we might not need new regulations.
+      Start: 502.595, End: 504.055
+    Sentence: Or if there's gaps, we have to fill those gaps in, but it's really important for the regulator in charge of that kind of specific sector has jurisdiction over it.
+      Start: 504.67, End: 513.55
+    Sentence: And then risk based, you've probably heard a few times as well.
+      Start: 513.55, End: 516.19
+    Sentence: What that means to us is that not all activities can be looked at the same, and so back office function might not be as risky as using a large language model for cancer diagnosis or something like that.
+      Start: 516.19, End: 527.705
+
+    Sentence: That's a lot riskier because, obviously, it brings in medical advice.
+      Start: 527.705, End: 531.865
+    Sentence: It brings in things that can, harm people's health.
+      Start: 531.865, End: 534.585
+    Sentence: And so it's really critical, in our opinion, that both we get to the sector specific regulations as well as risk based approaches.
+      Start: 534.585, End: 542.42
+    Sentence: And then ultimately, we also have to look at the existing regulatory framework because as I mentioned, AI is ubiquitous.
+      Start: 542.56, End: 547.45996
+    Sentence: It's been around for a long time.
+      Start: 547.51996, End: 548.895
+
+    Sentence: And we have to understand where new regulations are needed and where the existing framework might work, or maybe it's just updating the existing regulations to say, if it's illegal to do by a human, it's illegal to do with AI.
+      Start: 549.375, End: 560.73505
+    Sentence: But it's really important that we take the time to understand what are the gaps are in the system and then ultimately how to best fill in those gaps.
+      Start: 560.73505, End: 567.78
+    Sentence: So, Max, just, to, make it clear to our listeners, you are saying that we should have industry specific, regulation, and if there are some gaps, then we could have legislation around that.
+      Start: 568.96, End: 584.295
+    Sentence: Correct?
+      Start: 584.295, End: 584.795
+    Sentence: Yeah.
+      Start: 586.375, End: 586.695
+
+    Sentence: I think from our perspective, we have an existing framework that needs to better understand where it falls short for AI.
+      Start: 586.695, End: 593.5
+    Sentence: And so first and foremost, it's looking at the existing system and doing a thorough gap analysis to better understand where it might fall short.
+      Start: 593.5, End: 600.62
+    Sentence: And the truth is that a lot of the regulations we have were written decades ago before AI was really envisioned, so there might be gaps.
+      Start: 600.62, End: 607.02496
+    Sentence: And so let's go fill in those gaps in the best way possible through, to your point, sector specific regulations.
+      Start: 607.325, End: 612.545
+    Sentence: Mhmm.
+      Start: 612.925, End: 613.165
+
+    Sentence: And then it might be as simple as the regulator saying, you know what?
+      Start: 613.165, End: 615.96497
+    Sentence: If it's illegal to commit in certain random prime by a human, it's also illegal to do that with AI.
+      Start: 615.96497, End: 621.93994
+    Sentence: In other cases, it might be, you know what?
+      Start: 622.0, End: 623.75995
+    Sentence: We don't actually have a framework in place that could work for AI, so you have to go write one.
+      Start: 623.75995, End: 627.51996
+    Sentence: But until we understand what those gaps are, it's really hard to start filling those in.
+      Start: 627.51996, End: 631.54
+
+    Sentence: Okay.
+      Start: 632.935, End: 633.435
+    Sentence: So given that, Max, are there any specific areas of AI application that you believe require more urgent or stringent regulation?
+      Start: 633.655, End: 643.255
+    Sentence: I mean, you talked about health care, cancer, etcetera.
+      Start: 643.255, End: 645.675
+    Sentence: So do you think health care, national security I mean, you work across many, many different areas.
+      Start: 645.735, End: 651.97003
+    Sentence: So for our listeners, can you identify some specific areas of application that require more urgent regulation?
+      Start: 651.97003, End: 658.71
 
     Sentence: Yeah.
-      Start: 887.64, End: 888.04
-    Sentence: So first question again, please.
-      Start: 888.04, End: 889.74
-    Sentence: Alright.
-      Start: 907.015, End: 907.515
-    Sentence: So, the first question, what technical skills do hiring managers prioritize for entry level versus senior group roles?
-      Start: 907.815, End: 916.31
-    Sentence: So for entry level, hiring managers are looking, okay, are you understanding, let's say, a part of the funnel very well, let's say acquisition or an onboarding engagement?
-      Start: 916.93, End: 927.89496
+      Start: 660.295, End: 660.615
+    Sentence: I think at a high level, one of the most important things that we as a company need who performs test and evaluations are the safety metrics.
+      Start: 660.615, End: 668.535
+    Sentence: And what I mean by that is, for example, when we do test evaluations for companies today, we can understand the vulnerability as a model.
+      Start: 668.535, End: 675.93
+    Sentence: We can understand the strength of the model.
+      Start: 675.93, End: 677.69
+    Sentence: But what we don't have, and this is a role for the government to play, is exactly how the test should be structured.
+      Start: 677.69, End: 684.19
 
-    Sentence: Do you have familiarity with the tools that they are working with or a similar competitor that they are working with?
-      Start: 928.27496, End: 934.615
-    Sentence: Do you have, do you have experience in, or and some technical background which will or some know how which will enable you to capture, understand, learn, and get to speed fast with that technical because at entry level, you have to work with tools.
-      Start: 935.39496, End: 955.015
-    Sentence: And now your manager will teach you how to work with those tools.
-      Start: 955.395, End: 958.455
-    Sentence: If some of it, you will learn most of it by yourself or from your peers.
-      Start: 958.59503, End: 962.775
-    Sentence: Your manager is also able looking to figure out, are you a quick learner for those tools to have you learned many several tools before?
-      Start: 962.835, End: 971.02
+    Sentence: Meaning, how good is good enough?
+      Start: 684.57, End: 686.01
+    Sentence: How safe is safe enough?
+      Start: 686.01, End: 687.05
+    Sentence: How accurate does it need to be, etcetera?
+      Start: 687.05, End: 688.83
+    Sentence: And that is a role where the regulator has to help us because they're the only ones who can determine that.
+      Start: 689.22504, End: 694.585
+    Sentence: And the truth is that that bar might be different in different parts of the world, but ultimately, it's the role of the government to settle what we believe are the safety metrics, and then we have to write standards.
+      Start: 694.585, End: 704.36
 
-    Sentence: And and trust me, I have seen so many people mentioning 200 tools, 100 like, so many different tools, like, 20 tools, tools, but 20 tools into a, into the entry level CV, which if you fake it so much and it because if you know only a few tools, if your manager is going to test you for a tool which you have mentioned in the CV and you'd have or you just or or or, like a coding language and you just know how to write 3 lines of code in that specific language.
-      Start: 971.16, End: 1000.9
-    Sentence: Right?
-      Start: 1001.12, End: 1001.52
-    Sentence: Then you're gonna have on the interview.
-      Start: 1002.08, End: 1003.86
-    Sentence: So mention things that you really know, things that you are learning.
-      Start: 1004.08, End: 1008.225
-    Sentence: And if in your job description it says, hey, you need to know SQL, then do a course in SQL and know know know a few things in SQL before you go for an interview.
-      Start: 1008.225, End: 1017.985
+    Sentence: Standards are something where we desperately need them for things like test and evaluation and other pieces of that, and there's some amazing work going on at groups like NIST and, and IEEE and other standard setting bodies.
+      Start: 704.36, End: 715.25995
+    Sentence: But those are really the low hanging fruit things that will then underpin the rest of the regulatory framework.
+      Start: 715.385, End: 720.285
+    Sentence: You talked about, a very important area.
+      Start: 722.425, End: 724.90497
+    Sentence: You said standard setting.
+      Start: 724.90497, End: 726.345
+    Sentence: NIST has done that.
+      Start: 726.585, End: 727.8
 
-    Sentence: Right?
-      Start: 1017.985, End: 1018.35
-    Sentence: In your job description, it says, hey, they need to know a specific tool like mortgage, for example.
-      Start: 1018.43, End: 1023.88995
-    Sentence: Then you need to see what the mortgage flow supply, other competitors flow look like, and then understand those and be able to, articulate that in your conversation and interview.
-      Start: 1023.94995, End: 1037.695
-    Sentence: So knowing the tools, knowing that technical know how of the language could be, Knowing the funnel of onboarding, knowing, what goes into the customer journey.
-      Start: 1037.915, End: 1050.37
-    Sentence: What does customer journey look like?
-      Start: 1050.37, End: 1051.73
+    Sentence: UK has this whole safety body, and then there are others.
+      Start: 728.36, End: 732.7
+    Sentence: What is your view in terms of a global framework?
+      Start: 734.68, End: 737.98
+    Sentence: You know, companies like you are working globally.
+      Start: 738.27997, End: 740.7
+    Sentence: OpenAI is working globally.
+      Start: 740.92, End: 742.77997
+    Sentence: Other companies and we've had leaders of other companies who work across countries.
+      Start: 743.695, End: 748.835
 
-    Sentence: Who is the ICP?
-      Start: 1051.73, End: 1052.7899
-    Sentence: Right?
-      Start: 1053.09, End: 1053.4099
-    Sentence: That stuff.
-      Start: 1053.4099, End: 1054.1499
-    Sentence: As in more, you move into more senior roles.
-      Start: 1054.45, End: 1057.57
-    Sentence: Right?
-      Start: 1057.57, End: 1058.055
+    Sentence: You know, we the EU AI Act has come in.
+      Start: 749.855, End: 752.975
+    Sentence: Now the US is working on things.
+      Start: 752.975, End: 754.575
+    Sentence: The China China is working on things.
+      Start: 754.575, End: 756.6
+    Sentence: So talk about, either standards or, some level of harmonization.
+      Start: 756.83997, End: 761.5
+    Sentence: What do you believe is the need of the day?
+      Start: 762.19995, End: 764.75995
 
-    Sentence: You're just not looking at, the roles or the tools.
-      Start: 1058.135, End: 1063.435
-    Sentence: That is like given that you have that.
-      Start: 1063.9751, End: 1066.2151
-    Sentence: Right?
-      Start: 1066.2151, End: 1066.6951
-    Sentence: But you're also looking at the business acumen.
-      Start: 1067.015, End: 1069.5951
-    Sentence: Your ability to orchestrate, communicate within the tools.
-      Start: 1069.9751, End: 1074.03
-
-    Sentence: You're looking within the company.
-      Start: 1074.35, End: 1076.5901
-    Sentence: You're also looking at your ability something opened up.
-      Start: 1076.5901, End: 1084.11
+    Sentence: Is there some kind of a global standards or, harmonization of rules or collaboration that is necessary?
+      Start: 764.75995, End: 771.89996
     Sentence: Yeah.
-      Start: 1084.11, End: 1084.61
-    Sentence: Sorry.
-      Start: 1090.595, End: 1091.095
-    Sentence: Too much of moments.
-      Start: 1093.155, End: 1094.215
+      Start: 774.575, End: 774.895
+    Sentence: It's a it's a critical topic, and I think we've seen a lot happen in the past few months on this.
+      Start: 774.895, End: 780.115
+    Sentence: I think if we kinda back up to the Bletchley Summit in the UK, that's really where we started to understand the AI safety institutes.
+      Start: 780.175, End: 785.875
+    Sentence: We saw the UK announce theirs.
+      Start: 786.015, End: 787.35004
+
+    Sentence: The US did shortly thereafter.
+      Start: 787.35004, End: 788.47003
+    Sentence: We now have, I think, 10 or so around the world really working together at the Korea summit over the past few months.
+      Start: 788.47003, End: 794.55005
+    Sentence: We actually saw an announcement of a network of international safety institutes.
+      Start: 794.55005, End: 797.77
+    Sentence: And that's a really powerful tool because I think what we've seen is that we have to work together around the world to get this technology right because to your point, companies wanna move their technology around the world.
+      Start: 797.99005, End: 808.78503
+    Sentence: Then I think there's an important question to answer on what ultimately needs to be harmonized and where will governments kind of go into their own direction.
+      Start: 808.84503, End: 815.55
+
+    Sentence: I think from our perspective, we already have seen frameworks in other industries that work pretty well.
+      Start: 815.79, End: 820.61
+    Sentence: And so MyPass comes from aviation, and in aviation, we have what they're called bilateral aviation safety agreements.
+      Start: 820.83, End: 825.97
+    Sentence: And there's more than 45 of them that the US are entered into.
+      Start: 826.35, End: 829.545
+    Sentence: And what that says is that if the FAA or the US regulator does the work, another government will kind of understand that the FAA is the regulator, and they'll take that work.
+      Start: 829.545, End: 839.38495
+    Sentence: However, what that doesn't say is it's 1 to 1 harmonization of that.
+      Start: 839.38495, End: 842.845
+
+    Sentence: And so if a government says, you know what?
+      Start: 842.85, End: 844.69
+    Sentence: We don't think that this test was good enough for us.
+      Start: 844.69, End: 847.41
+    Sentence: They have the right to perform a new test.
+      Start: 847.41, End: 849.73
+    Sentence: But what it does is it gives you, like, 85 to 90% of the way there, and then each regulator ultimately understands what works best for them.
+      Start: 849.73, End: 857.17
+    Sentence: And I think what we're seeing is a similar forum play out in AI.
+      Start: 857.17, End: 860.625
+
+    Sentence: We saw the announcement between the US and the UK that they would honor each other's tests, which is great.
+      Start: 860.625, End: 866.16504
+    Sentence: But I think the what underpins all this is gets back to what we're talking about a second ago, which is the need for standards.
+      Start: 866.385, End: 871.82
+    Sentence: We need globally harmonized standards because that will underpin all of these agreements.
+      Start: 872.2, End: 876.46
+    Sentence: And right now, they're they're still in development.
+      Start: 876.84, End: 878.76
+    Sentence: And so I think from a a global standpoint, each regulator can understand what works best for them, but what's critical is that we're working off the same standards.
+      Start: 878.76, End: 886.735
+
+    Sentence: We're working off the same frameworks so that we can make this process as smooth as possible for companies.
+      Start: 886.735, End: 891.71497
+    Sentence: So, I think you talked about how, there can be standard settings.
+      Start: 893.295, End: 897.74
+    Sentence: You talked about FAA from your aviation background.
+      Start: 897.74, End: 900.7
+    Sentence: We've discussed in health, FDA, etcetera.
+      Start: 900.7, End: 903.76
+    Sentence: Max, I asked this also of a lot of our, you know, members of congress, leaders from the EU, etcetera.
+      Start: 904.54, End: 911.76
+
+    Sentence: Is there a need for a standard regulatory body for AI independent regulatory body like an FAA or an FDA or something of that nature?
+      Start: 912.365, End: 924.625
+    Sentence: In our opinion, we we don't think that there is.
+      Start: 925.97, End: 930.12994
+    Sentence: And the reason why I say that is that it gets back to how ubiquitous this technology is.
+      Start: 930.12994, End: 934.76996
+    Sentence: And so if you look at that, it means that it's gonna be encompassed in pretty much everything we do moving forward.
+      Start: 934.76996, End: 940.47
+    Sentence: Everything from kind of, like, the suggested movies you should watch on Netflix down to use of a large language model for an enterprise context.
+      Start: 940.675, End: 946.935
+
+    Sentence: And so it gets back to these sector specific regulations that we were talking about before where each regulator is gonna have to understand how this will factor into their own jurisdiction.
+      Start: 946.995, End: 956.135
+    Sentence: There will be a need for a centralized body of some kind, and we're seeing NIST start to write frameworks for that.
+      Start: 956.64996, End: 962.02997
+    Sentence: But every government stakeholder is a part of those discussions, which is critical.
+      Start: 962.17, End: 966.19
+    Sentence: And then once we get those standards, people understand how that factors into their own regulatory framework.
+      Start: 966.41, End: 972.19
+    Sentence: But what's important from our standpoint is that we're having those communications across government agencies.
+      Start: 972.33, End: 977.205
+
+    Sentence: We're understanding the picture of the technology.
+      Start: 977.34503, End: 979.36505
+    Sentence: And then ultimately, as we talked about, it's about understanding the regulatory framework as it is today, where gaps exist and how to best fill those gaps in.
+      Start: 979.66504, End: 987.91
+    Sentence: And that's where the agencies in charge of its sector jurisdiction are gonna really have a strong role to play, better understanding what works best for them.
+      Start: 987.91, End: 996.01
+    Sentence: Okay.
+      Start: 996.995, End: 997.315
+    Sentence: So agencies, because as you said, it's really across the board, and agencies kind of have to determine where the gap is.
+      Start: 997.315, End: 1005.815
+
+    Sentence: So, some of the policy makers that we interacted, one of the questions that came up, for you, Max, was this.
+      Start: 1006.115, End: 1013.43
+    Sentence: Are there any potential unintended consequences of AI regulation that policy makers should be aware of?
+      Start: 1013.64996, End: 1020.63
+    Sentence: Yeah.
+      Start: 1021.56995, End: 1021.97
+    Sentence: So I think the most important one is doing too much too soon.
+      Start: 1021.97, End: 1026.7949
+    Sentence: And so I think what we talked about before is it's absolutely critical that we get the safety framework right.
+      Start: 1026.855, End: 1031.255
+
+    Sentence: It's absolutely critical that we write standards.
+      Start: 1031.255, End: 1033.1749
+    Sentence: It's absolutely critical that we invest in implementing the technology from the government standpoint and where there are our research and development gaps, working to pull those together and fund them where necessary.
+      Start: 1033.1749, End: 1045.0901
+    Sentence: I think on the flip side of that, though, we can also do too much too soon and cut out the regulatory framework that stifles the technology.
+      Start: 1045.63, End: 1052.37
+    Sentence: And what's absolutely imperative to us is it gets back to kind of what our north star is, which is building a system that's flexible enough to allow for as much innovation as possible so that we as the United States can build the best technology in the world and export that technology to our allies.
+      Start: 1052.5901, End: 1067.31
+    Sentence: And then it also puts in place the guardrails where it's necessary.
+      Start: 1067.6901, End: 1070.8301
+
+    Sentence: And so I think if we keep that north star in mind, we can we can put in place a priority policy framework.
+      Start: 1070.97, End: 1076.11
+    Sentence: So, your perspective is let's not do too much too soon.
+      Start: 1076.89, End: 1081.13
+    Sentence: Put guardrails and standards.
+      Start: 1081.13, End: 1082.625
+    Sentence: Standards, I think, you're saying are really some of the most critical aspects.
+      Start: 1082.705, End: 1086.965
+    Sentence: Max, you work, your background is on the hill.
+      Start: 1087.745, End: 1091.445
+
+    Sentence: There have been over 100, bills, that have come across in congress.
+      Start: 1091.505, End: 1096.085
+    Sentence: We are also in an election year, so you know how, things are in Washington.
+      Start: 1097.2799, End: 1101.7
+    Sentence: Senator Schumer had these important forums, some of which you were, when I say scale was Scale AI was part of, etcetera.
+      Start: 1103.9199, End: 1112.735
+    Sentence: But the end of those forums that he led with senator Young, senator Heinrich, and, you know, senator Rounds, they basically ended up saying that, AI is a national security issue, and we need more funding and we can't fall behind, some of our other other countries like China, etcetera.
+      Start: 1113.1951, End: 1138.4099
+    Sentence: What is your view on so many different bills that happen?
+      Start: 1139.03, End: 1144.5751
+
+    Sentence: And, obviously, we are not gonna see any large specific, legislation that happens in all these insight forums.
+      Start: 1146.175, End: 1154.995
+    Sentence: And, also, the other question which I happened to ask, senator Rounds was on our podcast just a few days ago.
+      Start: 1155.4, End: 1162.54
+    Sentence: Do you think there's a need for a comprehensive AI, legislation like the EU has just passed?
+      Start: 1163.56, End: 1170.14
+    Sentence: Yeah.
+      Start: 1171.675, End: 1171.915
+    Sentence: So there's obviously a lot to unpack in the in that.
+      Start: 1171.915, End: 1174.235
+
+    Sentence: So I I'll try and take all of it, and if I if I least not, please let me know.
+      Start: 1174.235, End: 1177.8551
+    Sentence: So I think at a high level, leader Schumer, I think, really did an amazing thing, which was saying, before we legislate this, we have to learn about it.
+      Start: 1178.0751, End: 1187.49
+    Sentence: And so they had those 9 AI insight forms as you mentioned, and obviously behind the scenes with staff are meeting with thousands of stakeholders and still do every day to really understand the technology.
+      Start: 1187.49, End: 1196.93
+    Sentence: And I think what they realized when they started unpacking it is how complicated AI is because it's, like we talked about, ubiquitous.
+      Start: 1196.93, End: 1202.845
+    Sentence: It's gonna be a part of everything.
+      Start: 1202.845, End: 1204.225
+
+    Sentence: It's arguably the most important technological innovation of our time, and so we have to get the regulatory framework right.
+      Start: 1204.525, End: 1210.545
+    Sentence: And I think continuing to engage with leaders like senator Rounds, senator Hanrick, senator Yang, leader Schumer, and then in the house, you have congressman Olbernaty, congressman Beyer, congressman Liu, and I don't wanna keep going because we can name so many amazing people who are leading the charge on this.
+      Start: 1210.685, End: 1224.8099
+    Sentence: But I think what they've recognized is that it is complicated.
+      Start: 1224.87, End: 1227.69
+    Sentence: It's hard.
+      Start: 1227.75, End: 1228.47
+    Sentence: And then in the congress, it also touches the many committees of jurisdiction.
+      Start: 1228.47, End: 1232.25
+
+    Sentence: And so there's something like 8 to 10 committees who have a piece of the AI puzzle.
+      Start: 1232.6951, End: 1236.7151
+    Sentence: And so as leader Schumer put his his road map together, I think they rightly recognize the global competition right now that we're in.
+      Start: 1237.175, End: 1244.855
+    Sentence: Around the world, we're seeing kind of every country look to have the leading AI systems.
+      Start: 1244.855, End: 1249.76
+    Sentence: And from a national security perspective, it's critical that we do that here in the United States.
+      Start: 1249.76, End: 1253.78
+    Sentence: We're seeing China invest 1,000,000,000 of dollars a year into AI, probably tens of $1,000,000,000 a year in AI.
+      Start: 1253.92, End: 1259.805
+
+    Sentence: They're spending at least $2,000,000,000 on AI data this year alone.
+      Start: 1259.9651, End: 1264.2251
+    Sentence: I think we've seen the launch of hundreds of large language models now.
+      Start: 1264.3651, End: 1267.645
+    Sentence: And those models, if you look at it, are are getting to the top of the leaderboards.
+      Start: 1267.645, End: 1271.1051
+    Sentence: And so I think they rightly recognize it's imperative that the United States wins this race for AI.
+      Start: 1271.3251, End: 1276.3
+    Sentence: And so there's a lot of different ways we can look at that.
+      Start: 1276.3, End: 1278.6201
+
+    Sentence: And so from the national security lens, it's about implementing AI.
+      Start: 1278.6201, End: 1281.92
+    Sentence: It's about spending money on foundational elements like data to better understand how we can then go scale AI programs.
+      Start: 1282.14, End: 1288.975
+    Sentence: From the consumer side, it's putting in place that framework we're talking about before that allows for innovation, but puts in place direct guardrails.
+      Start: 1290.3151, End: 1298.555
+    Sentence: And so I think everyone has been committed to US leadership and AI, and then we've seen a lot of really good ideas get out there.
+      Start: 1298.555, End: 1304.55
+    Sentence: As you mentioned, there's probably over a 100 bills now of various fashions.
+      Start: 1304.55, End: 1308.55
+
+    Sentence: A lot of them look to target similar things.
+      Start: 1308.55, End: 1311.37
+    Sentence: And so then it's okay.
+      Start: 1311.51, End: 1312.87
+    Sentence: Like, where is the right time for legislation?
+      Start: 1312.87, End: 1314.97
+    Sentence: In our opinion, in a scale, it's getting the safety framework right.
+      Start: 1315.745, End: 1319.1051
+    Sentence: We have to get the right approach to safety down and do it in a good way, and we're we're very committed to doing so.
+      Start: 1319.1051, End: 1324.625
+
+    Sentence: And then it's also how do we make better use of data?
+      Start: 1324.625, End: 1327.2051
+    Sentence: The government produces a ton of data every day that goes wasted for AI.
+      Start: 1327.3451, End: 1331.3999
+    Sentence: And so if you look at the Department of Defense, for example, we found that in today's terms, they're creating 1 petabyte of data a day.
+      Start: 1331.7, End: 1338.6
+    Sentence: That is a massive tool for 1 department.
+      Start: 1338.6599, End: 1341.32
+    Sentence: And so how do we harness all of that data to become useful for AI systems?
+      Start: 1341.7, End: 1345.945
+
+    Sentence: What we've seen is that the leading tech giants, the OpenAI's, the Google's, the Meta's, are spending 1,000,000,000 of dollars a year on data because they understand that's what builds high quality systems.
+      Start: 1345.945, End: 1354.9249
+    Sentence: And so how do we now get the US government to harness the power of their data for the highest quality AI systems as well?
+      Start: 1355.065, End: 1362.1699
+    Sentence: So, I think, Max, you you have really touched upon a few important points.
+      Start: 1363.99, End: 1369.11
+    Sentence: What your point was that, these insight forms really helped in educating, senators and members of congress across the board, because that's also very, very important.
+      Start: 1369.11, End: 1381.365
+    Sentence: And I think what you're saying is safety standards are very, very critical.
+      Start: 1381.665, End: 1385.99
+
+    Sentence: One of the, questions that keeps coming up from, policymakers and regulators is how do they keep up with the rapid pace, of AI technology?
+      Start: 1386.53, End: 1397.81
+    Sentence: I mean, there's things happening on a day to day basis.
+      Start: 1397.81, End: 1400.8351
+    Sentence: Remember, these regulators are dealing with, Ukraine the same day.
+      Start: 1400.8351, End: 1404.755
+    Sentence: They are dealing with, you know, Hamas and Gaza and border security and everything else that goes on.
+      Start: 1404.755, End: 1411.5751
+    Sentence: How do you keep up?
+      Start: 1411.78, End: 1413.22
+
+    Sentence: And if they put in some kind of a regulation, how is it gonna, manage what 6 months or 12 months down the road is gonna be a completely different landscape, Max?
+      Start: 1413.22, End: 1423.72
+    Sentence: Yeah.
+      Start: 1424.02, End: 1424.26
+    Sentence: I think this is a really difficult topic to to get on top of, and the reason for it is just how much innovation is happening.
+      Start: 1424.26, End: 1430.365
+    Sentence: If we think back as we talked about, like, really early on this discussion, Chat Ship and Deep came out November of 2022, and we're not even really 2 years later.
+      Start: 1430.665, End: 1439.0851
+    Sentence: And to look at the leaps and bounds of the technology, the leading enterprise is now you utilizing the technology.
+      Start: 1439.4199, End: 1444.48
+
+    Sentence: The way in which it's changed the government and the Department of Defense and the other agencies, it's pretty remarkable.
+      Start: 1444.7, End: 1449.1799
+    Sentence: And I can't think of another technology that has captivated so many people so quickly.
+      Start: 1449.1799, End: 1453.6799
+    Sentence: And so from a regulatory perspective, it gets back to how do we allow that innovation.
+      Start: 1453.82, End: 1458.0449
+    Sentence: Right?
+      Start: 1458.0449, End: 1458.445
+    Sentence: And so from our perspective, the reason why we talk through sector specific and risk based is it really gets to how you do that.
+      Start: 1458.445, End: 1465.6649
+
+    Sentence: And so it goes back to 2 fold.
+      Start: 1465.725, End: 1467.245
+    Sentence: 1 is governing the use of the technology, not the technology itself.
+      Start: 1467.245, End: 1471.11
+    Sentence: Because if you govern the use of the technology, the regulation should stand the test of time.
+      Start: 1471.65, End: 1476.47
+    Sentence: And then it's also doing it in such a way that's not overly prescriptive.
+      Start: 1476.61, End: 1479.99
+    Sentence: And so that's where risk based comes in.
+      Start: 1480.37, End: 1482.0499
+
+    Sentence: Because what it's saying is if the activity is risky, we'll govern it in one way, and if it's not as risky, we'll govern it as another.
+      Start: 1482.0499, End: 1488.595
+    Sentence: So it shouldn't matter if you're using today's technology, tomorrow's, or the technology 5 years from now.
+      Start: 1488.735, End: 1494.035
+    Sentence: It puts in place its foundational framework that can flex to the next iteration of technology.
+      Start: 1494.095, End: 1499.635
+    Sentence: But then, ultimately, look, we might have to go on and update it because the next generation of AI systems come in.
+      Start: 1500.0599, End: 1505.6599
+    Sentence: And then we may have to update the regulation, but the key is we're not gonna have to rewrite it altogether like it could if we go too prescriptive right now.
+      Start: 1505.6599, End: 1512.72
+
+    Sentence: No.
+      Start: 1513.765, End: 1514.005
+    Sentence: I think, 2 important points you made.
+      Start: 1514.005, End: 1516.485
+    Sentence: As you said, sector specific, and then, risk based, approaches would allow, the regulation to stay up to date and then update it as necessary.
+      Start: 1516.485, End: 1530.12
+    Sentence: Max, some of the regulators would, you know, want to know how should they address the issue of AI transparency and explainability, especially in high stakes applications?
+      Start: 1531.22, End: 1542.4349
+    Sentence: Yeah.
+      Start: 1544.335, End: 1544.6549
+
+    Sentence: It's such an important topic because I think the public needs to have a better understanding of the technology and what goes into it.
+      Start: 1544.6549, End: 1552.1749
+    Sentence: And so I think this gets back to the right test and evaluation framework, and it gets back to the right standards.
+      Start: 1552.1749, End: 1557.8201
+    Sentence: And so from a test evaluation framework perspective, if we really take a step back, this has been something that scale has been thinking about for a long time.
+      Start: 1558.04, End: 1564.7001
+    Sentence: And so really about a year and a half ago, we started internally saying, okay.
+      Start: 1565.0, End: 1569.02
+    Sentence: We know that these AI systems are out there.
+      Start: 1569.135, End: 1571.215
+
+    Sentence: We're getting a lot of questions from policymakers on how do we know that they're safe to deploy.
+      Start: 1571.215, End: 1575.235
+    Sentence: Let's really put our heads around the methodology around test and evaluation.
+      Start: 1575.855, End: 1579.395
+    Sentence: And so we produced what was at the time the first comprehensive test and evaluation methodology white paper that not only looked at the testing side because we understood how to red team, we understood how to poke and prod models to understand their vulnerabilities.
+      Start: 1579.775, End: 1592.2
+    Sentence: It was really the evaluation side that was harder.
+      Start: 1592.74, End: 1594.98
+    Sentence: It was how do we know where the vulnerabilities are when we test these models?
+      Start: 1594.98, End: 1598.28
+
+    Sentence: How do we know comprehensively what do they look like?
+      Start: 1598.325, End: 1600.825
+    Sentence: And so we put that paper out and published it as a research paper to really show people we know how to do test and evaluation.
+      Start: 1601.0449, End: 1607.705
+    Sentence: And the science has continued to adopt and and change over time, but what is critical is really getting it out for people to understand how you do it.
+      Start: 1608.1649, End: 1616.0399
+    Sentence: And so if you can do the right test and evaluation framework where we're publishing these reports on what's goes into the model, we think that'll really help both the model developers and the deployers of this technology understand where the vulnerabilities are, where the strengths are, where the weaknesses are.
+      Start: 1616.1, End: 1631.9451
+    Sentence: And then, ultimately, as we have a regulatory framework where the safety metrics are set, like we talked about, we can then submit those quote, unquote model cards to the government so that they can understand holistically what goes into that AI system.
+      Start: 1631.9451, End: 1644.08
+
+    Sentence: And then we can really feel that it's safe to deploy because not only do we know comprehensively what goes into that AI, how explainable it is, how transparent the answers are, and then also that we've met the safety bar that's set by the government.
+      Start: 1644.38, End: 1657.7251
+    Sentence: Well, that's very helpful.
+      Start: 1658.5851, End: 1659.885
+    Sentence: So what you're saying is it's no longer that black box that, a lot of the regulators say we don't know, how they are coming up with these answers.
+      Start: 1659.9451, End: 1668.5399
+    Sentence: Max, what are your, views and perspectives on the concept of AI audits or impact assessments as regulatory tools?
+      Start: 1670.12, End: 1678.5399
+    Sentence: Yeah.
+      Start: 1679.445, End: 1679.6849
+
+    Sentence: So I think we kinda just talked about it, to be honest.
+      Start: 1679.6849, End: 1681.6849
+    Sentence: So I think from our side, getting the right test and evaluation framework in place is critical.
+      Start: 1681.6849, End: 1686.345
+    Sentence: And so, again, it goes back to where are the gaps in the regulatory framework.
+      Start: 1686.645, End: 1690.9049
+    Sentence: Once we understand where those gaps are, the best way to fill that is through risk based sector specific regulations around test evaluation or audits.
+      Start: 1691.21, End: 1699.07
+    Sentence: And so it's understanding really if, for example, in loan originations, you can't ask certain questions of a potential applicant.
+      Start: 1699.29, End: 1706.67
+
+    Sentence: And so if we're gonna utilize AI systems there, we have to make sure that those same questions aren't asked from an AI system.
+      Start: 1707.095, End: 1712.475
+    Sentence: And so it's getting in there and testing and evaluating the AI system, poking, prodding it, asking all the questions, trying to do different ways of techniques to get it to say answers to make sure that it won't ask those questions.
+      Start: 1712.6951, End: 1724.4401
+    Sentence: And once we're we and the regulator are confident that it won't ask those questions, we can go deploy that system.
+      Start: 1724.66, End: 1730.18
+    Sentence: But we have to constantly test and evaluate it.
+      Start: 1730.18, End: 1732.02
+    Sentence: We have to constantly monitor it because it's illegal to do it, so we have to ensure that it's if it's done by a human or an AI system, it's not asking those questions.
+      Start: 1732.02, End: 1740.2649
+
+    Sentence: And so what's really important here is that we're looking at kind of what the safety bar is, where the metric is, and then working backwards to ensure that we can comply with it.
+      Start: 1740.485, End: 1749.625
+    Sentence: No.
+      Start: 1750.0399, End: 1750.2
+    Sentence: I think, that's a very important issue.
+      Start: 1750.2, End: 1752.6
+    Sentence: Max, there's a lot of, conversation that's been happening, and we've had a lot of policy makers come to us, for input on this.
+      Start: 1752.6, End: 1764.0399
+    Sentence: And, given the important role that scale plays in this area, what are your thoughts on, synthetic data versus, you know, human, based data?
+      Start: 1764.0399, End: 1774.655
 
     Sentence: Yeah.
-      Start: 1099.635, End: 1100.135
-    Sentence: Thank you.
-      Start: 1100.755, End: 1101.575
-    Sentence: It's hard to make level.
-      Start: 1119.665, End: 1120.965
-    Sentence: Yeah.
-      Start: 1121.025, End: 1121.525
-    Sentence: Yeah.
-      Start: 1121.665, End: 1122.165
+      Start: 1775.755, End: 1775.995
+    Sentence: Absolutely.
+      Start: 1775.995, End: 1776.495
+    Sentence: I I think there's a role for it all, but what we've seen is that real world training data is still the gold standard of training data.
+      Start: 1776.635, End: 1783.35
+    Sentence: And so there's some instances around, like, medical diagnosis and things.
+      Start: 1783.41, End: 1786.87
+    Sentence: We're finding rare imagery of rare diseases just hard.
+      Start: 1787.01, End: 1790.47
 
-    Sentence: So as we move into mid level then, managers or leadership or more senior level, let's say, they are really looking at can you understand the business?
-      Start: 1170.41, End: 1181.885
-    Sentence: Do you come from the same vertical?
-      Start: 1181.885, End: 1183.4249
-    Sentence: Do you come or do you understand the metrics?
-      Start: 1183.8049, End: 1187.585
-    Sentence: Do you understand the growth model?
-      Start: 1187.6449, End: 1189.4249
-    Sentence: Do you understand the business aspect?
-      Start: 1189.485, End: 1192.6599
+    Sentence: There's not a lot out there.
+      Start: 1790.69, End: 1792.15
+    Sentence: Hospitals don't necessarily wanna share it, etcetera.
+      Start: 1792.37, End: 1794.71
+    Sentence: And so if you wanna train your model on, like, rare disease diagnosis, you might need some better data to augment the real world training data because there's just not a lot out there.
+      Start: 1795.085, End: 1804.705
+    Sentence: But where there is real world training data, we've seen that AI models perform the best.
+      Start: 1804.925, End: 1809.325
+    Sentence: And so from our perspective, there's there's, like, enough of the pie to go around for both, but we don't think there's a substitute for real world training data.
+      Start: 1809.325, End: 1818.2
 
-    Sentence: Can you lead people from who are coming in from different industries?
-      Start: 1192.6599, End: 1200.2
-    Sentence: Can you hire good people?
-      Start: 1200.6599, End: 1203.3999
-    Sentence: Can you retain good people?
-      Start: 1203.46, End: 1205.0
-    Sentence: You would And from a technical standpoint, they're really looking at are you able to not just communicate with developers but have influence with your engineering counterparts?
-      Start: 1205.1399, End: 1218.045
-    Sentence: Are you able to really have, like, really able to understand business, technology, metrics, and build growth around that.
-      Start: 1219.13, End: 1235.6051
+    Sentence: So, real world, training data is the best, but potentially can be augmented in some cases, like you said, in health care for rare instances with, synthetic data.
+      Start: 1818.98, End: 1830.6849
+    Sentence: Max, the other, big, topic du jour that's happening and I we talked to regulators is this whole issue of open source versus closed source.
+      Start: 1831.705, End: 1842.93
+    Sentence: You work across so many areas.
+      Start: 1842.93, End: 1845.01
+    Sentence: And just a few days ago, Meta announced 3, which is now at, you would say, at the top of the leaderboard or one of the top at the leaderboards.
+      Start: 1845.01, End: 1854.87
+    Sentence: Does Kale, or do you have any view on open source versus closed source?
+      Start: 1856.365, End: 1861.265
+
+    Sentence: Yeah.
+      Start: 1862.125, End: 1862.2849
+    Sentence: It's obviously a really important topic, and we were pleased to partner with Meta on the launch of llama 3.1.
+      Start: 1862.2849, End: 1867.345
+    Sentence: There are some pretty cool things that we're able to do with them that we published on our our website, and Meta has talked about as well.
+      Start: 1867.8049, End: 1873.11
+    Sentence: And I think from our perspective, there's definitely roles in the ecosystem for both.
+      Start: 1873.49, End: 1877.11
+    Sentence: And so, obviously, one of the biggest challenges of start ups utilize like, small company start ups utilizing AI is the cost of training a model.
+      Start: 1877.17, End: 1884.585
+
+    Sentence: And so what Meta is doing by open sourcing that and allowing a 1 or 2 person startup to tap into that is really powerful because it's really democratizing this technology.
+      Start: 1884.825, End: 1893.4049
+    Sentence: The other thing is too exporting it to our allies.
+      Start: 1893.945, End: 1896.505
+    Sentence: And so, for example, we want Taiwan or Singapore or Japan to have access to the leading US models, and open source is the way to do that, to make sure that the companies in Taiwan are training off of US open source and not Chinese open source, for example.
+      Start: 1896.505, End: 1910.76
+    Sentence: And so I think there's really powerful tools that we can do with open source and closed source models.
+      Start: 1910.975, End: 1916.415
+    Sentence: So there's definitely a role for both of them.
+      Start: 1916.415, End: 1918.435
+
+    Sentence: However, we do have to make sure that they're deployed in the safe fashion.
+      Start: 1918.495, End: 1920.975
+    Sentence: I think that's what the government's looking at, but it's critical in our opinion to ensure that there's a balance between both of them just because they will have different roles to play.
+      Start: 1920.975, End: 1929.1799
+    Sentence: And you touched upon, you know, getting our allies to work on it.
+      Start: 1930.52, End: 1934.12
+    Sentence: Is there a danger as some critics point out that our enemies also get access or non state actors get access to this technology and could do us harm?
+      Start: 1934.12, End: 1944.735
+    Sentence: Yeah.
+      Start: 1945.755, End: 1946.075
+
+    Sentence: Absolutely.
+      Start: 1946.075, End: 1946.575
+    Sentence: I mean, I think the administration is obviously looking at that now as part of their executive order due outs, and we've engaged with them on it.
+      Start: 1946.715, End: 1952.635
+    Sentence: But I think from our perspective, it's also really important that we're able to export our technology to the global south, to places where they might not have access to the leading chips or the leading infrastructure, the leading AI elements.
+      Start: 1952.635, End: 1963.47
+    Sentence: And so if we look at it, one of the biggest export tools the US have is technology imports.
+      Start: 1963.77, End: 1968.145
+    Sentence: And so it's really important that we're able to get our technology to our allies, whether it's in Taiwan where it's obviously an absolutely critical national security perspective, or in the global south where it's also critical for us to be able to export that.
+      Start: 1968.145, End: 1979.985
+
+    Sentence: And we would argue probably a national security benefit as well because if they're using our technology, they're not using our our enemy's technology.
+      Start: 1979.985, End: 1987.02
+    Sentence: And so making sure that they have a US option is absolutely critical.
+      Start: 1987.3201, End: 1990.78
+    Sentence: And so I think from our perspective, look, we have to ensure that we're doing this in a safe fashion, but it's absolutely imperative that we can't shut that off to the rest of the world as well.
+      Start: 1990.92, End: 2000.135
+    Sentence: So do it in a safe, fashion, but make sure our allies and the global self get access to our technology, Max, is what you're saying.
+      Start: 2000.675, End: 2008.4551
+    Sentence: Max, looking ahead, what is your view on some important emerging trends or technologies that, regulators, policy makers while listening to you should be preparing for?
+      Start: 2009.475, End: 2020.75
+
+    Sentence: Yeah.
+      Start: 2022.25, End: 2022.5701
+    Sentence: I mean, I think first and foremost, we have to establish the foundational elements of any regulatory framework.
+      Start: 2022.5701, End: 2027.965
+    Sentence: And what is that?
+      Start: 2028.025, End: 2028.745
+    Sentence: And so I think regardless of if you're in Europe, if you're in the US, if you're in Brazil, wherever you are in the world, there's a key element around measurement science right now that we need to fill in.
+      Start: 2028.745, End: 2039.37
+    Sentence: And that's why NIST is so important.
+      Start: 2039.45, End: 2041.47
+
+    Sentence: That's why the safety institute networks are so important, and that's really working.
+      Start: 2041.53, End: 2044.73
+    Sentence: And I know we've said it a few times now to build out the foundational frameworks, build out the foundation elements, build out the standards, do things, and then work together around the world to harmonize those standards so that companies have certainty around what they're going to be held to.
+      Start: 2044.73, End: 2059.565
+    Sentence: And then I think, ultimately, once we do that, we can build off of that.
+      Start: 2059.565, End: 2062.605
+    Sentence: But I think first and foremost, our message to anyone would be, let's build out those foundational elements together and then work on what's next.
+      Start: 2062.605, End: 2070.5698
+    Sentence: And then also, as we talked about, one of those foundational elements is understanding where new regulations are needed.
+      Start: 2070.71, End: 2075.5298
+
+    Sentence: And so it's understanding where do we need to go do new things, where can we rely on what's there today, where are the small gaps.
+      Start: 2075.5898, End: 2081.455
+    Sentence: And then ultimately, once we have those, we think we can build a really strong foundation or sorry, a really strong framework off that.
+      Start: 2081.675, End: 2087.835
+    Sentence: But today, it's really let's focus on those foundational elements and then build off of it.
+      Start: 2087.835, End: 2092.095
+    Sentence: No.
+      Start: 2092.9402, End: 2093.1
+    Sentence: That's great.
+      Start: 2093.1, End: 2093.82
+
+    Sentence: So, again, I think you have talked about the foundation, the standards, I think those are very, very critical thing.
+      Start: 2093.82, End: 2101.12
+    Sentence: One thing, we haven't touched upon, Max, is the role for public engagement and education in the process of, developing AI regulations.
+      Start: 2101.26, End: 2110.775
+    Sentence: What is your perspective?
+      Start: 2111.2349, End: 2112.615
+    Sentence: Because, ultimately, you want the public also to be engaged in this.
+      Start: 2112.675, End: 2117.655
+    Sentence: Yeah.
+      Start: 2118.755, End: 2118.9949
+
+    Sentence: A 100%.
+      Start: 2118.9949, End: 2119.7349
+    Sentence: And I think it's really important because of how democratized this technology has become so quickly.
+      Start: 2119.955, End: 2125.75
+    Sentence: And so now my parents have access to the most powerful tools, meaning, oh, l large language models at their hands just by going on the Internet, which is so cool in so many different ways.
+      Start: 2126.05, End: 2137.595
+    Sentence: But we have to also make sure they understand what the limitations with the technology are.
+      Start: 2137.655, End: 2140.855
+    Sentence: We also have to make sure they understand how to use the technology properly.
+      Start: 2140.855, End: 2143.835
+
+    Sentence: And so one really cool example of this was actually what we did last summer at DEFCON.
+      Start: 2144.855, End: 2149.195
+    Sentence: So DEFCON is the world leading hacking convention, and I was actually fortunate enough to go last year.
+      Start: 2149.46, End: 2154.3599
+    Sentence: And the White House actually came out with an announcement that we were gonna do a AI red teaming challenge.
+      Start: 2154.42, End: 2160.2798
+    Sentence: Yeah.
+      Start: 2160.5, End: 2160.66
+    Sentence: And so what that meant was 10 of the leading large language model made developers gave their models to the White House so that we could red team them.
+      Start: 2160.66, End: 2169.945
+
+    Sentence: It was really cool actually to see that commitment, and then SCALE built the test and evaluation platform for it.
+      Start: 2169.945, End: 2175.625
+    Sentence: And so we have this really cool exercise where 23100 of the world's leading hackers over 3 days went in and red team these models.
+      Start: 2175.625, End: 2183.45
+    Sentence: They poked them.
+      Start: 2183.45, End: 2184.09
+    Sentence: They prodded them.
+      Start: 2184.09, End: 2185.1301
+    Sentence: They tried to break them.
+      Start: 2185.1301, End: 2186.1702
+
+    Sentence: They tried to, like, win challenges around.
+      Start: 2186.1702, End: 2188.57
+    Sentence: Can you get a model to do something it shouldn't?
+      Start: 2188.57, End: 2190.83
+    Sentence: And this was such a cool tool in public engagement because people got to understand where the strength of the models were, where the weaknesses were.
+      Start: 2191.445, End: 2198.325
+    Sentence: And then from the company side, they got the best dataset ever on how to go improve their models, and it was a really cool thing because if you look at the report that was published, all of those vulnerabilities are patched now.
+      Start: 2198.325, End: 2210.49
+    Sentence: And so the attacks people were using can no longer be used.
+      Start: 2210.6301, End: 2213.59
+
+    Sentence: And so I think doing exercises like that where you're letting people and it doesn't have to be the world leading hackers, it was just a cool experience.
+      Start: 2213.59, End: 2219.69
+    Sentence: Understand the technology, understand how well built it is, understand where it shouldn't be used because it might be, like, not great at that topic yet, but people are getting better at fine tuning and things in doing it.
+      Start: 2220.465, End: 2231.3452
+    Sentence: I think it's really powerful, and it's something we need to do more of within the industry.
+      Start: 2231.3452, End: 2234.965
+    Sentence: I I think that's so cool, because you really get the, companies and the people engaged and really find out about, as you said, the vulnerabilities and the companies that patch up.
+      Start: 2236.1099, End: 2247.15
+    Sentence: And I hope, you can do it again, this year, Max.
+      Start: 2247.15, End: 2252.145
+
+    Sentence: Max, finally, for our and you really have addressed this.
+      Start: 2252.445, End: 2259.425
+    Sentence: Any, views or perspectives, one piece of advice that you would give to policy makers who are, going to be busy whether it's, this year or, looking at next year working on AI regulation.
+      Start: 2261.16, End: 2273.96
+    Sentence: And you talked about safety and standards, etcetera.
+      Start: 2273.96, End: 2276.475
+    Sentence: Anything besides that that you would like to, tell some of our policymakers and their staff who are listening to you?
+      Start: 2276.775, End: 2285.355
+    Sentence: Yeah.
+      Start: 2286.375, End: 2286.875
+
+    Sentence: Absolutely.
+      Start: 2286.935, End: 2287.415
+    Sentence: And, obviously, we've talked about a lot of that over the course of the conversation.
+      Start: 2287.415, End: 2290.43
+    Sentence: So maybe I'll make a new point on it, which is that in order for the US to lead the world in the development of the technology, we also have to lead the world in ensuring we have the most high quality data available for it.
+      Start: 2290.43, End: 2303.325
+    Sentence: And so we talk about it as data supremacy, and what that means to us as we talked about, the DOD is generating a petabyte of data a day.
+      Start: 2303.405, End: 2311.425
+    Sentence: But when you even get down to companies, it's been reported that, like, JPMorgan, for example, have a 150 petabytes of internal training data.
+      Start: 2311.805, End: 2319.185
+
+    Sentence: That GBT 4 was reported trained on 1 petabyte of data.
+      Start: 2319.7, End: 2323.24
+    Sentence: And so JP Morgan has access to a 150 times the data that was used to train GBT 4 that, if you think about it, is the best data in the world for their own use cases because it's hyper focused on what they do.
+      Start: 2323.3801, End: 2336.535
+    Sentence: And so in order for us to lead the world in AI for both an enterprise context, from a government context, and then ultimately from a consumer context, it all comes down to access to high quality data.
+      Start: 2336.675, End: 2347.59
+    Sentence: And so from a government standpoint, we need to invest in that.
+      Start: 2347.65, End: 2349.97
+    Sentence: We need to ensure that we're not just matching China's investment, which is $2,000,000,000 a year, but exceeding it over time.
+      Start: 2349.97, End: 2356.3901
+
+    Sentence: Because everyone what their what China's done is invested off of commercial AI companies blueprint, not the US government.
+      Start: 2356.45, End: 2362.405
+    Sentence: And so we're looking at a situation where they're investing about 1 to 2,000,000,000 this year.
+      Start: 2362.5452, End: 2368.245
+    Sentence: The the DOD alone is investing probably less than a 100,000,000.
+      Start: 2368.5452, End: 2371.925
+    Sentence: Mhmm.
+      Start: 2372.385, End: 2372.625
+    Sentence: And so over time, we have to close that gap and ultimately invest in high quality data systems for our own AI, and that that's across the whole government, not just the DOD we need to do it.
+      Start: 2372.625, End: 2383.45
+
+    Sentence: And then from the commercial side, it's how do we leverage enterprises' data so that they can have exactly what we're talking about, that runaway data advantage.
+      Start: 2383.45, End: 2390.745
+    Sentence: And so I think from our perspective, yes, we absolutely get the standards right.
+      Start: 2390.745, End: 2394.745
+    Sentence: We absolutely get the safety right.
+      Start: 2394.745, End: 2396.425
+    Sentence: But then it's looking at how do we separate ourselves from other regions, and in our opinion, that comes down to high quality data.
+      Start: 2396.425, End: 2402.445
+    Sentence: I think, that's a very important point you're making because across, the government, as you said, Max, it's not just DOD.
+      Start: 2403.44, End: 2411.7598
+
+    Sentence: You can look at, HHS.
+      Start: 2411.7598, End: 2413.8599
+    Sentence: You can look at IRS.
+      Start: 2414.16, End: 2415.46
+    Sentence: You can look at Social Security.
+      Start: 2415.5198, End: 2417.2998
+    Sentence: All across our agencies that correct collect so much valuable data.
+      Start: 2418.095, End: 2423.635
+    Sentence: Obviously, with guardrails put in it could be tremendously valuable, not just to companies, but are also think about to the people from a health care standpoint, from a housing standpoint, all those things.
+      Start: 2424.335, End: 2437.4402
+
+    Sentence: So I think, to the policy makers who are listening, I think that's a very, very important point.
+      Start: 2437.4402, End: 2444.02
+    Sentence: Max, towards the end, which we are getting close to, and, I know, how busy you are, we have a lightning round of questions.
+      Start: 2444.8, End: 2452.655
+    Sentence: This is a little bit of fun, but also gets a a little perspective in a quick, lightning round way.
+      Start: 2452.655, End: 2460.655
+    Sentence: So one word answer.
+      Start: 2460.655, End: 2462.39
+    Sentence: You ready for it, Max?
+      Start: 2463.0898, End: 2464.79
+
+    Sentence: Yeah.
+      Start: 2465.41, End: 2465.65
+    Sentence: Let's do it.
+      Start: 2465.65, End: 2466.63
+    Sentence: Okay.
+      Start: 2466.77, End: 2467.27
+    Sentence: So, Max, you gotta pick, AI ethics or AI efficiency.
+      Start: 2467.65, End: 2473.1099
+    Sentence: I don't think it has to be either or.
+      Start: 2475.615, End: 2476.975
+
+    Sentence: I'd say both even though I know that's not the way you expect me to answer it.
+      Start: 2476.975, End: 2480.415
+    Sentence: We'll give you an exception.
+      Start: 2480.415, End: 2481.635
+    Sentence: Okay.
+      Start: 2481.695, End: 2482.015
+    Sentence: Both.
+      Start: 2482.015, End: 2482.515
+    Sentence: Transparency or privacy?
+      Start: 2483.295, End: 2484.835
+
+    Sentence: Transparency.
+      Start: 2488.92, End: 2489.42
+    Sentence: Okay.
+      Start: 2489.96, End: 2490.46
+    Sentence: Automation or human oversight?
+      Start: 2491.4, End: 2493.02
+    Sentence: Human oversight.
+      Start: 2493.72, End: 2494.54
+    Sentence: Algorithmic bias or data bias?
+      Start: 2495.8, End: 2497.98
+
+    Sentence: Neither.
+      Start: 2503.295, End: 2503.795
+    Sentence: Okay.
+      Start: 2503.9348, End: 2504.4348
+    Sentence: Regulatory compliance or competitive edge, Max?
+      Start: 2505.535, End: 2508.6748
+    Sentence: Again, both.
+      Start: 2511.295, End: 2512.1748
+    Sentence: I I think you can use regulation to spur competitive edge and keep innovation at an all time high.
+      Start: 2512.1748, End: 2517.395
+
+    Sentence: Okay.
+      Start: 2518.22, End: 2518.72
+    Sentence: National AI Policies OR International AI Frameworks?
+      Start: 2519.42, End: 2522.88
+    Sentence: National AI Policies.
+      Start: 2525.74, End: 2527.04
+    Sentence: Okay.
+      Start: 2527.8198, End: 2528.3198
+    Sentence: Ethical AI Boards or Government Regulation?
+      Start: 2528.54, End: 2530.72
+
+    Sentence: I don't really have a great answer for that one.
+      Start: 2531.955, End: 2533.715
+    Sentence: I realize we'll probably scrub it from recording, but I don't have a great answer for that one.
+      Start: 2533.715, End: 2536.995
+    Sentence: No worries.
+      Start: 2536.995, End: 2537.635
+    Sentence: No worries.
+      Start: 2537.635, End: 2538.2751
+    Sentence: That's, perfectly fine.
+      Start: 2538.2751, End: 2540.215
+
+    Sentence: Max, really thank you for sharing your very valuable insights with us today.
+      Start: 2540.5952, End: 2546.05
+    Sentence: You know, your perspective has provided us a crucial viewpoint and ongoing dialogue about AI regulation.
+      Start: 2546.05, End: 2552.13
+    Sentence: You talked to, incredibly about, safety standards, about the critical role of data, that exists not just within the US government, but, you know, commercial entities like JPMorgan and others and why it is so important from a national security standpoint.
+      Start: 2552.13, End: 2567.755
+    Sentence: And to our listeners, the conversation we've had talk today underscores the complexity and importance of of developing fair and responsible AI regulations on a global scale as, you know, AI continues to advance and integrate into various aspects of our lives.
+      Start: 2568.855, End: 2584.54
+    Sentence: The need for thoughtful regulation becomes even more critical.
+      Start: 2584.54, End: 2587.9648
+
+    Sentence: And, really, we are very thankful to Max for providing that, incredibly important viewpoint.
+      Start: 2587.9648, End: 2595.085
+    Sentence: Thanks, Max, for being on the regulating AI podcast.
+      Start: 2595.085, End: 2598.4648
+    Sentence: It was fabulous, and we need to have you back again.
+      Start: 2598.765, End: 2601.3
+    Sentence: Thank you so much.
+      Start: 2601.94, End: 2602.74
+    Sentence: Can't wait to continue the conversation soon.
+      Start: 2602.74, End: 2604.68
 
     Sentence: Awesome.
-      Start: 1236.865, End: 1237.365
-    Sentence: Thank you, Saket.
-      Start: 1237.9851, End: 1239.025
-    Sentence: The next question is around a little bit more on skills.
-      Start: 1239.025, End: 1242.405
-    Sentence: I would like to understand how important is experience with data analytics and Data analytics and experimentation in growth interviews.
-      Start: 1242.625, End: 1250.66
-    Sentence: Data analytics and experimentation is super critical because when you are whether in entry level, mid level, senior level, you are always and in the growth world you are always downloaded with spreadsheets, CSV files, looking at campaign reports, looking at, like experimentation reports, looking at cohorts, looking at retention go up, like, different different things.
-      Start: 1250.66, End: 1275.705
+      Start: 2605.1401, End: 2605.6401
+    Sentence: Thank you, Max.
+      Start: 2605.7, End: 2606.82
+    Sentence: John?
+      Start: 2606.82, End: 2607.32
+    Sentence: Thanks for tuning in to the regulating AI innovate responsibly podcast.
+      Start: 2609.3, End: 2613.6401
+    Sentence: You'll find links in the show notes to any resources mentioned on the show.
+      Start: 2613.94, End: 2617.595
 
-    Sentence: Right?
-      Start: 1275.705, End: 1275.9451
-    Sentence: You're looking at revenue metrics.
-      Start: 1275.9451, End: 1277.405
-    Sentence: You need to know how to do those technical analysis, understand it, and make sense out of it as to what makes sense, what needs to move, why it needs to move, and present that into a presentation format as well so that you can communicate that.
-      Start: 1278.05, End: 1297.005
-    Sentence: So it's important to understand data analytics.
-      Start: 1297.225, End: 1300.365
-    Sentence: Maybe even do an SQL query, because some of the rules require.
-      Start: 1300.905, End: 1305.325
-
-    Sentence: Maybe even know a little bit of Python or some kind of format of data.
-      Start: 1306.9199, End: 1312.7799
-    Sentence: But data analytics is super important because if you cannot communicate, if you cannot communicate with your data engineers or people who are integrating or inflow of data that's coming in or orchestrating data out or understanding data buckets, data lakes, how does data ingestion, extrapolation happens, how does pivot tables make, why do pivot which pivot tables to make, which how to filter data, how to segment data, how to make sense of data, how to communicate that data in the right way to the different stakeholders, how to place the right bets on data, then you will not succeed as as you grow up.
-      Start: 1313.1599, End: 1357.705
-    Sentence: Right?
-      Start: 1358.01, End: 1358.25
-    Sentence: Because so data analytics, very important.
-      Start: 1358.25, End: 1360.59
-    Sentence: But you do not need to be data nerd.
-      Start: 1360.89, End: 1363.15
-
-    Sentence: You need to know your stuff.
-      Start: 1363.4501, End: 1365.31
-    Sentence: You need to be you need to communicate that stuff.
-      Start: 1366.81, End: 1370.27
-    Sentence: But most importantly, if your data analytics person is telling you that information, you need to be sure that that relevant that's relevant information and what's relevant in that and being able to communicate through that.
-      Start: 1370.655, End: 1384.115
-    Sentence: Great.
-      Start: 1384.77, End: 1385.27
-    Sentence: Alright.
-      Start: 1389.5701, End: 1390.0701
-
-    Sentence: Moving to soft skills next, Saket.
-      Start: 1390.13, End: 1392.39
-    Sentence: What soft skills do hiring managers look for in candidates at different levels within growth functions?
-      Start: 1393.3301, End: 1399.1901
-    Sentence: Soft skills, it's so broad and it's so, important.
-      Start: 1402.115, End: 1407.255
-    Sentence: And at and very interestingly, as in you move move more and more upwards in your career, soft skills become more important than hard skills.
-      Start: 1407.955, End: 1417.4801
-    Sentence: Right?
-      Start: 1418.18, End: 1418.68
-
-    Sentence: So because there you need to be able to communicate.
-      Start: 1418.8201, End: 1422.52
-    Sentence: Listen.
-      Start: 1424.3401, End: 1424.8401
-    Sentence: Asking the right question is such an important soft skill.
-      Start: 1425.705, End: 1430.205
-    Sentence: Listen.
-      Start: 1431.5449, End: 1432.0449
-    Sentence: Listening and asking the right questions.
-      Start: 1432.745, End: 1436.2849
-
-    Sentence: Ability to present without us, without you knows, without telling too much information.
-      Start: 1436.985, End: 1443.74
-    Sentence: So ability to communicate to different stakeholders, getting people together to build trust, to bring accountability.
-      Start: 1445.64, End: 1453.1951
-    Sentence: And there are soft skills like, you know, how can you bring more drive motivation within the team?
-      Start: 1455.575, End: 1466.22
-    Sentence: How can you delegate things better?
-      Start: 1466.46, End: 1469.12
-    Sentence: How can you execute more efficiently?
-      Start: 1469.5, End: 1472.64
-
-    Sentence: So there are a lot of these soft skills beyond communication and presentation, which are also very important.
-      Start: 1473.5, End: 1481.84
-    Sentence: So, different industries, different types of roles, different, requires different depth of it, but soft skill is an important thing.
-      Start: 1483.015, End: 1496.39
-    Sentence: One of the coolest soft skills that I have learned in the last 6 months is remembering people's name and calling out with people's first name.
-      Start: 1496.39, End: 1506.41
-    Sentence: And trust me if you, and then saying what you want to, when you do that, A, you build trust, B, you build authority.
-      Start: 1506.925, End: 1514.225
-    Sentence: And you can get more things done with those people.
-      Start: 1514.685, End: 1517.665
-
-    Sentence: So here is one quick tip on a soft skill that I learned.
-      Start: 1518.125, End: 1523.92
-    Sentence: Awesome.
-      Start: 1524.3, End: 1524.8
-    Sentence: Trust me I've got like a lot of things with this.
-      Start: 1526.14, End: 1530.96
-    Sentence: So if I say you're doing a good job versus if I say, Shashank, you're doing a good job.
-      Start: 1531.66, End: 1539.895
-    Sentence: There's a difference.
-      Start: 1540.115, End: 1541.015
-
-    Sentence: And I've got Taj Mahi free upgrade.
-      Start: 1541.715, End: 1543.975
-    Sentence: I'm not joking.
-      Start: 1545.075, End: 1545.975
-    Sentence: 2 cottages room and all.
-      Start: 1546.195, End: 1547.5549
-    Sentence: I've got 50% discount on Leelah Palace where they give no discounts.
-      Start: 1547.5549, End: 1552.1699
-    Sentence: I've got, like, so many things.
-      Start: 1552.1699, End: 1555.21
-
-    Sentence: I've got upgrades and whatnot, but just, for example, I've got, when I if this guy name is c Sandeep or I take people's name because very few people talk to them with respect.
-      Start: 1555.21, End: 1569.6649
-    Sentence: Less than 1%.
-      Start: 1569.6649, End: 1570.565
-    Sentence: Yeah.
-      Start: 1570.625, End: 1570.945
-    Sentence: But if you do, you get so much free stuff and discounts.
-      Start: 1570.945, End: 1574.005
-    Sentence: Right.
-      Start: 1574.465, End: 1574.965
-
-    Sentence: Right.
-      Start: 1575.4249, End: 1575.9049
-    Sentence: So use the first name.
-      Start: 1575.9049, End: 1577.345
-    Sentence: That's Very important.
-      Start: 1577.345, End: 1579.01
-    Sentence: Awesome.
-      Start: 1585.87, End: 1586.37
-    Sentence: Saketed, how do hiring managers assess culture and team fit you need to use for those See, for every company, there are some cultural values.
-      Start: 1586.5901, End: 1599.235
-
-    Sentence: There are some, you know, values.
-      Start: 1599.5349, End: 1603.5549
-    Sentence: For my best example is Amazon.
-      Start: 1604.46, End: 1606.64
-    Sentence: Amazon has these, 11 Amazon leadership principles.
-      Start: 1606.7, End: 1611.36
-    Sentence: For each and every interview, they have to test people on these leadership principles, and they have to score those people on the, leadership principles.
-      Start: 1611.98, End: 1623.275
-    Sentence: So similar and 11 is a very exhaustive list and but people do that.
-      Start: 1623.3351, End: 1627.735
-
-    Sentence: Right?
-      Start: 1627.735, End: 1628.235
-    Sentence: And that's why they have, like, 5, 6 round of interviews.
-      Start: 1628.615, End: 1630.715
-    Sentence: Whereas there are some companies that have 4 and 5 or 3 or 4 and 5 generally.
-      Start: 1631.015, End: 1635.9099
-    Sentence: Right?
-      Start: 1636.0499, End: 1636.53
-    Sentence: So you need to, like and some there are some common themes in our account around ownership accountability, about customer centricity.
-      Start: 1636.53, End: 1644.39
-
-    Sentence: This is, like, very common, you know, or customer first, all that stuff.
-      Start: 1644.69, End: 1649.3451
-    Sentence: There is also very common thing around teamwork and team collaboration and team spirit and all that stuff.
-      Start: 1649.4851, End: 1655.9851
-    Sentence: So make sure your answers are like, there are stories in your answers which, which are pre prepared for these questions.
-      Start: 1656.045, End: 1666.46
-    Sentence: Because you will be tested on this.
-      Start: 1666.9199, End: 1668.6
-    Sentence: And if you're going to think of that situation on the spot and answer something, you're going to give a stupid answer.
-      Start: 1668.6, End: 1675.98
-
-    Sentence: So please prepare in advance and give an impressive answer because these questions are going to come.
-      Start: 1677.0449, End: 1683.705
-    Sentence: And so understand what and most companies these days have on their career space that what are their values.
-      Start: 1683.7649, End: 1691.27
-    Sentence: Right?
-      Start: 1691.3301, End: 1691.8301
-    Sentence: So accountability level.
-      Start: 1691.89, End: 1693.65
-    Sentence: So ask Chargegbt or Cloud AI that, hey, if these are the things, what could be the structure for questions?
-      Start: 1693.65, End: 1699.27
-
-    Sentence: You get those questions, from Chargegbt, just pick 3 from each each of these accountability.
-      Start: 1699.73, End: 1707.495
-    Sentence: Three questions from teamwork and prepare your answers for it, in STARS format or the frameworks which works best for you.
-      Start: 1707.795, End: 1714.755
-    Sentence: STARS is a great format that I love.
-      Start: 1714.755, End: 1716.535
-    Sentence: And then record that practice that in front of a camera, hear yourself out or give a mock interview to your partner, to your friend, to your mentor.
-      Start: 1717.635, End: 1731.45
-    Sentence: And once you give them, take the corporate feedback and ace the interview, get your hiring manager love you as a culture fit, you stand out from the rest.
-      Start: 1731.99, End: 1741.175
-
-    Sentence: Awesome.
-      Start: 1742.275, End: 1742.775
-    Sentence: As a follow-up to that, Satish, is there anything more you'd like to add?
-      Start: 1743.0751, End: 1746.275
-    Sentence: We'd like to understand how do hiring managers differentiate Yeah.
-      Start: 1746.275, End: 1757.37
-    Sentence: So they differentiate on technical aspect.
-      Start: 1757.37, End: 1760.3501
-    Sentence: Like you know, do you have do you understand the technical thing.
-      Start: 1760.9701, End: 1764.625
-
-    Sentence: If you come from the similar industry, competitor industry, if you have if you bring complementary skills to the team.
-      Start: 1764.625, End: 1773.6849
-    Sentence: Like when I hired like 8 people in 6 months, I was really looking at, is this person bringing something to my team which nobody else has?
-      Start: 1773.745, End: 1782.78
-    Sentence: That was, like, one question that I always answered.
-      Start: 1782.78, End: 1785.1001
-    Sentence: Right?
-      Start: 1785.1001, End: 1785.5801
-    Sentence: So everybody in my team had one unique skill which nobody else had.
-      Start: 1785.5801, End: 1790.16
-
-    Sentence: Right?
-      Start: 1790.425, End: 1790.665
-    Sentence: And which was relevant for the growth of the team, for the growth of my growth team, and bringing awesome results.
-      Start: 1790.665, End: 1798.525
-    Sentence: And now because they were bringing those unique skills, those were one of the strengths of that.
-      Start: 1798.905, End: 1803.99
-    Sentence: And I made sure that people capitalize on the strength.
-      Start: 1804.07, End: 1806.49
-    Sentence: And out of 8 people, 4 people just got promoted within a year.
-      Start: 1806.63, End: 1810.09
-
-    Sentence: Awesome.
-      Start: 1812.39, End: 1812.87
-    Sentence: Thank you, Satir.
-      Start: 1812.87, End: 1813.31
-    Sentence: Coming to the last question of the segment, and it's around feedback.
-      Start: 1813.31, End: 1814.17
-    Sentence: Feedback are super critical.
-      Start: 1830.24, End: 1831.86
-    Sentence: Most of the time when you have interviews, you don't necessarily get a feedback even if you try to get a feedback.
-      Start: 1833.04, End: 1841.06
-
-    Sentence: Right?
-      Start: 1841.36, End: 1841.68
-    Sentence: Because manager let's say if you got it if you got rejected.
-      Start: 1841.68, End: 1845.695
-    Sentence: Right?
-      Start: 1845.695, End: 1846.095
-    Sentence: You will likely not get a feedback.
-      Start: 1846.095, End: 1848.895
-    Sentence: But if if the company is too good, have time, then they may give you if you came from a referral, you may get a feedback.
-      Start: 1848.895, End: 1854.915
-
-    Sentence: But generally, you don't.
-      Start: 1855.13, End: 1856.5701
-    Sentence: Right?
-      Start: 1856.5701, End: 1856.89
-    Sentence: Your HR will give you a very general feedback, and you'll get this email that, hey.
-      Start: 1856.89, End: 1861.2101
-    Sentence: We found some suitable candidates with blah blah blah blah.
-      Start: 1861.2101, End: 1863.8501
-    Sentence: So you, your we'll keep your profile for the future.
-      Start: 1863.8501, End: 1866.91
-
-    Sentence: So so it's very important to get the feedback before you get into the interview and that is why you need mentors.
-      Start: 1867.13, End: 1874.385
-    Sentence: That is why you need interview practice.
-      Start: 1874.385, End: 1876.145
-    Sentence: That is why you need to record your answers.
-      Start: 1876.145, End: 1878.005
-    Sentence: That is why you need to practice your interviews so that you are confident what you are answering is your best version.
-      Start: 1878.225, End: 1885.2101
-    Sentence: You cannot create your best version on camera or I mean on the interview thing at that time.
-      Start: 1885.99, End: 1892.17
-
-    Sentence: So it's important, you have practice that but I used to also, like, record my interviews.
-      Start: 1892.4701, End: 1899.195
-    Sentence: That not may not be the right best way to do it, but I used to do that and learn from from that as well.
-      Start: 1899.655, End: 1907.655
-    Sentence: Great.
-      Start: 1907.815, End: 1908.315
-    Sentence: So it's a it's a thing that you can incorporate.
-      Start: 1908.375, End: 1912.6699
-    Sentence: And also, let's say if you have got your feedback if you got through a referral, right, then your referral can generally see the feedback and so you can also get get answers from your referral as to how the interview went.
-      Start: 1912.8099, End: 1926.665
-
-    Sentence: And if generally, if you go through a referral, make sure before your interview with it, just practice the interview with your referral if it's a known person.
-      Start: 1927.045, End: 1936.965
-    Sentence: Right?
-      Start: 1936.965, End: 1937.465
-    Sentence: So because referral has also has a incentive to do that because if you get hired he gets a referral or she gets a referral bonus.
-      Start: 1937.63, End: 1943.41
-    Sentence: And so why not help you get hired?
-      Start: 1944.03, End: 1946.6101
+    Sentence: If you're enjoying our podcast, please subscribe so you'll never miss an episode and leave us a 5 star review.
+      Start: 2617.815, End: 2623.595
 

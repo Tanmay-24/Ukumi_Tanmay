@@ -37,7 +37,7 @@ def save_to_txt(parsed_data, output_file):
 
 
 if __name__ == "__main__":
-    with open("saket_audio.json", "r") as file:
+    with open("deepgram_response.json", "r") as file:
         json_data = json.load(file)
 
 
