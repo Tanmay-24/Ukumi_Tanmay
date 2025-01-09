@@ -55,8 +55,15 @@ class PodcastTranscriptProcessor:
             2. Do not generate new text or modify existing content
             3. Focus on clear question-answer segments
             
-            The goal is to remove unwanted content and identify the core Q&A pairs. The transcript may contain stops between actual questions and answers. The task is to remove segments like water breaks, mic checks, and other non-Q&A content.
-            Think step by step and process the entire transcript.
+            The goal is to remove content which does not contribute any significance to the converstaion and identify the core Q&A pairs. The transcript may contain stops between actual questions and answers. The task is to remove segments like water breaks, mic checks, and other non-Q&A content.
+            
+            Think step by step and process the entire transcript. 
+            
+            NOTE:
+            Keep in mind that the answer to a question may be spread across multiple segments. 
+            Ensure that answrs are completly captured and not cut off. 
+            Since most of the time questions are small but the answers are long, make sure to capture the entire answer.
+            
             
             Output Format:
             - Question segment with start/end timestamps
@@ -89,7 +96,7 @@ class PodcastTranscriptProcessor:
         refinement_prompt = ChatPromptTemplate.from_messages([
             ("system", """
             Clean the identified segments:
-            1. Remove filler words and profanity
+            1. Remove unwanted words and profanity
             2. Maintain exact timestamps
             3. Ensure question-answer alignment
             4. Do not modify core content of the transcript
@@ -140,7 +147,9 @@ class PodcastTranscriptProcessor:
             Output Format:
             question_start,question_end,answer_start,answer_end,potential
             
-            DO NOT give anything other than the timestamps and potential score in the output. Example output: 
+            DO NOT give anything other than the timestamps and potential score in the output.
+            
+            Example output: 
             10.32,18.105,18.885,155.65001
             169.205,172.98,174.34,257.01
             271.965,279.745,280.41998,413.165
