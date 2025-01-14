@@ -12,7 +12,7 @@ from deepgram import (
 load_dotenv()
 
 AUDIO_URL = {
-    "url": "https://ukumi-audio.s3.amazonaws.com/676a857fc290daf5f2c9f366.mp3"
+    "url": ""
 }
 
 def generate_transcript_deepgram(audio_url):

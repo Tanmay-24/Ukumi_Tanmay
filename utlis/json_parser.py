@@ -28,7 +28,7 @@ def save_to_txt(parsed_data, output_file):
     with open(output_file, "w", encoding="utf-8") as f:
         for idx, para in enumerate(parsed_data, start=1):
             for sentence in para["sentences"]:
-                f.write(f"    Sentence: {sentence['text']}\n")
+                f.write(f"     {sentence['text']}\n")
                 f.write(f"      Start: {sentence['start']}, End: {sentence['end']}\n")
             f.write("\n")
 

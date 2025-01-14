@@ -12,3 +12,7 @@ streamlit
 
 graphviz
 deepgram-sdk==3.7.7
+
+tenacity
+futures
+dataclasses
