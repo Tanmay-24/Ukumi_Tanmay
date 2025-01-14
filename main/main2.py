@@ -24,7 +24,7 @@ class State(TypedDict):
 
 class PodcastTranscriptProcessor:
     def __init__(self):
-        self.llm = ChatOpenAI(model="gpt-4o", temperature=0.1, api_key=OPENAI_API_KEY)
+        self.llm = ChatOpenAI(model="gpt-4o", temperature=0.2, api_key=OPENAI_API_KEY)
         
         # Building  the Graph
         self.graph_builder = StateGraph(State)
@@ -143,17 +143,18 @@ class PodcastTranscriptProcessor:
             - Educational or entertainment value
             - Shareability and trend relevance
             - Overall audience appeal
+            - Title: A short title for each segment
             
             Output Format:
-            question_start,question_end,answer_start,answer_end,potential
+            question_start,question_end,answer_start,answer_end,potential,title,recommended
             
-            DO NOT give anything other than the timestamps and potential score in the output.
+            DO NOT give anything other than the timestamps, potential score, title, and recommendation flag in the output.
             
             Example output: 
-            10.32,18.105,18.885,155.65001
-            169.205,172.98,174.34,257.01
-            271.965,279.745,280.41998,413.165
-            907.815,916.31,916.93,1052.7899
+            10.32,18.105,18.885,155.65001,5,"Introduction"
+            169.205,172.98,174.34,257.01,4,"Discussion on AI"
+            271.965,279.745,280.41998,413.165,8,"Future of Technology"
+            907.815,916.31,916.93,1052.7899,9,"Closing Remarks"
             
             """),
             ("human", "{qa_pairs}")
@@ -292,93 +293,98 @@ def main():
             if 'selected_segments' not in st.session_state:
                 st.session_state.selected_segments = {}
             
-            timestamps = final_output.content.strip('```').split()
+            timestamps = final_output.content.strip('```').split('\n')
             selected_segments = []
             
-            # Create columns for better layout
             col1, col2 = st.columns([3, 1])
             
             with col1:
                 for i, timestamp_group in enumerate(timestamps):
-                    # Split the timestamp group and extract potential score
-                    parts = timestamp_group.split(',')
-                    times = [float(t) for t in parts[:4]]  # First 4 elements are timestamps
-                    potential_score = int(parts[4])  # Fifth element is the potential score
-                    
-                    # Calculate duration
-                    duration = (times[1] - times[0]) + (times[3] - times[2])
-                    duration_str = f"{int(duration // 60)}:{int(duration % 60):02d}"
-                    
-                    # Create a color based on potential score
-                    score_color = f"{'#' + hex(int(255 * (potential_score/10)))[2:].zfill(2) + 'ff' + hex(int(255 * (1-potential_score/10)))[2:].zfill(2)}"
-                    
-                    # Use columns for each segment to show score and checkbox side by side
-                    seg_col1, seg_col2, seg_col3 = st.columns([4, 1, 1])
-                    
-                    with seg_col1:
-                        # Use session state for checkbox
-                        key = f"segment_{i}"
-                        if key not in st.session_state.selected_segments:
-                            st.session_state.selected_segments[key] = True
+                    try:
+                        # Split and validate the timestamp group
+                        parts = timestamp_group.strip().split(',')
+                        if len(parts) < 6:
+                            continue
                         
-                        if st.checkbox(
-                            f"Segment {i+1} ({duration_str})",
-                            value=st.session_state.selected_segments[key],
-                            key=key
-                        ):
-                            selected_segments.append(timestamp_group)
-                            st.session_state.selected_segments[key] = True
-                        else:
-                            st.session_state.selected_segments[key] = False
-                    
-                    with seg_col2:
-                        st.metric("Score", f"{potential_score}/10")
-                    
-                    with seg_col3:
-                        if st.button("ℹ️", key=f"info_{i}"):
-                            st.info(f"This segment has a potential score of {potential_score}/10 based on its content depth, emotional impact, educational value, and shareability.")
-            
-            with col2:
-                # Calculate total duration and average potential
-                total_duration = 0
-                total_potential = 0
-                if selected_segments:
-                    for segment in selected_segments:
-                        parts = segment.split(',')
                         times = [float(t) for t in parts[:4]]
-                        total_duration += (times[1] - times[0]) + (times[3] - times[2])
-                        total_potential += int(parts[4])
+                        potential_score = int(parts[4])
+                        title = parts[5].strip('"')
+                        
+                        duration = (times[1] - times[0]) + (times[3] - times[2])
+                        duration_str = f"{int(duration // 60)}:{int(duration % 60):02d}"
+                        
+                        score_color = f"{'#' + hex(int(255 * (potential_score/10)))[2:].zfill(2) + 'ff' + hex(int(255 * (1-potential_score/10)))[2:].zfill(2)}"
+                        
+                        seg_col1, seg_col2, seg_col3 = st.columns([4, 1, 1])
+                        
+                        with seg_col1:
+                            key = f"segment_{i}"
+                            # Initialize key if not exists
+                            if key not in st.session_state.selected_segments:
+                                st.session_state.selected_segments[key] = False
+                            
+                            if st.checkbox(
+                                f"{title} ({duration_str})",
+                                value=st.session_state.selected_segments[key],
+                                key=key
+                            ):
+                                selected_segments.append(timestamp_group)
+                                st.session_state.selected_segments[key] = True
+                            else:
+                                st.session_state.selected_segments[key] = False
+                        
+                        with seg_col2:
+                            st.metric("Score", f"{potential_score}/10")
+                        
+                        with seg_col3:
+                            if st.button("ℹ️", key=f"info_{i}"):
+                                st.info(f"This segment has a potential score of {potential_score}/10 based on its content depth, emotional impact, educational value, and shareability.")
                     
-                    avg_potential = total_potential / len(selected_segments)
-                    
-                    st.metric(
-                        "Total Duration",
-                        f"{int(total_duration // 60)}:{int(total_duration % 60):02d}"
-                    )
-                    st.metric(
-                        "Average Potential",
-                        f"{avg_potential:.1f}/10"
-                    )
+                    except (ValueError, IndexError) as e:
+                        st.error(f"Error processing segment {i}: {str(e)}")
+                        continue
             
-            # Download buttons
-            col1, col2 = st.columns(2)
-            with col1:
+            # Rest of the code remains the same
+            # Calculate total duration and average potential
+            total_duration = 0
+            total_potential = 0
+            if selected_segments:
+                for segment in selected_segments:
+                    parts = segment.strip().split(',')
+                    times = [float(t) for t in parts[:4]]
+                    total_duration += (times[1] - times[0]) + (times[3] - times[2])
+                    total_potential += int(parts[4])
+                
+                avg_potential = total_potential / len(selected_segments)
+                
+                st.metric(
+                    "Total Duration",
+                    f"{int(total_duration // 60)}:{int(total_duration % 60):02d}"
+                )
+                st.metric(
+                    "Average Potential",
+                    f"{avg_potential:.1f}/10"
+                )
+        
+        # Download buttons
+        col1, col2 = st.columns(2)
+        with col1:
+            st.download_button(
+                "Download All Results",
+                data=str(final_output.content),
+                file_name="processed_transcript.txt",
+                mime="text/plain"
+            )
+        
+        with col2:
+            if selected_segments:
+                selected_output = "\n".join(selected_segments)
                 st.download_button(
-                    "Download All Results",
-                    data=str(final_output.content),
-                    file_name="processed_transcript.txt",
+                    "Download Selected Segments",
+                    data=selected_output,
+                    file_name="selected_segments.txt",
                     mime="text/plain"
                 )
-            
-            with col2:
-                if selected_segments:
-                    selected_output = "\n".join(selected_segments)
-                    st.download_button(
-                        "Download Selected Segments",
-                        data=selected_output,
-                        file_name="selected_segments.txt",
-                        mime="text/plain"
-                    )
                     
 if __name__ == "__main__":
-    main()                    
+    main()

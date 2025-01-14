@@ -19,13 +19,8 @@ def create_segment(input_file, start, end, output_file):
         '-i', input_file,
         '-ss', str(start),
         '-to', str(end),
-        # Use proper encoding settings to prevent playback issues
-        '-c:v', 'libx264',
-        '-c:a', 'aac',
-        '-preset', 'medium',  # Balance between encoding speed and quality
-        '-crf', '23',        # Constant Rate Factor for quality (lower = better)
-        '-avoid_negative_ts', 'make_zero',  # Prevent timestamp issues
-        '-async', '1',       # Audio sync
+        '-c', 'copy',           # Stream copy instead of re-encoding
+        '-avoid_negative_ts', 'make_zero',
         output_file
     ]
     subprocess.run(command, check=True)
@@ -36,17 +31,14 @@ def concat_videos(segment_files, final_output):
         for file in segment_files:
             f.write(f"file '{file}'\n")
     
-    # Concatenate all segments with proper encoding
+    # Concatenate with stream copy
     command = [
         'ffmpeg',
         '-f', 'concat',
         '-safe', '0',
         '-i', 'segments.txt',
-        # Maintain quality with proper encoding
-        '-c:v', 'libx264',
-        '-c:a', 'aac',
-        '-preset', 'medium',
-        '-crf', '23',
+        '-c', 'copy',           # Stream copy for concatenation
+        '-movflags', '+faststart',  # Enable fast start for web playback
         final_output
     ]
     subprocess.run(command, check=True)
@@ -89,11 +81,11 @@ def main(input_video, timestamp_data, output_video):
     print(f"Complete! Output saved to {output_video}")
 
 if __name__ == "__main__":
-    input_video = "/home/tanmay/Desktop/Ukumi_Tanmay/Outputs/ffmpeg/output.mp4"
-    output_video = "new_edit_python.mp4"
+    input_video = "/home/tanmay/Desktop/Ukumi_Tanmay/data/output.mp4"
+    output_video = "output/new_edit_python_2.mp4"
     
     try:
-        with open("/home/tanmay/Downloads/processed_transcript.txt") as f:
+        with open("/home/tanmay/Downloads/selected_segments.txt") as f:
             timestamp_data = f.read()
             if timestamp_data.startswith('```'):
                 timestamp_data = timestamp_data.strip('```')
