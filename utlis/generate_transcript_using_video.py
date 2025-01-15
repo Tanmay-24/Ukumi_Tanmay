@@ -16,7 +16,12 @@ def extract_audio_from_video(video_path, audio_path):
         '-map', 'a',
         audio_path
     ]
-    subprocess.run(command, check=True)
+    try:
+        result = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print("FFmpeg output:", result.stdout.decode())
+        print("FFmpeg errors:", result.stderr.decode())
+    except subprocess.CalledProcessError as e:
+        print(f"Error extracting audio: {e.stderr.decode()}")
 
 def generate_transcript_deepgram(audio_path):
     try:
@@ -43,7 +48,7 @@ def generate_transcript_deepgram(audio_path):
         print(f"Exception: {e}")
         return None
 
-def save_response_to_json(response, filename='deepgram_response_big_video.json'):
+def save_response_to_json(response, filename='deepgram_response_regulating.json'):
     try:
         with open(filename, 'w') as f:
             json.dump(response, f, indent=4)
@@ -52,15 +57,15 @@ def save_response_to_json(response, filename='deepgram_response_big_video.json')
         print(f"Error saving response to JSON: {e}")
 
 if __name__ == "__main__":
-    video_path = "/home/tanmay/Desktop/Ukumi_Tanmay/data/output.mp4"
-    audio_path = "extracted_audio_big_video.mp3"
+    video_path = "/home/tanmay/Desktop/Ukumi_Tanmay/data/regulationg_ai.mp4"
+    audio_path = "/home/tanmay/Desktop/Ukumi_Tanmay/2.mp3"
 
     # Extract audio from video
-    extract_audio_from_video(video_path, audio_path)
+    # extract_audio_from_video(video_path, audio_path)
 
     # Generate transcript from extracted audio
-    # response = generate_transcript_deepgram(audio_path)
-    # if response:
-    #     print("Transcription completed successfully.")
-    # else:
-    #     print("Transcription failed.")
+    response = generate_transcript_deepgram(audio_path)
+    if response:
+        print("Transcription completed successfully.")
+    else:
+        print("Transcription failed.")
