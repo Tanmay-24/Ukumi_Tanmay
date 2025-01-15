@@ -28,8 +28,8 @@ def save_to_txt(parsed_data, output_file):
     with open(output_file, "w", encoding="utf-8") as f:
         for idx, para in enumerate(parsed_data, start=1):
             for sentence in para["sentences"]:
-                f.write(f"     {sentence['text']}\n")
-                f.write(f"      Start: {sentence['start']}, End: {sentence['end']}\n")
+                f.write(f"{sentence['text']}")
+                f.write(f" {sentence['start']},{sentence['end']}\n")
             f.write("\n")
 
 
@@ -37,13 +37,13 @@ def save_to_txt(parsed_data, output_file):
 
 
 if __name__ == "__main__":
-    with open("deepgram_response.json", "r") as file:
+    with open("deepgram_response_regulating.json", "r") as file:
         json_data = json.load(file)
 
 
 
 
     result = parse_paragraphs(json_data)
-    output_file = "output.txt"
+    output_file = "output_regulating.txt"
     save_to_txt(result, output_file)
     print(f"Data saved to {output_file}")
