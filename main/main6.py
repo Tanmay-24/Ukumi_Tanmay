@@ -6,6 +6,9 @@ from langgraph.graph import StateGraph, END
 from langgraph.graph.message import add_messages
 from dotenv import load_dotenv
 import os
+import json
+from models import TranscriptAnalysis, parse_text_format
+import json
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -87,18 +90,16 @@ class ParallelTranscriptProcessor:
             Since most of the time questions are small but the answers are long, make sure to capture the entire answer.
             
             
-            Output Format (structure only, do not output the structure):
+            OUTPUT->
             - question_start,question_end,answer_start,answer_end, topic name
             - question_start,question_end,answer_start,answer_end, topic name
-            - list of segments that were removed, and the reason for removal
             
+            Example Output:
             
-            Example output:
+            KEPT SEGMENTS:
             10.32,18.105,18.885,155.65001,"Introduction"
             169.205,172.98,174.34,257.01,"Discussion on AI"
             
-            Removed segments:
-            5.32,10.105, "Water break"
             """),
             ("human", "{transcript}")
         ])
@@ -127,12 +128,14 @@ class ParallelTranscriptProcessor:
             4. Maintain exact timestamps
             5. Do not modify core content of the transcript
             
-            Output Format:
+            OUTPUT->
+            - question_start,question_end,answer_start,answer_end, topic name
             - question_start,question_end,answer_start,answer_end, topic name
             
-            Example output:
+            Example Output:
             10.32,18.105,18.885,155.65001,"Introduction"
             169.205,172.98,174.34,257.01,"Discussion on AI"
+            
             """),
             ("human", "{transcript}")
         ])
@@ -160,10 +163,7 @@ class ParallelTranscriptProcessor:
             3. Create comprehensive segment ratings
             
             Format output:
-            - question_start,question_end,answer_start,answer_end, topic name
-            - Combined segment ratings
-            - Overall recommendations
-            - Priority segments
+                - question_start,question_end,answer_start,answer_end,topic name,segment ratings (0-10)
             """),
             ("human", "Editor Analysis: {editor_analysis}\nViewer Analysis: {viewer_analysis}")
         ])
@@ -175,30 +175,39 @@ class ParallelTranscriptProcessor:
                 "editor_analysis": state['editor_analysis'],
                 "viewer_analysis": state['viewer_analysis']
             })
+            print(combined.content)
             return {
                 **state,
                 "combined_analysis": combined.content
             }
+            
         except Exception as e:
             print(f"Combiner agent error: {str(e)}")
             raise
 
     def formatter_agent(self, state: CombinedState) -> CombinedState:
-        """Formats the final output in the required structure"""
+        """Formats the final output using Pydantic validation"""
         formatter_prompt = ChatPromptTemplate.from_messages([
             ("system", """
-            Format the combined analysis into the final output structure:
+            Format the combined analysis into a structured output.
             
             Required format:
-            question_start,question_end,answer_start,answer_end,potential,title
+            KEPT SEGMENTS:
+            start,end,question_start,answer_end,title,rating
+            
+            REMOVED SEGMENTS:
+            start,end
             
             Rules:
-            1. Extract precise timestamps
-            2. Calculate potential scores (1-10)
-            3. Create concise titles
-            4. Sort by potential score
+            1. All timestamps must be valid numbers
+            2. Ratings must be between 0-10
+            3. Each segment must have a title
+            4. Title should be descriptive but concise
             
-            Output only the formatted lines, nothing else.
+            Example:
+            KEPT SEGMENTS:
+            10.32,18.105,18.885,155.65,"Introduction to AI",8.5
+            169.20,172.98,174.34,257.01,"Future of Technology",7.5
             """),
             ("human", "{combined_analysis}")
         ])
@@ -209,10 +218,21 @@ class ParallelTranscriptProcessor:
             formatted = formatter_chain.invoke({
                 "combined_analysis": state['combined_analysis']
             })
-            return {
-                **state,
-                "final_output": formatted.content
-            }
+            
+            # Parse the LLM output into our schema format
+            parsed_data = parse_text_format(formatted.content)
+            
+            # Validate using Pydantic
+            try:
+                validated_data = TranscriptAnalysis(**parsed_data)
+                return {
+                    **state,
+                    "final_output": validated_data.model_dump()
+                }
+            except Exception as e:
+                print(f"Validation error: {str(e)}")
+                raise
+            
         except Exception as e:
             print(f"Formatter agent error: {str(e)}")
             raise
@@ -271,10 +291,11 @@ def main():
         result = processor.process_transcript(transcript)
         
         print("Final Output:")
-        print(result["final_output"])
+        print(json.dumps(result["final_output"], indent=2))
         
-        with open("script_output_saket.txt", 'w') as file:
-            file.write(result["final_output"])
+        # Save the validated output
+        with open("script_output_saket.json", 'w') as file:
+            json.dump(result["final_output"], file, indent=2)
 
     except FileNotFoundError:
         print(f"Error: Transcript file not found at {transcript_path}")
