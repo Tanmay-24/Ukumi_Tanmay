@@ -48,7 +48,7 @@ def generate_transcript_deepgram(audio_path):
         print(f"Exception: {e}")
         return None
 
-def save_response_to_json(response, filename='deepgram_response_regulating.json'):
+def save_response_to_json(response, filename='deepgram_response_riverside.json'):
     try:
         with open(filename, 'w') as f:
             json.dump(response, f, indent=4)
@@ -57,11 +57,11 @@ def save_response_to_json(response, filename='deepgram_response_regulating.json'
         print(f"Error saving response to JSON: {e}")
 
 if __name__ == "__main__":
-    video_path = "/home/tanmay/Desktop/Ukumi_Tanmay/data/regulationg_ai.mp4"
-    audio_path = "/home/tanmay/Desktop/Ukumi_Tanmay/2.mp3"
+    video_path = "/home/tanmay/Desktop/Ukumi_Tanmay/data/riverside_backup-video_the_india opportuni.mp4"
+    audio_path = "/home/tanmay/Desktop/Ukumi_Tanmay/3.mp3"
 
     # Extract audio from video
-    # extract_audio_from_video(video_path, audio_path)
+    extract_audio_from_video(video_path, audio_path)
 
     # Generate transcript from extracted audio
     response = generate_transcript_deepgram(audio_path)

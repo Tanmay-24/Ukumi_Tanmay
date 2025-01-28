@@ -86,19 +86,14 @@ class ParallelTranscriptProcessor:
             Ensure that answers are completly captured and not cut off. 
             Since most of the time questions are small but the answers are long, make sure to capture the entire answer.
             
-            
             Output Format (structure only, do not output the structure):
             - question_start,question_end,answer_start,answer_end, topic name
             - question_start,question_end,answer_start,answer_end, topic name
-            - list of segments that were removed, and the reason for removal
             
             
             Example output:
             10.32,18.105,18.885,155.65001,"Introduction"
             169.205,172.98,174.34,257.01,"Discussion on AI"
-            
-            Removed segments:
-            5.32,10.105, "Water break"
             """),
             ("human", "{transcript}")
         ])
@@ -154,16 +149,11 @@ class ParallelTranscriptProcessor:
         """Combines editor and viewer analyses"""
         combiner_prompt = ChatPromptTemplate.from_messages([
             ("system", """
-            Combine the editorial analysis and viewer feedback to:
-            1. Identify highest potential segments
-            2. Balance professional quality with audience appeal
-            3. Create comprehensive segment ratings
+            Combine the editorial timestamps and viewer timestamps into one output and add ratings (1-10) for each segment based on quality and engagement.
             
             Format output:
             - question_start,question_end,answer_start,answer_end, topic name
             - Combined segment ratings
-            - Overall recommendations
-            - Priority segments
             """),
             ("human", "Editor Analysis: {editor_analysis}\nViewer Analysis: {viewer_analysis}")
         ])
@@ -194,10 +184,8 @@ class ParallelTranscriptProcessor:
             
             Rules:
             1. Extract precise timestamps
-            2. Calculate potential scores (1-10)
+            2. Calculate potential scores (1-10), higher for better quality and engagement, lower for less appealing content
             3. Create concise titles
-            4. Sort by potential score
-            
             Output only the formatted lines, nothing else.
             """),
             ("human", "{combined_analysis}")
@@ -263,7 +251,7 @@ class ParallelTranscriptProcessor:
 
 def main():
     try:
-        transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/data/output_saket.txt"
+        transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/riverside_shri.txt"
         with open(transcript_path, 'r') as file:
             transcript = file.read()
 
@@ -273,7 +261,7 @@ def main():
         print("Final Output:")
         print(result["final_output"])
         
-        with open("script_output_saket.txt", 'w') as file:
+        with open("script_output_riverside_shri_2.txt", 'w') as file:
             file.write(result["final_output"])
 
     except FileNotFoundError:
