@@ -3,6 +3,8 @@ import json
 def parse_paragraphs(json_data):
     paragraphs = json_data.get('results', {}).get('channels', [])[0] \
         .get('alternatives', [])[0].get('paragraphs', {}).get('paragraphs', [])
+    duration= json_data.get('metadata', {}).get('duration', [])
+    print(f"Duration: {duration}")    
     
     parsed_data = []
     for para in paragraphs:
@@ -37,13 +39,13 @@ def save_to_txt(parsed_data, output_file):
 
 
 if __name__ == "__main__":
-    with open("deepgram_response_regulating.json", "r") as file:
+    with open("/home/tanmay/Desktop/Ukumi_Tanmay/deepgram_response_riverside.json", "r") as file:
         json_data = json.load(file)
 
 
 
 
     result = parse_paragraphs(json_data)
-    output_file = "output_regulating.txt"
+    output_file = "riverside_shri.txt"
     save_to_txt(result, output_file)
     print(f"Data saved to {output_file}")

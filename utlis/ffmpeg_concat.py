@@ -83,11 +83,11 @@ def main(input_video, timestamp_data, output_video):
     print(f"Complete! Output saved to {output_video}")
 
 if __name__ == "__main__":
-    input_video = "/home/tanmay/Desktop/Ukumi_Tanmay/data/regulationg_ai.mp4"
-    output_video = "output/new_edit_python_regulating_ai.mp4"
+    input_video = "/home/tanmay/Desktop/Ukumi_Tanmay/data/riverside_backup-video_the_india opportuni.mp4"
+    output_video = "output/4_agents_riverside_shri.mp4"
 
     try:
-        with open("/home/tanmay/Downloads/processed_transcript.txt") as f:
+        with open("/home/tanmay/Desktop/Ukumi_Tanmay/script_output_riverside_shri_2.txt") as f:
             timestamp_data = f.read().strip()
             if timestamp_data.startswith('```'):
                 timestamp_data = timestamp_data.strip('```')

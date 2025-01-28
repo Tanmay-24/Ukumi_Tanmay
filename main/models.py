@@ -1,6 +1,6 @@
 
 from pydantic import BaseModel, Field, field_validator
-from typing import List
+from typing import List, Optional
 
 class Timestamp(BaseModel):
     start: float = Field(..., ge=0)
@@ -17,8 +17,14 @@ class Segment(BaseModel):
     rating: float = Field(..., ge=0, le=10)
     title: str = Field(..., min_length=1)
 
+class RemovedSegment(BaseModel):
+    start: float = Field(..., ge=0)
+    end: float = Field(..., ge=0)
+    reason: str = Field(..., min_length=1)
+    
 class TranscriptAnalysis(BaseModel):
     segments: List[Segment]
+    # removed_segments: Optional[List[RemovedSegment]]
 
     @field_validator('segments')
     def segments_must_not_overlap(cls, v):
@@ -62,3 +68,30 @@ def parse_text_format(text: str) -> dict:
     return {
         "segments": segments
     }
+    
+def parse_text_format_2(text: str) -> dict:
+    removed_segments = []
+    current_section = None
+    
+    for line in text.strip().split('\n'):
+        line = line.strip()
+        if not line:
+            continue
+        
+        if "REMOVED SEGMENTS:" in line:
+            current_section = "removed"
+            continue
+        
+        if current_section == "removed" and ',' in line:
+            try:
+                start, end, reason = line.split(',', 2)
+                removed_segments.append({
+                    "start": float(start),
+                    "end": float(end),
+                    "reason": reason.strip('"')
+                })
+            except (ValueError, IndexError) as e:
+                print(f"Warning: Skipping invalid line: {line}")
+                continue
+    
+    return {"removed_segments": removed_segments}
