@@ -39,7 +39,7 @@ class UnifiedState(TypedDict):
 
 class OptimizedTranscriptProcessor:
     def __init__(self, max_retries: int = 3):
-        self.llm = ChatOpenAI(model="gpt-4o", temperature=0, api_key=OPENAI_API_KEY,)
+        self.llm = ChatOpenAI(model="gpt-4o", temperature=0.1, api_key=OPENAI_API_KEY,seed=5567)
         self.max_retries = max_retries
         self.workflow = self.setup_workflow()
 
@@ -188,7 +188,7 @@ def main():
     start_time = time.time()
     try:
         print("Starting transcript processing pipeline...")
-        transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/ai.txt"
+        transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/riverside_shri.txt"
         
         print("Reading transcript file...")
         with open(transcript_path, 'r') as file:
@@ -201,7 +201,7 @@ def main():
         if not result or not result.get("final_output"):
             raise ValueError("Processing failed to produce valid output")
             
-        output_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/removed_segments_output.json"
+        output_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/removed_segments_output_2.json"
         print("Saving results...")
         with open(output_path, 'w') as file:
             json.dump(result["final_output"]["removed"], file, indent=2)
