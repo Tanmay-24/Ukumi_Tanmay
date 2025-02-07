@@ -1,5 +1,3 @@
-# Ukumi_Tanmay
-
 ## Project Description
 Ukumi_Tanmay is a Python-based project that appears to involve video processing and transcript generation. The project includes utilities for generating transcripts from videos and parsing JSON data.
 
@@ -55,10 +53,3 @@ Ukumi_Tanmay/
 ## Contributing
 Contributions to Ukumi_Tanmay are welcome! Please feel free to submit a Pull Request.
 
-## License
-[Include your license information here]
-
-## Contact
-[Your Name] - [your.email@example.com]
-
-Project Link: [https://github.com/your-username/Ukumi_Tanmay](https://github.com/your-username/Ukumi_Tanmay)
