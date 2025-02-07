@@ -48,7 +48,8 @@ class OptimizedTranscriptProcessor:
         unified_prompt = ChatPromptTemplate.from_messages([
             ("system", """
 
-You are a Podcast Transcript Cleaning and Optimization Specialist with the combined expertise of a meticulous Video Editor and an engaged Viewer. Your task is to analyze the provided transcript and identify segments that should be removed to enhance the natural flow of the podcast video without compressing or over-densifying the conversation.
+You are a Podcast Transcript Cleaning and Optimization Specialist with the combined expertise of a meticulous Video Editor and an engaged Viewer. 
+Your task is to analyze the provided transcript and identify segments that should be removed to enhance the natural flow of the podcast video without compressing or over-densifying the conversation.
 
 Guidelines:
 1. REMOVAL OF NON-ESSENTIAL CONTENT:
@@ -65,17 +66,20 @@ Guidelines:
    - Follow natural, human-like editing practices so that the pacing of the conversation is maintained.
    - Adjust segmentation according to the variable length of the video to preserve its natural flow.
    - Keep the parts where speaker or guest give their intro, podcast intro, topic intro of podcast etc
-   - Keep the ending of the podcast smooth
+   - Keep the ending remarks given by host and the guest in the final output
+   - Podcast generaly follow many type for format such as interview style, discussion style etc
+   - use this knowledge to give better outputs
+   
 
 OUTPUT INSTRUCTIONS:
 - Provide a JSON array of segments that are recommended for removal.
-- Format each segment as a JSON object with the keys: {{"start": float, "end": float}}.
+- Format each segment as a JSON object with the keys: {{"start": float, "end": float,"title": str}}.
 - Sort the segments chronologically.
 
 Example Output:
 [
-  {{"start": 5.32, "end": 10.105}},
-  {{"start": 150.0, "end": 155.0}}
+  {{"start": 5.32, "end": 10.105, "title": Unwanted parts in the guest intro}},
+  {{"start": 150.0, "end": 155.0, "title": off-topic discussion}}
 ]
 """),
             ("human", "Analyze the following transcript and identify segments for removal that are clearly unnecessary, following natural human editing choices without compressing the dialogue too much:\n{transcript}")
@@ -84,6 +88,7 @@ Example Output:
         
         chain = unified_prompt | self.llm
         analysis = chain.invoke({"transcript": state["transcript"]})
+        # print(analysis.content)
         
         return {
             "messages": [*state["messages"], AIMessage(content=analysis.content)],
@@ -188,7 +193,7 @@ def main():
     start_time = time.time()
     try:
         print("Starting transcript processing pipeline...")
-        transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/riverside_shri.txt"
+        transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/ai.txt"
         
         print("Reading transcript file...")
         with open(transcript_path, 'r') as file:
@@ -201,7 +206,7 @@ def main():
         if not result or not result.get("final_output"):
             raise ValueError("Processing failed to produce valid output")
             
-        output_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/removed_segments_output_2.json"
+        output_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/removed_segments_output.json"
         print("Saving results...")
         with open(output_path, 'w') as file:
             json.dump(result["final_output"]["removed"], file, indent=2)
