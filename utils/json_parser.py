@@ -34,9 +34,9 @@ def save_to_txt(parsed_data, output_file):
             f.write("\n")
 
 if __name__ == "__main__":
-    with open("/home/tanmay/Desktop/Ukumi_Tanmay/extras/deepgram_response.json", "r") as file:
+    with open("/home/tanmay/Desktop/Ukumi_Tanmay/extras/saket_audio.json", "r") as file:
         json_data = json.load(file)
     result = parse_paragraphs(json_data)
-    output_file = "extras/ai.txt"
+    output_file = "extras/saket.txt"
     save_to_txt(result, output_file)
     print(f"Data saved to {output_file}")

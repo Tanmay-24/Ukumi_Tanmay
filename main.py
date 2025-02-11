@@ -193,7 +193,7 @@ def main():
     start_time = time.time()
     try:
         print("Starting transcript processing pipeline...")
-        transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/ai.txt"
+        transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/saket.txt"
         
         print("Reading transcript file...")
         with open(transcript_path, 'r') as file:
