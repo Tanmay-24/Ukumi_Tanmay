@@ -26,7 +26,7 @@ class RemovedSegmentsOutput(BaseModel):
 
 # Create the processing agent with structured output
 transcript_processor = Agent(
-    model=OpenAIChat(id="gpt-4o", temperature=0.1),
+    model=OpenAIChat(id="o3-mini"),
     description="Podcast Transcript Cleaning Specialist",
     response_model=RemovedSegmentsOutput,
     instructions="""You are a Podcast Transcript Cleaning and Optimization Specialist. Analyze the transcript and identify segments that should be removed to enhance natural flow while preserving core content.
@@ -61,7 +61,7 @@ def process_transcript(transcript_path: str, output_path: str):
 if __name__ == "__main__":
     import time
     start_time = time.time()
-    transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/saket.txt"
+    transcript_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/ai.txt"
     output_path = "/home/tanmay/Desktop/Ukumi_Tanmay/extras/phi.json"
     
     try:
