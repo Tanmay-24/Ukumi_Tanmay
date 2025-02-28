@@ -26,7 +26,7 @@ class RemovedSegmentsOutput(BaseModel):
 
 # Create the processing agent with structured output
 transcript_processor = Agent(
-    model=OpenAIChat(id="gpt-4o",temperature=0.14,ap),
+    model=OpenAIChat(id="gpt-4o",temperature=0.14),
     description="Podcast Transcript Cleaning Specialist",
     response_model=RemovedSegmentsOutput,
     instructions="""You are a Podcast Transcript Cleaning and Optimization Specialist. Analyze the transcript and identify segments that should be removed to enhance natural flow while preserving core content.
