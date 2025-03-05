@@ -1,7 +1,10 @@
-langchain
-langgraph
-jsonschema
-langchain-openai
-python-dotenv
 deepgram-sdk==3.7.7
 mutagen
+openai
+pydantic
+pydub
+python-dotenv
+requests
+spacy
+torch
+transformers

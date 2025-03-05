@@ -2,37 +2,19 @@ import json
 import re
 from typing import Dict, List, Any, Union
 
-# Transformer and NLP libraries
-import torch
-from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
+import spacy
 
 class PodcastTranscriptAnalyzer:
     def __init__(self):
         """
-        Initialize the analyzer with NLP models
+        Initialize the analyzer with SpaCy NLP model
         """
-        # Use a more specialized and reliable NER model
-        model_name = "dbmdz/bert-large-cased-finetuned-conll03-english"
-        
         try:
-            # Explicitly set device to CPU
-            device = torch.device('cpu')
-            
-            # Load tokenizer and model
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-            self.model = AutoModelForTokenClassification.from_pretrained(model_name)
-            
-            # Create pipeline with explicit device setting
-            self.nlp = pipeline(
-                "ner", 
-                model=self.model, 
-                tokenizer=self.tokenizer,
-                aggregation_strategy="simple",
-                device=device
-            )
-        except Exception as e:
-            print(f"Error initializing NLP models: {e}")
-            raise
+            # Load the large English model
+            self.nlp = spacy.load("en_core_web_trf")
+        except OSError:
+            print("Downloading SpaCy English model...")
+            raise ValueError("SpaCy English model not found")
     
     def clean_and_normalize_text(self, text: str) -> str:
         """
@@ -41,9 +23,6 @@ class PodcastTranscriptAnalyzer:
         # Remove extra whitespaces
         text = re.sub(r'\s+', ' ', text)
         
-        # Normalize some common cases
-        text = text.replace('ister', 'ister ')  # Fix partial words
-        text = text.replace('ister Musk', 'Mister Musk')
         
         return text.strip()
     
@@ -91,26 +70,29 @@ class PodcastTranscriptAnalyzer:
             print(f"Error extracting text: {str(e)}")
             return ""
     
-    def process_ner_results(self, ner_results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def process_ner_results(self, doc) -> List[Dict[str, Any]]:
         """
-        Process and clean NER results
+        Process and clean NER results from SpaCy
         """
         processed_entities = []
         seen_entities = set()
         
-        # Comprehensive entity description mapping
+        # Entity description mapping relevant for podcast viewers
         entity_descriptions = {
-            'PER': 'Person',
+            'PERSON': 'Person',
             'ORG': 'Organization', 
             'LOC': 'Location',
-            'MISC': 'Miscellaneous'
+            'GPE': 'Geopolitical Entity',
+            'EVENT': 'Named Events (e.g., Conferences, Historical Events)',
+            'WORK_OF_ART': 'Titles of Books, Songs, Movies, etc.',
+            'DATE': 'Dates Mentioned',
+            'TIME': 'Specific Times Mentioned'
         }
         
-        for entity in ner_results:
+        for ent in doc.ents:
             # Extract entity details
-            entity_text = entity.get('word', entity.get('text', '')).strip()
-            entity_label = entity.get('entity', entity.get('label', 'O'))
-            entity_score = float(entity.get('score', 1.0))
+            entity_text = ent.text.strip()
+            entity_label = ent.label_
             
             # Skip very short entities
             if len(entity_text) <= 1:
@@ -123,46 +105,32 @@ class PodcastTranscriptAnalyzer:
             if entity_key in seen_entities:
                 continue
             
-            # Determine description
-            description = entity_descriptions.get(entity_label, 'Other')
-            
-            processed_entities.append({
-                "text": entity_text,
-                "label": entity_label,
-                "score": entity_score,
-                "description": description
-            })
-            
-            seen_entities.add(entity_key)
+            # Only include entities that are in our entity_descriptions dictionary
+            if entity_label in entity_descriptions:
+                description = entity_descriptions[entity_label]
+                
+                processed_entities.append({
+                    "text": entity_text,
+                    "label": entity_label,
+                    "description": description
+                })
+                
+                seen_entities.add(entity_key)
         
-        # Sort entities by score in descending order
-        processed_entities.sort(key=lambda x: x['score'], reverse=True)
+        # Sort entities by text length (descending) to prioritize more specific entities
+        processed_entities.sort(key=lambda x: len(x['text']), reverse=True)
         
         return processed_entities
     
     def analyze_entities(self, text: str) -> List[Dict[str, Any]]:
         """
-        Extract named entities from text
+        Extract named entities from text using SpaCy
         """
-        # Process text in chunks to avoid token limits
-        words = text.split()
-        chunk_size = 200
-        chunks = [' '.join(words[i:i+chunk_size]) for i in range(0, len(words), chunk_size)]
-        
-        all_entities = []
-        
-        for chunk in chunks:
-            if not chunk.strip():
-                continue
-            
-            try:
-                chunk_results = self.nlp(chunk)
-                all_entities.extend(chunk_results)
-            except Exception as e:
-                print(f"Error processing chunk: {e}")
+        # Process the entire text at once (SpaCy is more efficient)
+        doc = self.nlp(text)
         
         # Process and clean NER results
-        processed_results = self.process_ner_results(all_entities)
+        processed_results = self.process_ner_results(doc)
         
         return processed_results
     

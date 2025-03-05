@@ -16,17 +16,9 @@ def extract_segments(data):
     return [{'start': float(item['start']), 'end': float(item['end']), 'text': item['text']} 
             for item in data[0]['text']]
 
-def split_array(arr, max_size=20):
-    """Split an array into subarrays of specified maximum size."""
-    return [arr[i:i + max_size] for i in range(0, len(arr), max_size)]
-
-def get_llm_keywords(client, transcript_chunks, model="gpt-4o", temperature=0.7):
-    """Generate relevant b-roll keywords using LLM."""
-    broll_info = []
-    
-    podcast_prompt = """You are analyzing a transcript from a podcast video. Each segment represents a short part of the conversation.
-
-Your task is to determine if b-roll footage would enhance the viewer's understanding for each segment, and if so, provide a specific keyword to search for relevant footage.
+def get_llm_keywords(client, transcript, model="gpt-4o", temperature=0.7):
+    """Generate relevant b-roll keywords using LLM for the entire transcript."""
+    podcast_prompt = """You are analyzing a transcript from a podcast video. Your task is to determine if b-roll footage would enhance the viewer's understanding for each segment of the conversation, and if so, provide a specific keyword to search for relevant footage.
 
 B-roll should ONLY be suggested when it adds significant value:
 1. When explaining complex concepts or ideas
@@ -40,47 +32,44 @@ DO NOT suggest b-roll for:
 - Abstract discussions without clear visual elements
 - Segments that are purely conversational
 
-For each segment, provide:
-1. "k": A specific, concrete keyword for searching video footage (if b-roll is needed)
-2. "i": The segment index number (0-19)
-3. "need_broll": true/false - whether this segment truly needs visual enhancement
+Analyze the entire transcript and provide b-roll suggestions for relevant segments. For each suggestion, provide:
+1. "k": A specific, concrete keyword for searching video footage
+2. "i": The index of the segment in the transcript (starting from 0)
+3. "need_broll": true (always true for suggested b-roll)
 
 Input:
 {transcript}
 
 Output format (JSON only):
-[{{"k": "keyword", "i": 0, "need_broll": true}}, {{"k": "keyword", "i": 1, "need_broll": false}}]
+[{{"k": "keyword", "i": 0, "need_broll": true}}, {{"k": "keyword", "i": 5, "need_broll": true}}]
+
+Ensure that your suggestions are accurate, relevant, and enhance the viewer's understanding of the content.
 """
 
-    for i, chunk in enumerate(transcript_chunks):
-        prompt = podcast_prompt.format(transcript=str(chunk))
-        
-        chat_completion = client.chat.completions.create(
-            messages=[{"role": "user", "content": prompt}],
-            model=model,
-            temperature=temperature
-        )
-        
-        broll_data = chat_completion.choices[0].message.content
-        print(f"Processing chunk {i+1}/{len(transcript_chunks)}")
-        
-        try:
-            # Handle possible JSON formatting issues
-            if "```json" in broll_data:
-                broll_data = broll_data.split('```json')[1].split('```')[0].strip()
-            if "```" in broll_data:
-                broll_data = broll_data.split('```')[1].split('```')[0].strip()
-                
-            parsed_data = json.loads(broll_data)
-            # Adjust indices to account for chunking
-            adjusted_data = [{"k": x["k"], "i": 20*i+x["i"], "need_broll": x.get("need_broll", True)} 
-                             for x in parsed_data]
-            broll_info.extend(adjusted_data)
-        except Exception as e:
-            print(f"Error parsing LLM response: {e}")
-            print(f"Raw response: {broll_data}")
+    prompt = podcast_prompt.format(transcript=str(transcript))
     
-    return broll_info
+    chat_completion = client.chat.completions.create(
+        messages=[{"role": "user", "content": prompt}],
+        model=model,
+        temperature=temperature
+    )
+    
+    broll_data = chat_completion.choices[0].message.content
+    print("Processing transcript for b-roll suggestions...")
+    
+    try:
+        # Handle possible JSON formatting issues
+        if "```json" in broll_data:
+            broll_data = broll_data.split('```json')[1].split('```')[0].strip()
+        if "```" in broll_data:
+            broll_data = broll_data.split('```')[1].split('```')[0].strip()
+            
+        broll_info = json.loads(broll_data)
+        return broll_info
+    except Exception as e:
+        print(f"Error parsing LLM response: {e}")
+        print(f"Raw response: {broll_data}")
+        return []
 
 def fetch_pexels_video(keyword, api_key, orientation="landscape", per_page=5, quality=["hd", "sd"]):
     """Fetch video from Pexels API with improved parameters."""
@@ -128,38 +117,25 @@ def main():
     """Main function with configurable parameters."""
     # Configurable parameters
     config = {
-        # Input/Output
         "input_file": "output/sen_AI.json",         # Path to input JSON file
         "output_file": "broll_data.json",           # Path to output JSON file
-        
-        # Content processing
-        "chunk_size": 500,                          # Size of transcript chunks for processing
-        "llm_model": "gpt-4o",                # Model to use for keyword generation
-        "llm_temperature": 0.6,                    # Temperature for LLM responses (higher = more creative)
-        
-        # B-roll selection
-        "use_need_broll_flag": True,               # Whether to use the LLM's need_broll flag
-        "broll_percentage": 0.25,                   # Percentage of segments to include b-roll if not using need_broll
-        
-        # Pexels API
-        "video_orientation": "landscape",          # Orientation of videos to fetch
-        "video_results_per_query": 5,              # Number of videos to consider per query
-        "preferred_qualities": ["hd"],       # Preferred video qualities in order of preference
+        "llm_model": "gpt-4o",                      # Model to use for keyword generation
+        "llm_temperature": 0.6,                     # Temperature for LLM responses
+        "video_orientation": "landscape",           # Orientation of videos to fetch
+        "video_results_per_query": 5,               # Number of videos to consider per query
+        "preferred_qualities": ["hd"],              # Preferred video qualities in order of preference
     }
     
     # Command line arguments override config
     parser = argparse.ArgumentParser(description='Generate B-roll suggestions for podcast videos')
     parser.add_argument('--input', help='Input JSON file path')
     parser.add_argument('--output', help='Output JSON file path')
-    parser.add_argument('--percentage', type=float, help='Percentage of segments to include b-roll')
     args = parser.parse_args()
     
     if args.input:
         config["input_file"] = args.input
     if args.output:
         config["output_file"] = args.output
-    if args.percentage is not None:
-        config["broll_percentage"] = max(0.0, min(1.0, args.percentage))  # Clamp between 0 and 1
     
     # Load environment variables for API keys
     load_dotenv()
@@ -174,31 +150,19 @@ def main():
     print(f"Loading data from {config['input_file']}...")
     sen_AI_data = load_json_data(config['input_file'])
     extracted_data = extract_segments(sen_AI_data)
-    data = [x["text"] for x in extracted_data]
-    
-    # Split transcript into chunks
-    split_arrays = split_array(data, max_size=config["chunk_size"])
+    transcript = " ".join([x["text"] for x in extracted_data])
     
     # Generate keywords for segments
     print("Generating keywords for B-roll...")
     broll_info = get_llm_keywords(
         client, 
-        split_arrays, 
+        transcript, 
         model=config["llm_model"],
         temperature=config["llm_temperature"]
     )
     
-    # Filter segments that need b-roll
-    if config["use_need_broll_flag"]:
-        broll_segments = [item for item in broll_info if item.get("need_broll", True)]
-    else:
-        # Randomly select a percentage of segments
-        num_to_select = int(len(extracted_data) * config["broll_percentage"])
-        selected_indices = random.sample(range(len(extracted_data)), num_to_select)
-        broll_segments = [item for item in broll_info if item["i"] in selected_indices]
-    
     # Create a mapping from segment index to broll_info item
-    broll_info_map = {item['i']: item for item in broll_segments}
+    broll_info_map = {item['i']: item for item in broll_info}
     
     # Create final output structure
     print("Fetching B-roll videos...")
