@@ -140,3 +140,18 @@ def get_silence_gaps(raw_segments):
         silence_gaps.append({'start': silence_start, 'end': silence_end})
     print(f"Found {len(silence_gaps)} silence gaps")
     return silence_gaps
+
+if __name__ == "__main__":
+    import sys
+    
+    if len(sys.argv) != 2:
+        print("Usage: python find_silence.py <path_to_audio_file>")
+        sys.exit(1)
+    
+    audio_file_path = sys.argv[1]
+    raw_segments = process_audio(audio_file_path)
+    silence_gaps = get_silence_gaps(raw_segments)
+    
+    output_file = "/home/tanmay/Desktop/Ukumi_Tanmay/audio_analysis/silence_analysis.json"
+    save_json({"raw_segments": raw_segments, "silence_gaps": silence_gaps}, output_file)
+    print(f"Analysis complete. Results saved to {output_file}")
