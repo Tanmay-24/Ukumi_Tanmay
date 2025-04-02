@@ -3,10 +3,16 @@ import os
 from typing import Dict, List, Optional, Any
 from dotenv import load_dotenv
 import openai
+import tiktoken
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
+
+def count_tokens(text: str, model: str = "gpt-4") -> int:
+    """Count the number of tokens in a text string."""
+    encoding = tiktoken.encoding_for_model(model)
+    return len(encoding.encode(text))
 
 def get_words_from_json(json_data: Dict[str, Any]) -> List[Dict]:
     """Parse the input JSON and extract the word-level transcript."""
@@ -71,10 +77,15 @@ Possible formats: Q&A Format, Narrative Format, Panel Discussion, Interview, Tec
 
 
 def process_chapter_edits(chapter_data: dict, word_transcript: list[Dict], format_type: str) -> dict:
-    """Process both content and filler word edits for a chapter using the OpenAI API with the o3-mini model.
-       If the chapter is largely non-essential or filled with disjointed phrases, consider skipping the entire chapter."""
+    """Process both content and filler word edits for a chapter using the OpenAI API with the o3-mini model."""
     combined_removals = []
-    for chapter in chapter_data:
+    # TESTING: Only process first 3 chapters
+    chapter_data = chapter_data[:3]
+    total_chapters = len(chapter_data)
+    
+    for i, chapter in enumerate(chapter_data, 1):
+        print(f"\nProcessing chapter {i}/{total_chapters}: {chapter['title']}")
+        
         chapter_transcript = [
             word
             for word in word_transcript
@@ -88,61 +99,130 @@ def process_chapter_edits(chapter_data: dict, word_transcript: list[Dict], forma
             )
         )
         
+        # Count tokens for this chapter
+        token_count = count_tokens(transcript_str)
+        print(f"Token count for chapter {i}: {token_count}")
+        if token_count > 8000:  # Approximate context limit for o3-mini
+            print(f"Warning: Chapter {i} exceeds recommended token limit. Consider splitting into smaller chunks.")
+        
+        # Enhanced format-specific strategies with clear delimiters
         format_lower = format_type.lower()
         if "q&a" in format_lower or "interview" in format_lower:
-            strategy = (
-                "Focus on preserving complete question-answer pairs. Remove content not part of a Q&A pair or essential bridging statement."
-            )
+            strategy = """
+            <format_strategy>
+            Q&A/Interview Format:
+            - Preserve complete question-answer pairs
+            - Keep natural transitions between questions
+            - Maintain interviewer-interviewee rapport
+            - Preserve genuine reactions and emotions
+            - Remove content not part of Q&A pairs
+            - Keep authentic expressions of enthusiasm
+            - Preserve personal connections
+            - Remove technical setup noise
+            </format_strategy>
+            """
         elif "narrative" in format_lower:
-            strategy = (
-                "Focus on story flow and key plot points. Remove excessive descriptions or tangential sub-plots."
-            )
+            strategy = """
+            <format_strategy>
+            Narrative Format:
+            - Focus on story flow and key plot points
+            - Preserve authentic reactions and emotions
+            - Keep natural story progression
+            - Maintain engaging descriptions
+            - Remove excessive descriptions
+            - Preserve personal connections
+            - Keep authentic expressions
+            - Remove technical setup noise
+            </format_strategy>
+            """
         elif "technical" in format_lower:
-            strategy = (
-                "Focus on technical accuracy and clarity. Remove redundant explanations while ensuring completeness."
-            )
+            strategy = """
+            <format_strategy>
+            Technical Format:
+            - Focus on technical accuracy
+            - Maintain engaging explanations
+            - Preserve authentic reactions
+            - Keep natural progression
+            - Remove redundant explanations
+            - Preserve personal connections
+            - Keep authentic expressions
+            - Remove technical setup noise
+            </format_strategy>
+            """
         else:
-            strategy = (
-                "Focus on improving clarity and removing redundancy. Preserve main points and unique insights. Remove tangents and verbosity."
-            )
+            strategy = """
+            <format_strategy>
+            General Format:
+            - Focus on clarity and removing redundancy
+            - Preserve authentic voice
+            - Keep main points and insights
+            - Maintain natural flow
+            - Remove tangents
+            - Preserve personal connections
+            - Keep authentic expressions
+            - Remove technical setup noise
+            </format_strategy>
+            """
         
-        # Updated prompt with enhanced instructions
+        # Updated prompt with enhanced format-specific instructions and clear delimiters
         prompt = f"""
-You are an expert podcast editor. Your task is to analyze the following podcast chapter transcript and determine the best editing approach to create a concise and engaging transcript.
+<task>
+You are an expert podcast editor for a {format_type} podcast. Your goal is to enhance the listening experience by removing content that might bore or distract viewers while preserving the authentic voice and important elements.
+</task>
 
-Your analysis must:
-1. Identify segments within the chapter that should be removed because they contain filler words (e.g., "um", "uh", "like", "you know", "sort of", "kind of"), false starts, or disjointed phrasing.
-2. Evaluate if the entire chapter is non-essential or composed predominantly of filler content; if so, mark the entire chapter for removal.
-3. Preserve all content that is vital for understanding, including key points, main arguments, unique insights, important examples, and necessary context.
-4. Ensure that removal segments do not overlap and use exact source timestamps without rounding.
+{strategy}
 
-INPUT:
-- A string representation of a single chapter's transcript, including:
-    * Chapter title, start time, and end time.
-    * A series of sentences/words, each with its own start and end timestamp.
+<content_guidelines>
+REMOVE:
+- Technical setup phrases ("okay", "yeah", "great")
+- Incomplete sentences and thoughts
+- Repetitive words/phrases
+- Off-topic tangents
+- Factually incorrect statements
 
-OUTPUT:
-Return a JSON object with combined edits that include both content and filler word removal segments. If your analysis suggests the chapter should be entirely skipped, output an edit covering the whole chapter's time range and explain your decision in the "reason" field.
+KEEP:
+- Expressions of gratitude and politeness
+- Personal connections and authentic reactions
+- Key personality traits of speakers
+- Main discussion points and arguments
+- Natural conversation flow
+</content_guidelines>
 
-FORMAT: {format_type}
-STRATEGY: {strategy}
+<quality_requirements>
+- Each remaining sentence must be complete and coherent
+- Maintain the natural flow of conversation
+- Preserve the speaker's authentic voice
+- Keep the emotional authenticity
+- Ensure content remains engaging
+</quality_requirements>
 
-Additional Guidelines:
-- Think step-by-step like a podcast viewer: retain segments that add value and are likely to engage the listener.
-- When determining removals, consider if skipping the entire chapter is warranted because it lacks meaningful content.
-- Justify every removal decision with a clear explanation in the "reason" field.
-- Follow the exact timestamp protocol: use the exact start time of the first sentence and the exact end time of the last sentence in any removal segment.
+<analysis_requirements>
+1. Identify segments containing filler words, false starts, or disjointed phrasing
+2. Evaluate if the entire chapter is non-essential
+3. Preserve vital content for understanding
+4. Ensure removal segments don't overlap
+5. Use exact source timestamps
+</analysis_requirements>
 
-Transcript:
+<output_format>
+Return a JSON object with edits that include:
+- start: timestamp
+- end: timestamp
+- reason: brief explanation
+- chapter_title: chapter name
+</output_format>
+
+<chapter_data>
 {transcript_str}
+</chapter_data>
 """
         
         try:
             response = client.responses.create(
                 model="o3-mini",
-                reasoning={"effort": "medium"},
+                reasoning={"effort": "high"},
                 input=[
-                    {"role": "user", "content": "Think step-by-step as a podcast viewer and only keep those segments which a viewer might want to listen to.\n" + prompt + "\nTranscript:\n" + transcript_str}
+                    {"role": "user", "content": prompt}
                 ],
                 text={
                     "format": {
@@ -177,7 +257,7 @@ Transcript:
         
             result = json.loads(response.output_text)
             combined_removals.extend(result["edits"])
-            break  # Process only the first chapter
+           
 
         except Exception as e:
             return Exception(f"Error processing chapter edits: {e}")
@@ -185,25 +265,11 @@ Transcript:
     return combined_removals
 
 def reconstruct_transcript(chapter_data: list[dict], word_transcript: list[dict], edit_result: List[Dict[str, Any]]) -> str:
-    """
-    Reconstruct the refined transcript by applying chapter-level removal edits on a word-level transcript.
-    
-    For each chapter:
-      - Extract the words that fall within the chapter's time range.
-      - Remove words whose timestamp overlaps >50% with any removal segment for that chapter.
-      - Prepend a chapter header and join the remaining words to form a refined chapter transcript.
-    
-    Args:
-        chapter_data: A list of chapters, each with at least "start", "end", and "title" keys.
-        word_transcript: A list of word-level transcript segments, each with "start", "end", and "text".
-        edit_result: A list of dictionaries containing the chapter edit removals.
-    
-    Returns:
-        A string of the refined transcript, with each chapter processed separately.
-    """
-
+    """Reconstruct the refined transcript by applying chapter-level removal edits."""
     all_removals = edit_result
     refined_chapters = []
+    # TESTING: Only process first 3 chapters
+    chapter_data = chapter_data[:3]
     
     for chapter in chapter_data:
         chapter_title = chapter["title"]
@@ -252,22 +318,18 @@ def reconstruct_transcript(chapter_data: list[dict], word_transcript: list[dict]
 
 
 def reflect_on_transcript(chapter_data: List[Dict[str, Any]], word_transcript: List[Dict[str, Any]], edited_transcript: str, edits: List[Dict[str, Any]]) -> str:
-    """
-    Analyze the coherence, flow, and broken sentences for each chapter, comparing the original and edited transcripts.
-    
-    Args:
-        chapter_data (List[Dict[str, Any]]): List of chapters with their metadata.
-        word_transcript (List[Dict[str, Any]]): Word-level transcript with timestamps.
-        edited_transcript (str): The edited podcast transcript.
-        edits (List[Dict[str, Any]]): List of edits made to the transcript.
-    
-    Returns:
-        str: A string containing reflection notes for each chapter.
-    """
+    """Analyze the coherence, flow, and broken sentences for each chapter."""
+    print("\n=== Starting Transcript Reflection ===")
     edited_chapters = edited_transcript.split("Chapter:")
     reflection_notes = []
+    # TESTING: Only process first 3 chapters
+    chapter_data = chapter_data[:3]
+    total_chapters = len(chapter_data)
     
     for i, chapter in enumerate(chapter_data, 1):
+        print(f"\nReflecting on chapter {i}/{total_chapters}: {chapter['title']}")
+        
+        # Count tokens for reflection input
         chapter_start = float(chapter["start"])
         chapter_end = float(chapter["end"])
         
@@ -280,6 +342,22 @@ def reflect_on_transcript(chapter_data: List[Dict[str, Any]], word_transcript: L
         
         edited_chapter = edited_chapters[i] if i < len(edited_chapters) else ""
         chapter_edits = [edit for edit in edits if edit.get("chapter_title") == chapter["title"]]
+        
+        reflection_input = f"""
+        Original Chapter {i} ({chapter["title"]}):
+        {original_chapter.strip()}
+
+        Edited Chapter {i}:
+        {edited_chapter.strip()}
+
+        Edits made:
+        {json.dumps(chapter_edits, indent=2)}
+        """
+        
+        token_count = count_tokens(reflection_input)
+        print(f"Token count for chapter {i} reflection: {token_count}")
+        if token_count > 8000:
+            print(f"Warning: Chapter {i} reflection exceeds recommended token limit")
         
         prompt = f"""
         Analyze the following original and edited podcast chapter transcripts:
@@ -364,28 +442,55 @@ Edit Impact: {result['edit_impact']}
 
 Content Preservation: {result['content_preservation']}
 """)
-            break
+            
         except Exception as e:
             reflection_notes.append(f"Chapter {i} Reflection: Error occurred during analysis - {str(e)}\n")
     
     return "\n\n".join(reflection_notes)
 
+def apply_final_edits(word_transcript: List[Dict[str, Any]], chapter_data: List[Dict[str, Any]], final_edits: List[Dict[str, Any]]) -> str:
+    """Apply the final edits to the word-level transcript and reconstruct the final edited transcript."""
+    final_chapters = []
+    # TESTING: Only process first 3 chapters
+    chapter_data = chapter_data[:3]
+    
+    for chapter, chapter_edits in zip(chapter_data, final_edits):
+        chapter_start = float(chapter["start"])
+        chapter_end = float(chapter["end"])
+        print(f"\nProcessing final edits for chapter: {chapter['title']}")
+        print(f"Start time: {chapter_start}, End time: {chapter_end}")
+        print(f"Number of edits to apply: {len(chapter_edits['final_chapter_edits'])}")
+        
+        chapter_words = [
+            word for word in word_transcript
+            if chapter_start <= float(word["start"]) and float(word["end"]) <= chapter_end
+        ]
+        print(f"Original words in chapter: {len(chapter_words)}")
+        
+        # Apply edits to the chapter
+        for edit in chapter_edits["final_chapter_edits"]:
+            edit_start = float(edit["start"])
+            edit_end = float(edit["end"])
+            print(f"Applying edit: {edit_start} - {edit_end}, Reason: {edit['reason']}")
+            chapter_words = [
+                word for word in chapter_words
+                if float(word["start"]) < edit_start or float(word["end"]) > edit_end
+            ]
+        
+        print(f"Words remaining after edits: {len(chapter_words)}")
+        
+        # Reconstruct the chapter text
+        chapter_text = f"Chapter: {chapter['title']}\n" + " ".join(word["text"] for word in chapter_words)
+        final_chapters.append(chapter_text)
+    
+    # Join all chapter texts with double newlines
+    return "\n\n".join(final_chapters)
+
 def generate_final_output(chapter_data: List[Dict[str, Any]], word_transcript: List[Dict[str, Any]], edited_transcript: str, edits: List[Dict[str, Any]], review_notes: List[str]) -> Dict:
-    """
-    Generate the final edits by processing each chapter individually, considering the original transcript,
-    edited transcript, initial edits, and chapter-specific review notes.
-    
-    Args:
-        chapter_data: List of chapters with their metadata.
-        word_transcript: Word-level transcript with timestamps.
-        edited_transcript: The edited podcast transcript.
-        edits: List of initial edits made to the transcript.
-        review_notes: List of review notes for each chapter.
-    
-    Returns:
-        A dictionary containing final edits for each chapter.
-    """
+    """Generate the final edits by processing each chapter individually."""
     final_output = {"final_edits": []}
+    # TESTING: Only process first 3 chapters
+    chapter_data = chapter_data[:3]
     
     for i, chapter in enumerate(chapter_data):
         chapter_title = chapter.get("title", f"Chapter {i+1}")
@@ -409,34 +514,136 @@ def generate_final_output(chapter_data: List[Dict[str, Any]], word_transcript: L
         # Get chapter-specific review notes
         chapter_review_notes = review_notes[i] if i < len(review_notes) else ""
         
-        # Construct the prompt for this chapter
+        # Determine format from chapter title or content
+        format_type = "General"  # Default format
+        if any(keyword in chapter_title.lower() for keyword in ["interview", "qa", "question", "answer"]):
+            format_type = "Q&A/Interview"
+        elif any(keyword in chapter_title.lower() for keyword in ["story", "narrative", "tale"]):
+            format_type = "Narrative"
+        elif any(keyword in chapter_title.lower() for keyword in ["technical", "explanation", "guide"]):
+            format_type = "Technical"
+        
+        # Enhanced format-specific strategies with clear delimiters
+        if format_type == "Q&A/Interview":
+            strategy = """
+            <format_strategy>
+            Q&A/Interview Format:
+            - Preserve complete question-answer pairs
+            - Keep natural transitions between questions
+            - Maintain interviewer-interviewee rapport
+            - Preserve genuine reactions and emotions
+            - Remove content not part of Q&A pairs
+            - Keep authentic expressions of enthusiasm
+            - Preserve personal connections
+            - Remove technical setup noise
+            </format_strategy>
+            """
+        elif format_type == "Narrative":
+            strategy = """
+            <format_strategy>
+            Narrative Format:
+            - Focus on story flow and key plot points
+            - Preserve authentic reactions and emotions
+            - Keep natural story progression
+            - Maintain engaging descriptions
+            - Remove excessive descriptions
+            - Preserve personal connections
+            - Keep authentic expressions
+            - Remove technical setup noise
+            </format_strategy>
+            """
+        elif format_type == "Technical":
+            strategy = """
+            <format_strategy>
+            Technical Format:
+            - Focus on technical accuracy
+            - Maintain engaging explanations
+            - Preserve authentic reactions
+            - Keep natural progression
+            - Remove redundant explanations
+            - Preserve personal connections
+            - Keep authentic expressions
+            - Remove technical setup noise
+            </format_strategy>
+            """
+        else:
+            strategy = """
+            <format_strategy>
+            General Format:
+            - Focus on clarity and removing redundancy
+            - Preserve authentic voice
+            - Keep main points and insights
+            - Maintain natural flow
+            - Remove tangents
+            - Preserve personal connections
+            - Keep authentic expressions
+            - Remove technical setup noise
+            </format_strategy>
+            """
+        
+        # Construct the prompt for this chapter with clear delimiters
         prompt = f"""
-        You are an expert podcast editor. Analyze the following chapter data and provide final edits:
+<task>
+You are an expert podcast editor for a {format_type} podcast. Your goal is to enhance the listening experience by removing content that might bore or distract viewers while preserving the authentic voice and important elements.
+</task>
 
-        Chapter Title: {chapter_title}
-        
-        Original Transcript:
-        {original_chapter_transcript}
-        
-        Initial Edits:
-        {json.dumps(chapter_initial_edits, indent=2)}
+{strategy}
 
-        Edited Transcript by applying Initial Edits Original Transcript:
-        {edited_chapter_transcript}
-        
-        Review Notes on Edited Transcript:
-        {chapter_review_notes}
-        
-        Based on this information, provide final edits for this chapter. Focus on addressing the specific issues mentioned in the review notes. For each edit, provide detailed reasoning.
+<content_guidelines>
+REMOVE:
+- Technical setup phrases
+- Incomplete sentences and thoughts
+- Repetitive words/phrases
+- Off-topic tangents
+- Factually incorrect statements
 
-        IMPORTANT: Only provide removal edits. Do not suggest any insertions.
-        Ensure that your edits improve clarity, flow, and content preservation while addressing the issues raised in the review notes.
-        """
+KEEP:
+- Expressions of gratitude and politeness
+- Personal connections and authentic reactions
+- Key personality traits of speakers
+- Main discussion points and arguments
+- Natural conversation flow
+</content_guidelines>
+
+<quality_requirements>
+- Each remaining sentence must be complete and coherent
+- Maintain the natural flow of conversation
+- Preserve the speaker's authentic voice
+- Keep the emotional authenticity
+- Ensure content remains engaging
+</quality_requirements>
+
+<chapter_data>
+Title: {chapter_title}
+Original: {original_chapter_transcript}
+Initial Edits: {json.dumps(chapter_initial_edits, indent=2)}
+Edited: {edited_chapter_transcript}
+Review Notes: {chapter_review_notes}
+</chapter_data>
+
+<output_requirements>
+Provide final edits that:
+1. Address specific issues from review notes
+2. Follow content guidelines
+3. Maintain {format_type} format
+4. Include brief reasoning for each edit
+5. Only include removal edits (no insertions)
+</output_requirements>
+
+<output_format>
+Return a JSON object with:
+- chapter_title: string
+- final_chapter_edits: array of objects with:
+  - start: number
+  - end: number
+  - reason: string
+</output_format>
+"""
         
         try:
             response = client.responses.create(
                 model="o3-mini",
-                reasoning={"effort": "medium"},
+                reasoning={"effort": "high"},
                 input=[
                     {"role": "user", "content": prompt}
                 ],
@@ -478,9 +685,7 @@ def generate_final_output(chapter_data: List[Dict[str, Any]], word_transcript: L
                 if edit["end"] > edit["start"]
             ]
             final_output["final_edits"].append(chapter_final_edits)
-            with open("/home/tanmay/Desktop/Ukumi_Tanmay/1.json", 'w') as f:
-                json.dump(final_output, f, indent=2)
-            break
+            
         except Exception as e:
             print(f"Error processing chapter {chapter_title}: {e}")
             final_output["final_edits"].append({
@@ -489,6 +694,12 @@ def generate_final_output(chapter_data: List[Dict[str, Any]], word_transcript: L
                 "error": str(e)
             })
     
+    # Apply final edits to create the final transcript
+    final_transcript = apply_final_edits(word_transcript, chapter_data, final_output["final_edits"])
+    
+    # Add the final transcript to the output
+    final_output["final_transcript"] = final_transcript
+    
     return final_output
 
 
@@ -496,31 +707,73 @@ def generate_final_output(chapter_data: List[Dict[str, Any]], word_transcript: L
 def process_transcript(input_json_path: str) -> Dict:
     """Process a podcast transcript to improve its quality."""
     try:
+        print("\n=== Starting Podcast Transcript Processing ===")
+        print(f"Loading input JSON from: {input_json_path}")
+        
         # Load the input JSON
         with open(input_json_path, 'r') as f:
             json_data = json.load(f)
         
+        print("\n=== Extracting Data from JSON ===")
         # Extract data from the JSON
         chapter_data = get_chapters_from_json(json_data)
+        print(f"Found {len(chapter_data)} chapters")
+        
         sentence_transcript = get_sen_from_json(json_data)
+        print(f"Found {len(sentence_transcript)} sentences")
+        
         word_transcript = get_words_from_json(json_data)
+        print(f"Found {len(word_transcript)} words")
         
-        
+        print("\n=== Analyzing Podcast Format ===")
         # Analyze overall podcast format once (instead of per chapter)
         podcast_format = analyze_podcast_format(sentence_transcript)
+        print(f"Detected format: {podcast_format}")
+        
+        print("\n=== Processing Chapter Edits ===")
         edits = process_chapter_edits(chapter_data, word_transcript, podcast_format)
-        cleaned_transcript = reconstruct_transcript(chapter_data,word_transcript, edits)
+        print(f"Generated {len(edits)} edit segments")
+        
+        print("\n=== Reconstructing Transcript ===")
+        cleaned_transcript = reconstruct_transcript(chapter_data, word_transcript, edits)
+        print("Transcript reconstruction complete")
 
-        reflection_result = reflect_on_transcript(chapter_data,word_transcript,cleaned_transcript,edits)
-        final_output = generate_final_output(chapter_data,word_transcript,cleaned_transcript,edits,reflection_result)
-        print(final_output)
+        print("\n=== Reflecting on Transcript ===")
+        reflection_result = reflect_on_transcript(chapter_data, word_transcript, cleaned_transcript, edits)
+        print("Reflection analysis complete")
+        
+        print("\n=== Generating Final Output ===")
+        final_output = generate_final_output(chapter_data, word_transcript, cleaned_transcript, edits, reflection_result)
+        print("Final output generation complete")
+        
+        print("\n=== Processing Complete ===")
         return final_output
     
     except Exception as e:
+        print(f"\nError during processing: {str(e)}")
         return {"error": str(e)}
 
 def main():
-    process_transcript(input_json_path="/home/tanmay/Desktop/Ukumi_Tanmay/output/sahu.json")
+    print("\n=== Starting Podcast Editor ===")
+    print("Using conda environment: local")
+    
+    result = process_transcript(input_json_path="/home/tanmay/Desktop/Ukumi_Tanmay/output/sahu.json")
+    
+    print("\n=== Saving Results ===")
+    # Print or save the final output and transcript
+    print("\nFinal Output:")
+    print(json.dumps(result["final_edits"], indent=2))
+    
+    print("\nFinal Transcript:")
+    print(result["final_transcript"])
+    
+    # Save the final transcript to a file
+    output_path = "/home/tanmay/Desktop/Ukumi_Tanmay/output/final_transcript.txt"
+    with open(output_path, "w") as f:
+        f.write(result["final_transcript"])
+    print(f"\nFinal transcript saved to: {output_path}")
+    
+    print("\n=== Processing Complete ===")
 
 if __name__ == "__main__":
     main()
