@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Any
 from dotenv import load_dotenv
 import openai
 import tiktoken
@@ -42,7 +42,52 @@ def analyze_podcast_format(sentence_transcript: List[Dict]) -> str:
     transcript_str = "\n".join([sentence.get("text", "") for sentence in sentence_transcript])
     
     prompt = """Analyze this podcast transcript and determine its overall format.
-Possible formats: Q&A Format, Narrative Format, Panel Discussion, Interview, Technical Explanation, Monologue.
+Possible formats:
+Q&A Format, Narrative Format, Panel Discussion, Interview, Technical Explanation, Monologue.
+
+Consider the following format definitions:
+
+Q&A Format:
+- Direct question-answer exchanges
+- Clear questioner and answerer roles
+- Structured and formal
+- Questions often prepared in advance
+- Example: "What inspired you to start this project?" followed by a direct answer
+
+Interview Format:
+- More conversational and fluid
+- Includes follow-up questions based on responses
+- Personal anecdotes and stories
+- More informal and natural
+- Example: "Tell me about your journey" followed by a story and follow-up questions
+
+Panel Discussion:
+- Multiple speakers/experts
+- Moderator facilitates discussion
+- Speakers interact with each other
+- May include audience questions
+- Example: Roundtable discussion with multiple experts
+
+Narrative Format:
+- Story-driven structure
+- Clear beginning, middle, and end
+- Often single speaker
+- May include sound effects or music
+- Example: Storytelling podcast
+
+Technical Explanation:
+- Focus on explaining concepts
+- Includes definitions and examples
+- May use visual aids (even if audio-only)
+- Structured around topics or concepts
+- Example: Educational podcast explaining a technical topic
+
+Monologue:
+- Single speaker throughout
+- Opinion-based or informational
+- No direct interaction with others
+- Often scripted
+- Example: Commentary or opinion podcast
 """
 
     try:
@@ -50,7 +95,7 @@ Possible formats: Q&A Format, Narrative Format, Panel Discussion, Interview, Tec
             model="gpt-4o-mini",
             temperature=0.3,
             input=[
-                {"role": "user", "content": prompt + "\n\nTRANSCRIPT:\n" + transcript_str}  # Limit size if needed
+                {"role": "user", "content": prompt + "\n\nTRANSCRIPT:\n" + transcript_str[:10000]}  # Limit size if needed
             ],
             text={
                 "format":{
@@ -102,8 +147,6 @@ def process_chapter_edits(chapter_data: dict, word_transcript: list[Dict], forma
         # Count tokens for this chapter
         token_count = count_tokens(transcript_str)
         print(f"Token count for chapter {i}: {token_count}")
-        if token_count > 8000:  # Approximate context limit for o3-mini
-            print(f"Warning: Chapter {i} exceeds recommended token limit. Consider splitting into smaller chunks.")
         
         # Enhanced format-specific strategies with clear delimiters
         format_lower = format_type.lower()
@@ -174,7 +217,7 @@ You are an expert podcast editor for a {format_type} podcast. Your goal is to en
 
 <content_guidelines>
 REMOVE:
-- Technical setup phrases ("okay", "yeah", "great")
+- Technical setup phrases 
 - Incomplete sentences and thoughts
 - Repetitive words/phrases
 - Off-topic tangents
@@ -219,8 +262,8 @@ Return a JSON object with edits that include:
         
         try:
             response = client.responses.create(
-                model="o3-mini",
-                reasoning={"effort": "high"},
+                model="gpt-4o",
+                temperature=0.3,
                 input=[
                     {"role": "user", "content": prompt}
                 ],
@@ -293,34 +336,33 @@ def reconstruct_transcript(chapter_data: list[dict], word_transcript: list[dict]
         for word in chapter_words:
             word_start = float(word.get("start", 0))
             word_end = float(word.get("end", 0))
-            word_duration = word_end - word_start
             remove_word = False
-            
+
             for removal in chapter_removals:
                 rem_start = float(removal.get("start", 0))
                 rem_end = float(removal.get("end", 0))
                 # Calculate the overlap between this word and the removal segment
-                overlap = max(0, min(word_end, rem_end) - max(word_start, rem_start))
-                if word_duration > 0 and (overlap / word_duration) > 0.5:
+                if word_start >= rem_start and word_end <= rem_end:
                     remove_word = True
                     break
-            
+
             if not remove_word:
                 refined_words.append(word.get("text", ""))
         
-        # Reconstruct the chapter transcript with a header and join the remaining words
-        chapter_text = f"Chapter: {chapter_title}\n" + " ".join(refined_words)
+        # Reconstruct the chapter transcript with a chapter title placeholder and join the remaining words with space
+        chapter_text = f"_\n\n" + " ".join(refined_words)
         refined_chapters.append(chapter_text)
     
     # Join all chapter transcripts with double newlines
     edit_applied_transcript = "\n\n".join(refined_chapters)
+    print(edit_applied_transcript)
     return edit_applied_transcript
 
 
 def reflect_on_transcript(chapter_data: List[Dict[str, Any]], word_transcript: List[Dict[str, Any]], edited_transcript: str, edits: List[Dict[str, Any]]) -> str:
     """Analyze the coherence, flow, and broken sentences for each chapter."""
     print("\n=== Starting Transcript Reflection ===")
-    edited_chapters = edited_transcript.split("Chapter:")
+    edited_chapters = edited_transcript.split("_")
     reflection_notes = []
     # TESTING: Only process first 3 chapters
     chapter_data = chapter_data[:3]
@@ -343,24 +385,11 @@ def reflect_on_transcript(chapter_data: List[Dict[str, Any]], word_transcript: L
         edited_chapter = edited_chapters[i] if i < len(edited_chapters) else ""
         chapter_edits = [edit for edit in edits if edit.get("chapter_title") == chapter["title"]]
         
-        reflection_input = f"""
-        Original Chapter {i} ({chapter["title"]}):
-        {original_chapter.strip()}
-
-        Edited Chapter {i}:
-        {edited_chapter.strip()}
-
-        Edits made:
-        {json.dumps(chapter_edits, indent=2)}
-        """
-        
-        token_count = count_tokens(reflection_input)
-        print(f"Token count for chapter {i} reflection: {token_count}")
-        if token_count > 8000:
-            print(f"Warning: Chapter {i} reflection exceeds recommended token limit")
-        
         prompt = f"""
-        Analyze the following original and edited podcast chapter transcripts:
+        Act as a supplementary podcast editor. 
+        You are reviewing a chapter that has already gone through initial editing.
+        Your task is to identify ONLY what ADDITIONAL editing needs to be done to improve what remains after prior edits.
+
 
         Original Chapter {i} ({chapter["title"]}):
         {original_chapter.strip()}
@@ -371,40 +400,24 @@ def reflect_on_transcript(chapter_data: List[Dict[str, Any]], word_transcript: L
         Edits made:
         {json.dumps(chapter_edits, indent=2)}
 
-         Provide a detailed analysis focusing on the following aspects,
-         Include timestamps or segment of sentences in the output to give a better idea of what part of the transcript we are talking about in the analysis.
-
-        1. Coherence:
-           - Has the overall coherence of the chapter improved or deteriorated?
-           - Are the main ideas and arguments presented more clearly in the edited version?
-           - Is there a logical progression of thoughts throughout the chapter?
-
-        2. Flow:
-           - Is the flow of ideas smoother in the edited version?
-           - Are transitions between topics more natural and effective?
-           - Has the removal of content affected the narrative structure positively or negatively?
-
-        3. Broken Sentences:
-           - Identify any sentences that became broken or incomplete due to the edits.
-           - Assess if these broken sentences impact the understanding of the content.
-           - Suggest potential fixes for any problematic sentences.
-
-        4. Edit Impact:
-           - Evaluate how the specific edits have affected the chapter's overall quality.
-           - Determine if important information was inadvertently removed.
-           - Assess if the edits have improved the clarity and conciseness of the content.
-
-        5. Content Preservation:
-           - Ensure that key points, main arguments, and unique insights are preserved in the edited version.
-           - Identify any instances where crucial context or examples may have been lost.
-
-        Format your analysis as a concise yet comprehensive paragraph for each of the five aspects mentioned above.
+        <task>
+        Analyze ONLY the REMAINING content (not already removed content) and identify:
+        1. Additional segments that should be removed (specify exact text)
+        2. Awkward transitions resulting from prior edits that need smoothing
+        3. Remaining filler words or phrases that should be removed
+        4. Segments that may sound unnatural when played back-to-back
+        5. Indentify if undoing any prior edits would improve the flow
+        6. Any broken sentences or phrases that need to be fixed
+        7. DO NOT suggest rephrasing or rewording - only identify what should be removed
+        8. Only focus on what else should be edited in the REMAINING content.
+        </task>
+ 
         """
 
         try:
             response = client.responses.create(
                 model="gpt-4o",
-                temperature=0.5,
+                temperature=0.3,
                 input=[
                     {"role": "user", "content": prompt}
                 ],
@@ -415,13 +428,12 @@ def reflect_on_transcript(chapter_data: List[Dict[str, Any]], word_transcript: L
                         "schema": {
                             "type": "object",
                             "properties": {
-                                "coherence": {"type": "string"},
-                                "flow": {"type": "string"},
-                                "broken_sentences": {"type": "string"},
-                                "edit_impact": {"type": "string"},
-                                "content_preservation": {"type": "string"},
+                                "reflection_notes": {
+                                    "type": "string",
+                                    "description": "Reflection notes on the chapter"
+                                },
                             },
-                            "required": ["coherence", "flow", "broken_sentences", "edit_impact", "content_preservation"],
+                            "required": ["reflection_notes"],
                             "additionalProperties": False
                         },
                         "strict": True
@@ -430,61 +442,15 @@ def reflect_on_transcript(chapter_data: List[Dict[str, Any]], word_transcript: L
             )
             
             result = json.loads(response.output_text)
+            # print(f"Reflection for Chapter {i}: {result['reflection_notes']}")
             reflection_notes.append(f"""Reflection on Chapter {i} :
-                                    
-Coherence: {result['coherence']}
-
-Flow: {result['flow']}
-
-Broken Sentences: {result['broken_sentences']}
-
-Edit Impact: {result['edit_impact']}
-
-Content Preservation: {result['content_preservation']}
+Notes for this chapter: {result['reflection_notes']}                                    
 """)
             
         except Exception as e:
             reflection_notes.append(f"Chapter {i} Reflection: Error occurred during analysis - {str(e)}\n")
     
     return "\n\n".join(reflection_notes)
-
-def apply_final_edits(word_transcript: List[Dict[str, Any]], chapter_data: List[Dict[str, Any]], final_edits: List[Dict[str, Any]]) -> str:
-    """Apply the final edits to the word-level transcript and reconstruct the final edited transcript."""
-    final_chapters = []
-    # TESTING: Only process first 3 chapters
-    chapter_data = chapter_data[:3]
-    
-    for chapter, chapter_edits in zip(chapter_data, final_edits):
-        chapter_start = float(chapter["start"])
-        chapter_end = float(chapter["end"])
-        print(f"\nProcessing final edits for chapter: {chapter['title']}")
-        print(f"Start time: {chapter_start}, End time: {chapter_end}")
-        print(f"Number of edits to apply: {len(chapter_edits['final_chapter_edits'])}")
-        
-        chapter_words = [
-            word for word in word_transcript
-            if chapter_start <= float(word["start"]) and float(word["end"]) <= chapter_end
-        ]
-        print(f"Original words in chapter: {len(chapter_words)}")
-        
-        # Apply edits to the chapter
-        for edit in chapter_edits["final_chapter_edits"]:
-            edit_start = float(edit["start"])
-            edit_end = float(edit["end"])
-            print(f"Applying edit: {edit_start} - {edit_end}, Reason: {edit['reason']}")
-            chapter_words = [
-                word for word in chapter_words
-                if float(word["start"]) < edit_start or float(word["end"]) > edit_end
-            ]
-        
-        print(f"Words remaining after edits: {len(chapter_words)}")
-        
-        # Reconstruct the chapter text
-        chapter_text = f"Chapter: {chapter['title']}\n" + " ".join(word["text"] for word in chapter_words)
-        final_chapters.append(chapter_text)
-    
-    # Join all chapter texts with double newlines
-    return "\n\n".join(final_chapters)
 
 def generate_final_output(chapter_data: List[Dict[str, Any]], word_transcript: List[Dict[str, Any]], edited_transcript: str, edits: List[Dict[str, Any]], review_notes: List[str]) -> Dict:
     """Generate the final edits by processing each chapter individually."""
@@ -694,28 +660,20 @@ Return a JSON object with:
                 "error": str(e)
             })
     
-    # Apply final edits to create the final transcript
-    final_transcript = apply_final_edits(word_transcript, chapter_data, final_output["final_edits"])
-    
-    # Add the final transcript to the output
-    final_output["final_transcript"] = final_transcript
-    
     return final_output
 
 
 
-def process_transcript(input_json_path: str) -> Dict:
+def main(input_json_path="/home/tanmay/Desktop/Ukumi_Tanmay/output/sahu.json") -> Dict:
     """Process a podcast transcript to improve its quality."""
     try:
-        print("\n=== Starting Podcast Transcript Processing ===")
+        
         print(f"Loading input JSON from: {input_json_path}")
         
         # Load the input JSON
         with open(input_json_path, 'r') as f:
             json_data = json.load(f)
         
-        print("\n=== Extracting Data from JSON ===")
-        # Extract data from the JSON
         chapter_data = get_chapters_from_json(json_data)
         print(f"Found {len(chapter_data)} chapters")
         
@@ -725,17 +683,18 @@ def process_transcript(input_json_path: str) -> Dict:
         word_transcript = get_words_from_json(json_data)
         print(f"Found {len(word_transcript)} words")
         
-        print("\n=== Analyzing Podcast Format ===")
-        # Analyze overall podcast format once (instead of per chapter)
         podcast_format = analyze_podcast_format(sentence_transcript)
         print(f"Detected format: {podcast_format}")
         
         print("\n=== Processing Chapter Edits ===")
         edits = process_chapter_edits(chapter_data, word_transcript, podcast_format)
         print(f"Generated {len(edits)} edit segments")
+        print(f"Edits: {json.dumps(edits, indent=2)}")
         
         print("\n=== Reconstructing Transcript ===")
+        
         cleaned_transcript = reconstruct_transcript(chapter_data, word_transcript, edits)
+        
         print("Transcript reconstruction complete")
 
         print("\n=== Reflecting on Transcript ===")
@@ -745,35 +704,15 @@ def process_transcript(input_json_path: str) -> Dict:
         print("\n=== Generating Final Output ===")
         final_output = generate_final_output(chapter_data, word_transcript, cleaned_transcript, edits, reflection_result)
         print("Final output generation complete")
-        
+        with open("/home/tanmay/Desktop/Ukumi_Tanmay/exp/sahu_final_output.json", "w") as f:
+            json.dump(final_output, f, indent=2)
         print("\n=== Processing Complete ===")
+        # print(json.dumps(final_output, indent=2)) 
         return final_output
-    
+  
     except Exception as e:
         print(f"\nError during processing: {str(e)}")
         return {"error": str(e)}
-
-def main():
-    print("\n=== Starting Podcast Editor ===")
-    print("Using conda environment: local")
-    
-    result = process_transcript(input_json_path="/home/tanmay/Desktop/Ukumi_Tanmay/output/sahu.json")
-    
-    print("\n=== Saving Results ===")
-    # Print or save the final output and transcript
-    print("\nFinal Output:")
-    print(json.dumps(result["final_edits"], indent=2))
-    
-    print("\nFinal Transcript:")
-    print(result["final_transcript"])
-    
-    # Save the final transcript to a file
-    output_path = "/home/tanmay/Desktop/Ukumi_Tanmay/output/final_transcript.txt"
-    with open(output_path, "w") as f:
-        f.write(result["final_transcript"])
-    print(f"\nFinal transcript saved to: {output_path}")
-    
-    print("\n=== Processing Complete ===")
 
 if __name__ == "__main__":
     main()
