@@ -93,7 +93,7 @@ Monologue:
 - Example: Commentary or opinion podcast
 """
 
-    try:
+    try:    
         response = client.responses.create(
             model="gpt-4o-mini",
             temperature=0.3,
